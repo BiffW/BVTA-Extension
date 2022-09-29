@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Simplified Chinese" nowhitespace="true" translatedname="中文(简体)">
+  <entityname.railgunshelldepletedfuel>轨道炮贫化燃料炮弹</entityname.railgunshelldepletedfuel>
+  <entitydescription.railgunshelldepletedfuel>比钢制炮弹威力更大，穿甲能力更强，能对目标造成辐射伤害。</entitydescription.railgunshelldepletedfuel>
+  <entityname.railgunshellaphep>轨道炮穿甲高爆近炸炮弹</entityname.railgunshellaphep>
+  <entitydescription.railgunshellaphep>一种轨道炮穿甲弹。能够穿透舰艇的外壳后引爆，配有近炸引信。</entitydescription.railgunshellaphep>
+  <entityname.railgunshellapfsds>轨道炮尾翼稳定脱壳穿甲炮弹</entityname.railgunshellapfsds>
+  <entitydescription.railgunshellapfsds>一种可装填式轨道炮炮弹。发射高速无装药钢针穿透舰艇外壳和装甲。</entitydescription.railgunshellapfsds>
+  <entityname.railgunshellacid>轨道炮酸雾炮弹</entityname.railgunshellacid>
+  <entitydescription.railgunshellacid>一种试验性轨道炮炮弹。装填了特制酸液，发射后能够喷洒在弹道附近。这种备受争议的武器曾多次被动物保护协会提议禁止。</entitydescription.railgunshellacid>
+  <entityname.railguncanistershellexplosive>轨道炮爆破霰弹炮弹</entityname.railguncanistershellexplosive>
+  <entitydescription.railguncanistershellexplosive>一种可装填式轨道炮炮弹。发射装有炸药的弹丸。</entitydescription.railguncanistershellexplosive>
+
+  <entityname.chaingunammoboxexplosive>连射炮高爆弹药箱</entityname.chaingunammoboxexplosive>
+  <entitydescription.chaingunammoboxexplosive>连射炮弹药。命中时爆炸。</entitydescription.chaingunammoboxexplosive>
+  <entityname.chaingunammoboxspread>连射炮霰弹弹药箱</entityname.chaingunammoboxspread>
+  <entitydescription.chaingunammoboxspread>连射炮霰射弹药。对无护甲目标有效。</entitydescription.chaingunammoboxspread>
+  
+  <entityname.coilgunammoboxstun>电磁枪震撼弹药箱</entityname.coilgunammoboxstun>
+  <entitydescription.coilgunammoboxstun>电磁枪弹药。命中时爆炸并击晕目标。</entitydescription.coilgunammoboxstun>
+
+  <entityname.flakcannonshockammobox>高射炮电击弹药箱</entityname.flakcannonshockammobox>
+  <entitydescription.flakcannonshockammobox>一箱沉重的电击弹药，可供高射炮使用。对集群目标有效。</entitydescription.flakcannonshockammobox>
+</infotexts>

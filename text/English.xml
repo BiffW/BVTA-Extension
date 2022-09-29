@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <entityname.railgunshelldepletedfuel>Depleted Fuel Railgun Shell</entityname.railgunshelldepletedfuel>
+  <entitydescription.railgunshelldepletedfuel>It is more powerful than steel shells, has stronger armor piercing ability, and can cause radiation damage to the target.</entitydescription.railgunshelldepletedfuel>
+  <entityname.railgunshellaphep>APHE Proximity Railgun Shell</entityname.railgunshellaphep>
+  <entitydescription.railgunshellaphep>A railgun armor-piercing projectile. Able to penetrate the ship's hull and detonate, equipped with a proximity fuze.</entitydescription.railgunshellaphep>
+  <entityname.railgunshellapfsds>APFSDS Railgun Shell</entityname.railgunshellapfsds>
+  <entitydescription.railgunshellapfsds>A reloadable railgun shell. Fires a high-speed steel dart that penetrate the ship's hull and armor.</entitydescription.railgunshellapfsds>
+  <entityname.railgunshellacid>Acid Railgun Shell</entityname.railgunshellacid>
+  <entitydescription.railgunshellacid>An experimental railgun shell. It is filled with special acid, which can be sprayed near the projectile after launch.This controversial weapon has been repeatedly proposed for ban by animal protection societies.</entitydescription.railgunshellacid>
+  <entityname.railguncanistershellexplosive>Explosive Canister Shell</entityname.railguncanistershellexplosive>
+  <entitydescription.railguncanistershellexplosive>A reloadable railgun shell. Loaded with explosive pellets.</entitydescription.railguncanistershellexplosive>
+
+  <entityname.chaingunammoboxexplosive>Chaingun Explosive Ammunition Box</entityname.chaingunammoboxexplosive>
+  <entitydescription.chaingunammoboxexplosive>Ammo for chaingun. Explodes on hit.</entitydescription.chaingunammoboxexplosive>
+  <entityname.chaingunammoboxspread>Chaingun Burst Ammunition Box</entityname.chaingunammoboxspread>
+  <entitydescription.chaingunammoboxspread>Burst ammo for chaingun. Effective against unarmored targets.</entitydescription.chaingunammoboxspread>
+
+  <entityname.coilgunammoboxstun>Coilgun Stunner Ammunition Box</entityname.coilgunammoboxstun>
+  <entitydescription.coilgunammoboxstun>Ammunition for the coilgun. Explodes and stuns targets on impact.</entitydescription.coilgunammoboxstun>
+
+  <entityname.flakcannonshockammobox>Shock Flak Shells Box</entityname.flakcannonshockammobox>
+  <entitydescription.flakcannonshockammobox>A heavy box of wide-spread electric shock ammo for the Flak Cannon. Good against swarms.</entitydescription.flakcannonshockammobox>
+</infotexts>
