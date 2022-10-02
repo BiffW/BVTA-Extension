@@ -19,3 +19,4 @@ Coilgun
 
 Flak Cannon
   - Shock Flak Shells Box
+  - Focused Armor-Piercing Flak Shells Box
