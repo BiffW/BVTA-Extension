@@ -21,4 +21,6 @@
 
   <entityname.flakcannonshockammobox>Shock Flak Shells Box</entityname.flakcannonshockammobox>
   <entitydescription.flakcannonshockammobox>A heavy box of wide-spread electric shock ammo for the Flak Cannon. Good against swarms.</entitydescription.flakcannonshockammobox>
+  <entityname.flakcannondirectionalpiercingammobox>Focused Armor-Piercing Flak Shells Box</entityname.flakcannondirectionalpiercingammobox>
+  <entitydescription.flakcannondirectionalpiercingammobox>A heavy box of low spread armor-piercing ammo for the Flak Cannon. Good against targets behind walls.</entitydescription.flakcannondirectionalpiercingammobox>
 </infotexts>
