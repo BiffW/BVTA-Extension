@@ -38,115 +38,104 @@
         </Projectile>
     </Item>
     <!--连射炮爆破弹药箱-->
-    <Item identifier="chaingunammoboxexplosive" scale="0.5" tags="chaingunequipment,chaingunammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy">
-        <PreferredContainer primary="chaingunammosource" />
-        <PreferredContainer primary="ammoboxcontainer"/>
-        <Price baseprice="750" minleveldifficulty="25" displaynonempty="true">
-            <Price storeidentifier="merchantoutpost" multiplier="1.3" sold="false" />
-            <Price storeidentifier="merchantcity" multiplier="1.2" sold="false" />
-            <Price storeidentifier="merchantresearch" multiplier="1.3" sold="false" />
-            <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="1" />
-            <Price storeidentifier="merchantmine" multiplier="1.2" sold="false" />
-            <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="1" />
+    <Item identifier="chaingunammoboxexplosive" variantof="chaingunammoboxphysicorium">
+    <PreferredContainer primary="chaingunammosource,ammoboxcontainer" />
+    <PreferredContainer secondary="wreckammoboxcontainer" spawnprobability="0.03" />
+        <Price baseprice="750" minleveldifficulty="25">
+            <Price storeidentifier="merchantoutpost" multiplier="1.3" />
+            <Price storeidentifier="merchantcity" multiplier="1.2" />
+            <Price storeidentifier="merchantresearch" multiplier="1.3" />
+            <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="2" />
+            <Price storeidentifier="merchantmine" multiplier="1.2" />
+            <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="2" />
         </Price>
-        <Deconstruct time="10">
-            <Item identifier="sodium" mincondition="0.95" />
-            <Item identifier="sodium" mincondition="0.70" />
-            <Item identifier="sodium" mincondition="0.45" />
-            <Item identifier="sodium" mincondition="0.20" />
-            <Item identifier="iron" mincondition="0.95" />
-            <Item identifier="carbon" mincondition="0.95" />
-            <Item identifier="aluminium" />
+        <Deconstruct>
+            <Item identifier="sodium" amount="2" />
+            <Item identifier="sodium" amount="2" />
         </Deconstruct>
-        <Fabricate suitablefabricators="fabricator" requiredtime="20">
-            <RequiredSkill identifier="weapons" level="50" />
+        <Fabricate>
+            <RequiredSkill level="50" />
             <RequiredItem identifier="c4block" amount="4" />
-            <RequiredItem identifier="steel" />
-            <RequiredItem identifier="aluminium" />
         </Fabricate>
-        <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
-            <RequiredSkill identifier="weapons" level="40" />
+        <Fabricate>
+            <RequiredSkill level="40" />
             <RequiredItem identifier="c4block" amount="4" />
-            <RequiredItem identifier="steel" />
-            <RequiredItem tag="chaingunammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
         </Fabricate>
-        <Sprite texture="%ModDir:BVTA Extension Unstable%/images/ammoboxes.png" depth="0.54" sourcerect="0,0,95,78" origin="0.5,0.5" />
-        <Body width="115" height="88" density="50" />
-        <Holdable slots="Any,RightHand+LeftHand" canBeCombined="true" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect" />
-        <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" canbecombined="true" ShowConditionInContainedStateIndicator="true" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet" SpawnWithId="chaingunboltexplosive">
-            <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-                <SpawnItem identifiers="chaingunboltexplosive" spawnposition="ThisInventory" />
+        <Sprite texture="%ModDir:BVTA Extension Unstable%/images/ammoboxes.png" sourcerect="0,0,95,78" />
+        <ItemContainer SpawnWithId="chaingunboltexplosive">
+            <StatusEffect>
+                <SpawnItem identifiers="chaingunboltexplosive" />
             </StatusEffect>
-            <StatusEffect type="OnUse" target="This" condition="-0.20" disabledeltatime="true">
-                <RequiredItem items="chaingunboltexplosive" type="Contained" />
+            <StatusEffect>
+                <RequiredItem items="chaingunboltexplosive" />
             </StatusEffect>
-            <Containable identifiers="chaingunboltexplosive" />
+            <Containable items="chaingunboltexplosive" />
         </ItemContainer>
     </Item>
     <Item name="Chaingun Bolt Small" identifier="chaingunboltspread" category="Weapon" scale="0.15" sonarsize="1" hideinmenus="true">
         <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="143,310,369,66" depth="0.55" />
         <Body width="170" height="10" density="10" />
         <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
-        <Projectile characterusable="false" launchimpulse="200.0" spread="10">
+        <Projectile characterusable="false" launchimpulse="0.0" spread="10" removeonhit="true" damagedoors="true">
             <Attack structuredamage="1" itemdamage="5" severlimbsprobability="0.5">
                 <Affliction identifier="gunshotwound" strength="6" />
                 <Affliction identifier="bleeding" strength="2" />
                 <Affliction identifier="stun" strength="0.1" />
             </Attack>
-            <StatusEffect type="OnActive" target="This" lifetime="2">
-                <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="1" velocitymin="-10" velocitymax="-100" scalemin="0.5" scalemax="1" />
+            <StatusEffect type="OnActive" target="This" lifetime="0.5">
+                <ParticleEmitter particle="chainguntrail" copyentityangle="true" particlespersecond="10" initialdelay="0.05" colormultiplier="240,200,50" />
             </StatusEffect>
             <StatusEffect type="OnNotContained" target="This" stackable="false" delay="3">
                 <Remove />
             </StatusEffect>
-            <StatusEffect type="OnImpact" target="This">
-                <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="10" velocitymin="100" velocitymax="2000" scalemin="0.25" scalemax="0.5" />
-                <Remove />
+            <StatusEffect type="OnImpact" target="UseTarget">
+                <ParticleEmitter particle="impactfirearm" copyentityangle="true" particleamount="1" velocitymin="0" velocitymax="0" scalemin="0.3" scalemax="0.5" />    
+                <ParticleEmitter particle="weldspark" copyentityangle="true" anglemin="-40" anglemax="40" particleamount="2" velocitymin="-300" velocitymax="-800" scalemin="0.3" scalemax="0.6" />    
+                <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="1" velocitymin="100" velocitymax="500" scalemin="0.13" scalemax="0.16" />
+            </StatusEffect>
+            <StatusEffect type="OnImpact" target="UseTarget">
+                <Conditional entitytype="eq Structure"/>
+                <Conditional hastag="eq door"/>
+                <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="1" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
             </StatusEffect>
         </Projectile>
     </Item>
-    <Item identifier="chaingunammoboxspread" scale="0.5" tags="chaingunequipment,chaingunammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy">
-        <PreferredContainer primary="chaingunammosource" />
+    <Item identifier="chaingunammoboxspread" variantof="chaingunammobox">
+        <PreferredContainer primary="chaingunammosource" spawnprobability="0" />
         <PreferredContainer primary="ammoboxcontainer" />
-        <Price baseprice="200" minavailable="1" displaynonempty="true">
-            <Price storeidentifier="merchantoutpost" multiplier="1.3" sold="false" />
-            <Price storeidentifier="merchantcity" multiplier="1.2" sold="false" />
-            <Price storeidentifier="merchantresearch" multiplier="1.3" sold="false" />
-            <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="2" />
-            <Price storeidentifier="merchantmine" multiplier="1.2" sold="false" />
-            <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="2" />
+        <PreferredContainer secondary="wreckammoboxcontainer" spawnprobability="0.07" />
+        <Price baseprice="200" minavailable="1">
+            <Price storeidentifier="merchantoutpost" multiplier="1.3" />
+            <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="2" />
+            <Price storeidentifier="merchantresearch" multiplier="1.3" />
+            <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="5" />
+            <Price storeidentifier="merchantmine" multiplier="1.2" />
+            <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="5" />
         </Price>
-        <Deconstruct time="10">
-            <Item identifier="lead" mincondition="0.95" />
-            <Item identifier="lead" mincondition="0.61" />
-            <Item identifier="lead" mincondition="0.27" />
+        <Deconstruct>
+            <Item identifier="lead" mincondition="0.95" amount="2" />
+            <Item identifier="lead" mincondition="0.45" amount="2" />
             <Item identifier="iron" mincondition="0.95" />
             <Item identifier="carbon" mincondition="0.95" />
+            <Item identifier="aluminium" />
             <Item identifier="iron" mincondition="0.45" />
             <Item identifier="carbon" mincondition="0.45" />
-            <Item identifier="aluminium" />
         </Deconstruct>
-        <Fabricate suitablefabricators="fabricator" requiredtime="20">
-            <RequiredSkill identifier="weapons" level="40" />
-            <RequiredItem identifier="lead" amount="3" />
-            <RequiredItem identifier="steel" amount="2" />
-            <RequiredItem identifier="aluminium" />
+        <Fabricate>
+            <RequiredItem amount="4" />
+            <RequiredItem amount="2" />
         </Fabricate>
-        <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
-            <RequiredSkill identifier="weapons" level="20" />
-            <RequiredItem identifier="lead" amount="3" />
-            <RequiredItem identifier="steel" amount="2" />
-            <RequiredItem tag="chaingunammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+        <Fabricate>
+            <RequiredItem amount="4" />
+            <RequiredItem amount="2" />
         </Fabricate>
-        <Sprite texture="%ModDir:BVTA Extension Unstable%/images/ammoboxes.png" depth="0.54" sourcerect="96,0,95,78" origin="0.5,0.5" />
-        <Body width="115" height="88" density="50" />
-        <Holdable slots="Any,RightHand+LeftHand" canBeCombined="true" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect" />
-        <ItemContainer hideitems="true" capacity="6" drawinventory="false" canbeselected="false" canbecombined="true" ShowConditionInContainedStateIndicator="true" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet" SpawnWithId="chaingunboltspread,chaingunboltspread,chaingunboltspread,chaingunboltspread,chaingunboltspread,chaingunboltspread">
-            <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-                <SpawnItem identifiers="chaingunboltspread" spawnposition="ThisInventory" count="6" />
+        <Sprite texture="%ModDir:BVTA Extension Unstable%/images/ammoboxes.png" sourcerect="96,0,95,78" />
+        <ItemContainer capacity="6" SpawnWithId="chaingunboltspread,chaingunboltspread,chaingunboltspread,chaingunboltspread,chaingunboltspread,chaingunboltspread">
+            <StatusEffect>
+                <SpawnItem identifiers="chaingunboltspread" count="6" />
             </StatusEffect>
-            <StatusEffect type="OnUse" target="This" condition="-0.2" disabledeltatime="true">
-                <RequiredItem items="chaingunboltspread" type="Contained" />
+            <StatusEffect>
+                <RequiredItem items="chaingunboltspread" />
             </StatusEffect>
             <Containable items="chaingunboltspread" />
         </ItemContainer>

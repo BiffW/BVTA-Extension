@@ -72,44 +72,23 @@
     </ElectricalDischarger>
   </Item>
   <!--高射炮电击弹药箱-->
-  <Item name="" identifier="flakcannonshockammobox" scale="0.5" tags="flakcannonequipment,flakcannonammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy">
-    <PreferredContainer primary="flakcannonammoloader" mincondition="1" />
-    <PreferredContainer primary="ammoboxcontainer" mincondition="1" />
-    <PreferredContainer secondary="wreckflakcannonloader" amount="1" />
-    <PreferredContainer secondary="wreckammoboxcontainer" mincondition="1" spawnprobability="0.01" />
-    <Price baseprice="300" sold="false" displaynonempty="true" minleveldifficulty="35">
-      <Price storeidentifier="merchantoutpost" multiplier="1.3" />
-      <Price storeidentifier="merchantcity" multiplier="1.2" />
-      <Price storeidentifier="merchantresearch" multiplier="1.3" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="3" sold="true" />
-      <Price storeidentifier="merchantmine" multiplier="1.2" />
-      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" sold="true" />
-    </Price>
-    <Deconstruct time="10">
-      <Item identifier="fulgurium" mincondition="0.95" />
-      <Item identifier="aluminium" />
+  <Item name="" identifier="flakcannonshockammobox" variantof="flakcannonammoboxphysicorium">
+    <Fabricate>
+      <RequiredItem identifier="fulgurium" />
+    </Fabricate>
+    <Fabricate>
+      <RequiredItem identifier="fulgurium" />
+    </Fabricate>
+    <Deconstruct>
+      <Item identifier="fulgurium" />
     </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiredtime="20">
-      <RequiredSkill identifier="weapons" level="40" />
-      <RequiredItem identifier="fulgurium" />
-      <RequiredItem identifier="phosphorus" />
-      <RequiredItem identifier="aluminium" />
-    </Fabricate>
-    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
-      <RequiredSkill identifier="weapons" level="30" />
-      <RequiredItem identifier="fulgurium" />
-      <RequiredItem identifier="phosphorus" />
-      <RequiredItem tag="flakcannonammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
-    </Fabricate>
-    <Sprite texture="%ModDir:BVTA Extension Unstable%/images/ammoboxes.png" depth="0.54" sourcerect="96,80,95,78" origin="0.5,0.5" />
-    <Body width="115" height="88" density="50" />
-    <Holdable slots="Any,RightHand+LeftHand" canBeCombined="true" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect" />
-    <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" canbecombined="true" ShowConditionInContainedStateIndicator="true" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet">
-      <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-        <SpawnItem identifiers="flakshockbolt" spawnposition="ThisInventory" />
+    <Sprite texture="%ModDir:BVTA Extension Unstable%/images/ammoboxes.png" sourcerect="96,80,95,78" />
+    <ItemContainer>
+      <StatusEffect>
+        <SpawnItem identifiers="flakshockbolt" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This" condition="-4" disabledeltatime="true">
-        <RequiredItem items="flakshockbolt" type="Contained" />
+      <StatusEffect>
+        <RequiredItem items="flakshockbolt" />
       </StatusEffect>
       <Containable items="flakshockbolt" />
     </ItemContainer>
@@ -174,44 +153,37 @@
     </Projectile>
   </Item>
   <!--高射炮定向穿甲弹药箱-->
-  <Item name="" identifier="flakcannondirectionalpiercingammobox" scale="0.5" tags="flakcannonequipment,flakcannonammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy">
-    <PreferredContainer primary="flakcannonammoloader" mincondition="1" />
-    <PreferredContainer primary="ammoboxcontainer" mincondition="1" />
-    <PreferredContainer secondary="wreckflakcannonloader" amount="1" />
-    <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.05" />
-    <Price baseprice="250" displaynonempty="true">
+  <Item name="" identifier="flakcannondirectionalpiercingammobox" variantof="flakcannonammobox">
+    <PreferredContainer primary="flakcannonammoloader" spawnprobability="0" />
+    <PreferredContainer primary="ammoboxcontainer" />
+    <PreferredContainer secondary="wreckflakcannonloader" />
+    <PreferredContainer secondary="wreckammoboxcontainer" spawnprobability="0.05" />
+    <Price baseprice="250" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.3" />
-      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" sold="true" />
       <Price storeidentifier="merchantresearch" multiplier="1.3" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="3" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="3" sold="true" />
       <Price storeidentifier="merchantmine" multiplier="1.2" />
-      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" sold="true" />
     </Price>
-    <Deconstruct time="10">
-      <Item identifier="titaniumaluminiumalloy" mincondition="0.95" />
-      <Item identifier="aluminium" />
+    <Deconstruct>
+      <Item identifier="titaniumaluminiumalloy" />
     </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiredtime="20">
-      <RequiredSkill identifier="weapons" level="30" />
-      <RequiredItem identifier="phosphorus" />
+    <Fabricate>
+      <RequiredSkill level="30" />
       <RequiredItem identifier="titaniumaluminiumalloy" />
-      <RequiredItem identifier="aluminium" />
     </Fabricate>
-    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
-      <RequiredSkill identifier="weapons" level="25" />
-      <RequiredItem identifier="phosphorus" />
+    <Fabricate>
+      <RequiredSkill level="25" />
       <RequiredItem identifier="titaniumaluminiumalloy" />
-      <RequiredItem tag="flakcannonammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension Unstable%/images/ammoboxes.png" depth="0.54" sourcerect="96,160,95,78" origin="0.5,0.5" />
-    <Body width="115" height="88" density="50" />
-    <Holdable slots="Any,RightHand+LeftHand" canBeCombined="true" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect" />
-    <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" canbecombined="true" ShowConditionInContainedStateIndicator="true" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet">
-      <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-        <SpawnItem identifiers="flakboltdirectionalpiercing" spawnposition="ThisInventory" />
+    <ItemContainer>
+      <StatusEffect>
+        <SpawnItem identifiers="flakboltdirectionalpiercing" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This" condition="-4" disabledeltatime="true">
-        <RequiredItem items="flakboltdirectionalpiercing" type="Contained" />
+      <StatusEffect>
+        <RequiredItem items="flakboltdirectionalpiercing" />
       </StatusEffect>
       <Containable items="flakboltdirectionalpiercing" />
     </ItemContainer>

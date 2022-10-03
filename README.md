@@ -1,7 +1,7 @@
 # BVTA-Extension
 An extension to BVTA which adds some new ammunition items made by community modders
 
-Last tested game version: 0.19.6.0
+Last tested game version: 0.19.9.0
 
 Railgun
   - Depleted Fuel Railgun Shell from Ammo Mod by Laryssa
@@ -12,7 +12,7 @@ Railgun
 
 Chaingun
   - Chaingun Explosive Ammunition Box from EK Armory by Videogames
-  - Chaingun Burst Ammunition Box by Zyleand
+  - Chaingun Scattering Ammunition Box by Zyleand
 
 Coilgun
   - Coilgun Stunner Ammunition Box
