@@ -10,17 +10,14 @@
   <entitydescription.railgunshellacid>一种试验性轨道炮炮弹。装填了特制酸液，发射后能够喷洒在弹道附近。这种备受争议的武器曾多次被动物保护协会提议禁止。</entitydescription.railgunshellacid>
   <entityname.railguncanistershellexplosive>轨道炮爆破霰弹炮弹</entityname.railguncanistershellexplosive>
   <entitydescription.railguncanistershellexplosive>一种可装填式轨道炮炮弹。发射装有炸药的弹丸。</entitydescription.railguncanistershellexplosive>
-
   <entityname.chaingunammoboxexplosive>连射炮爆破弹药箱</entityname.chaingunammoboxexplosive>
   <entitydescription.chaingunammoboxexplosive>连射炮弹药。命中时爆炸。</entitydescription.chaingunammoboxexplosive>
   <entityname.chaingunammoboxspread>连射炮霰弹弹药箱</entityname.chaingunammoboxspread>
   <entitydescription.chaingunammoboxspread>连射炮霰射弹药。对无护甲目标有效。</entitydescription.chaingunammoboxspread>
-  
   <entityname.coilgunammoboxstun>电磁枪震撼弹药箱</entityname.coilgunammoboxstun>
   <entitydescription.coilgunammoboxstun>电磁枪弹药。命中时爆炸并击晕目标。</entitydescription.coilgunammoboxstun>
-
-  <entityname.flakcannonshockammobox>高射炮电击弹药箱</entityname.flakcannonshockammobox>
-  <entitydescription.flakcannonshockammobox>一箱沉重的电击弹药，可供高射炮使用。对集群目标有效。</entitydescription.flakcannonshockammobox>
-  <entityname.flakcannondirectionalpiercingammobox>高射炮聚能破甲弹药箱</entityname.flakcannondirectionalpiercingammobox>
-  <entitydescription.flakcannondirectionalpiercingammobox>一箱沉重的聚能破甲弹药，可供高射炮使用。可穿透船壳和装甲对敌人造成伤害。</entitydescription.flakcannondirectionalpiercingammobox>
+  <entityname.flakcannonshockammobox>电击破片弹药箱</entityname.flakcannonshockammobox>
+  <entitydescription.flakcannonshockammobox>一箱沉重的电击弹药，可供破片加农炮使用。对集群目标有效。</entitydescription.flakcannonshockammobox>
+  <entityname.flakcannondirectionalpiercingammobox>集束穿甲破片弹药箱</entityname.flakcannondirectionalpiercingammobox>
+  <entitydescription.flakcannondirectionalpiercingammobox>一箱沉重的聚能破甲弹药，可供破片加农炮使用。可穿透船壳和装甲对敌人造成伤害。</entitydescription.flakcannondirectionalpiercingammobox>
 </infotexts>

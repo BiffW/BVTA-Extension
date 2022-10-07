@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <!--高射炮电击弹-->
   <Item name="Flak Shock Bolt" identifier="flakshockbolt" category="Weapon" scale="1" sonarsize="2" hideinmenus="true">
@@ -13,7 +13,7 @@
       </Attack>
       <StatusEffect type="OnActive" target="This" lifetime="2">
         <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="0.9" scalemax="1.5" />
-      </StatusEffect>      
+      </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <SpawnItem identifier="flakshockshrapnel" spawnposition="This" count="32" aimspread="120" rotationtype="Collider" rotation="0" />
         <Explosion range="30.0" structuredamage="20" camerashake="25.0" camerashakerange="2000" force="10.0" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.3">
@@ -52,7 +52,7 @@
         <Remove />
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This">
-          <Use />
+        <Use />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove />
@@ -82,7 +82,7 @@
     <Deconstruct>
       <Item identifier="fulgurium" />
     </Deconstruct>
-    <Sprite texture="%ModDir:BVTA Extension Unstable%/images/ammoboxes.png" sourcerect="96,80,95,78" />
+    <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="96,80,95,78" />
     <ItemContainer>
       <StatusEffect>
         <SpawnItem identifiers="flakshockbolt" />
@@ -118,7 +118,7 @@
         <ParticleEmitter particle="shrapnel" anglemin="0" anglemax="360" particleamount="50" velocitymin="100" velocitymax="2000" scalemin="1" scalemax="2" />
         <RemoveItem />
       </StatusEffect>
-      <StatusEffect type="OnActive" target="This" Condition="-100" delay="0.25" stackable="false"/>
+      <StatusEffect type="OnActive" target="This" Condition="-100" delay="0.25" stackable="false" />
       <StatusEffect type="OnImpact" target="This" Condition="-50" stackable="false" />
     </Projectile>
     <MotionSensor range="300" canbeselected="false" IgnoreDead="True" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
@@ -177,7 +177,7 @@
       <RequiredSkill level="25" />
       <RequiredItem identifier="titaniumaluminiumalloy" />
     </Fabricate>
-    <Sprite texture="%ModDir:BVTA Extension Unstable%/images/ammoboxes.png" depth="0.54" sourcerect="96,160,95,78" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" depth="0.54" sourcerect="96,160,95,78" origin="0.5,0.5" />
     <ItemContainer>
       <StatusEffect>
         <SpawnItem identifiers="flakboltdirectionalpiercing" />

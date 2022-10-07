@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="BVTA Extension Unstable" modversion="0.1.3" corepackage="False" gameversion="0.19.5.0">
+<contentpackage name="BVTA Extension" corepackage="false" modversion="0.1.6" gameversion="0.19.11.0">
   <Item file="%ModDir%/new_chaingun.xml" />
   <Item file="%ModDir%/new_coilgun.xml" />
   <Item file="%ModDir%/new_flakcannon.xml" />

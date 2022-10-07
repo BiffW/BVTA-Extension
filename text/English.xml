@@ -10,15 +10,12 @@
   <entitydescription.railgunshellacid>An experimental railgun shell loaded with special acid, which can be sprayed near the projectile after launch. This controversial weapon has been repeatedly proposed for ban by animal protection societies.</entitydescription.railgunshellacid>
   <entityname.railguncanistershellexplosive>Explosive Canister Shell</entityname.railguncanistershellexplosive>
   <entitydescription.railguncanistershellexplosive>A reloadable railgun shell. Loaded with explosive pellets.</entitydescription.railguncanistershellexplosive>
-
   <entityname.chaingunammoboxexplosive>Chaingun Explosive Ammunition Box</entityname.chaingunammoboxexplosive>
   <entitydescription.chaingunammoboxexplosive>Ammo for chaingun. Explodes on hit.</entitydescription.chaingunammoboxexplosive>
   <entityname.chaingunammoboxspread>Chaingun Scattering Ammunition Box</entityname.chaingunammoboxspread>
   <entitydescription.chaingunammoboxspread>Scattering ammo for chaingun. Effective against unarmored targets.</entitydescription.chaingunammoboxspread>
-
   <entityname.coilgunammoboxstun>Coilgun Stunner Ammunition Box</entityname.coilgunammoboxstun>
   <entitydescription.coilgunammoboxstun>Ammunition for the coilgun. Explodes and stuns targets on impact.</entitydescription.coilgunammoboxstun>
-
   <entityname.flakcannonshockammobox>Shock Flak Shells Box</entityname.flakcannonshockammobox>
   <entitydescription.flakcannonshockammobox>A heavy box of wide-spread electric shock ammo for the Flak Cannon. Good against swarms.</entitydescription.flakcannonshockammobox>
   <entityname.flakcannondirectionalpiercingammobox>Focused Armor-Piercing Flak Shells Box</entityname.flakcannondirectionalpiercingammobox>
