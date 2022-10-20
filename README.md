@@ -1,7 +1,7 @@
 # BVTA-Extension
 An extension to BVTA which adds some new ammunition items made by community modders
 
-Last tested game version: 0.19.9.0
+Last tested game version: 0.19.13.0
 
 Railgun
   - Depleted Fuel Railgun Shell from Ammo Mod by Laryssa

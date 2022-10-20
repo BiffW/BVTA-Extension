@@ -32,10 +32,10 @@
     <Sprite texture="%ModDir:BVTA Extension%/images/railgunshelldf.png" sourcerect="0,0,214,32" />
     <Projectile>
       <Attack penetration="*1.25">
-        <Affliction identifier="explosiondamage" strength="1340" />
-        <Affliction identifier="bleeding" strength="268" />
-        <Affliction identifier="radiationsickness" strength="240" />
-        <Affliction identifier="stun" strength="15" />
+        <Affliction identifier="explosiondamage" strength="1500" />
+        <Affliction identifier="bleeding" strength="100" />
+        <Affliction identifier="radiationsickness" strength="100" />
+        <Affliction identifier="stun" strength="22.5" />
       </Attack>
     </Projectile>
   </Item>
