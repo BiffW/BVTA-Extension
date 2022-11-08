@@ -196,7 +196,7 @@
     </ItemComponent>
     <TriggerComponent triggeredby="Creature" force="0" radius="500" allowingameediting="false">
       <StatusEffect type="OnActive" target="Character" delay="0.5" stackable="false" disabledeltatime="true">
-        <Affliction identifier="acidburn" strength="0.5" />
+        <Affliction identifier="acidburn" strength="0.8" />
       </StatusEffect>
     </TriggerComponent>
   </Item>
@@ -238,14 +238,14 @@
     <Projectile characterusable="false" launchimpulse="0.0" maxtargetstohit="1" damagedoors="true">
       <StatusEffect type="OnActive" target="This" condition="-34">
         <ParticleEmitter particle="bubbles" />
-        <ParticleEmitter particle="fixfoam" anglemin="0" anglemax="360" velocitymin="1" velocitymax="2" scalemultiplier="4.0,4.0" particlespersecond="32" colormultiplier="144,255,144,127" />
+        <ParticleEmitter particle="fixfoam" anglemin="0" anglemax="360" velocitymin="1" velocitymax="2" scalemultiplier="4.0,4.0" particlespersecond="16" colormultiplier="144,255,144,127" />
       </StatusEffect>
       <StatusEffect type="OnImpact"></StatusEffect>
       <StatusEffect type="OnUse">
         <SpawnItem identifier="railgunshellacidemitter" spawnposition="This" count="6" spread="500" />
       </StatusEffect>
       <StatusEffect type="OnBroken" />
-      <StatusEffect type="OnActive" target="This" delay="0.05" stackable="false" disabledeltatime="true">
+      <StatusEffect type="OnActive" target="This" delay="0.1" stackable="false" disabledeltatime="true">
         <SpawnItem identifier="railgunshellacidemitter" spawnposition="This" spread="100" />
       </StatusEffect>
       <StatusEffect type="Always" target="This" allowwhenbroken="true" disabledeltatime="true">

@@ -15,7 +15,7 @@
         <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="0.9" scalemax="1.5" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
-        <SpawnItem identifier="flakshockshrapnel" spawnposition="This" count="32" aimspread="120" rotationtype="Collider" rotation="0" />
+        <SpawnItem identifier="flakshockshrapnel" spawnposition="This" count="16" aimspread="120" rotationtype="Collider" rotation="0" />
         <Explosion range="30.0" structuredamage="20" camerashake="25.0" camerashakerange="2000" force="10.0" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.3">
           <Affliction identifier="explosiondamage" strength="20" />
         </Explosion>
@@ -27,7 +27,7 @@
       <StatusEffect type="OnActive" target="This" Condition="-100" delay="0.25" stackable="false" />
       <StatusEffect type="OnImpact" target="This" Condition="-100" stackable="false" />
     </Projectile>
-    <MotionSensor range="150" canbeselected="false" IgnoreDead="True" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
+    <MotionSensor range="200" canbeselected="false" IgnoreDead="True" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
       <StatusEffect type="Always" target="This" condition="-100" disabledeltatime="true" stackable="false" checkconditionalalways="true">
         <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
       </StatusEffect>
@@ -61,12 +61,11 @@
     <ElectricalDischarger Range="1000" RangeMultiplierInWalls="0.1" outdoorsonly="true" powerconsumption="0">
       <Attack targetimpulse="50">
         <Affliction identifier="stun" strength="4" />
-        <Affliction identifier="burn" strength="5" />
+        <Affliction identifier="burn" strength="10" />
       </Attack>
       <StatusEffect type="OnUse" target="This" disabledeltatime="true">
         <sound file="Content/Items/Weapons/WEAPONS_electricalDischarge1.ogg" range="2000" selectionmode="random" />
         <sound file="Content/Items/Weapons/WEAPONS_electricalDischarge2.ogg" range="2000" />
-        <ParticleEmitter particle="risingbubbles" anglemin="0" anglemax="360" particleamount="50" velocitymin="50" velocitymax="100" scalemin="1" scalemax="2" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="This" condition="-100" delay="0.25" disabledeltatime="true" />
     </ElectricalDischarger>
@@ -171,10 +170,12 @@
     </Deconstruct>
     <Fabricate>
       <RequiredSkill level="30" />
+      <RequiredItem identifier="phosphorus" />
       <RequiredItem identifier="titaniumaluminiumalloy" />
     </Fabricate>
     <Fabricate>
       <RequiredSkill level="25" />
+      <RequiredItem identifier="phosphorus" />
       <RequiredItem identifier="titaniumaluminiumalloy" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" depth="0.54" sourcerect="96,160,95,78" origin="0.5,0.5" />
