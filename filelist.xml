@@ -3,6 +3,7 @@
   <Item file="%ModDir%/new_chaingun.xml" />
   <Item file="%ModDir%/new_coilgun.xml" />
   <Item file="%ModDir%/new_flakcannon.xml" />
+  <Item file="%ModDir%/new_pulselaser.xml" />
   <Item file="%ModDir%/new_railgun.xml" />
   <Text file="%ModDir%/Text/SimplifiedChinese.xml" />
   <Text file="%ModDir%/Text/English.xml" />

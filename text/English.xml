@@ -20,4 +20,6 @@
   <entitydescription.flakcannonshockammobox>A heavy box of wide-spread electric shock ammo for the Flak Cannon. Good against swarms.</entitydescription.flakcannonshockammobox>
   <entityname.flakcannondirectionalpiercingammobox>Focused Armor-Piercing Flak Shells Box</entityname.flakcannondirectionalpiercingammobox>
   <entitydescription.flakcannondirectionalpiercingammobox>A heavy box of low spread armor-piercing ammo for the Flak Cannon. Good against targets behind walls.</entitydescription.flakcannondirectionalpiercingammobox>
+  <entityname.pulselaserammoboxmixed>Mixed Pulse Laser Fuel Box</entityname.pulselaserammoboxmixed>
+  <entitydescription.pulselaserammoboxmixed>A mix-up of two types of pulse laser ammo, switches lens mode after each shot. Containing 80 shots.</entitydescription.pulselaserammoboxmixed>
 </infotexts>
