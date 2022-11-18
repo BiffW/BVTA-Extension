@@ -45,7 +45,7 @@
             <RequiredSkill identifier="weapons" level="65" />
             <RequiredItem identifier="fulgurium" amount="2" />
             <RequiredItem identifier="alienblood" />
-            <RequiredItem tag="pulselaserammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+            <RequiredItem identifier="" tag="pulselaserammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
         </Fabricate>
         <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="0,160,95,78" />
         <ItemContainer SpawnWithId="pulselaserboltpiercing">
@@ -72,6 +72,18 @@
     </Item>
     <!--穿透激光燃料箱-->
     <Item identifier="pulselaserammoboxpiercing" variantof="pulselaserammoboxtrilaser">
+        <Fabricate suitablefabricators="fabricator" requiredtime="20">
+            <RequiredSkill identifier="weapons" level="65" />
+            <RequiredItem identifier="fulgurium" />
+            <RequiredItem identifier="alienblood" />
+            <RequiredItem identifier="aluminium" />
+        </Fabricate>
+        <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
+            <RequiredSkill identifier="weapons" level="60" />
+            <RequiredItem identifier="fulgurium" />
+            <RequiredItem identifier="alienblood" />
+            <RequiredItem identifier="" tag="pulselaserammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+        </Fabricate>
         <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="192,0,95,78" />
         <ItemContainer SpawnWithId="pulselaserboltpiercing">
             <StatusEffect>
