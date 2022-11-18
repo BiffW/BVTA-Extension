@@ -72,14 +72,19 @@
   </Item>
   <!--高射炮电击弹药箱-->
   <Item name="" identifier="flakcannonshockammobox" variantof="flakcannonammoboxphysicorium">
-    <Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredItem identifier="fulgurium" />
+      <RequiredItem identifier="phosphorus" />
+      <RequiredItem identifier="aluminium" />
     </Fabricate>
-    <Fabricate>
+    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
       <RequiredItem identifier="fulgurium" />
+      <RequiredItem identifier="phosphorus" />
+      <RequiredItem identifier="" tag="flakcannonammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
     </Fabricate>
     <Deconstruct>
-      <Item identifier="fulgurium" />
+      <Item identifier="fulgurium" mincondition="0.95" />
+      <Item identifier="aluminium" />
     </Deconstruct>
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="96,80,95,78" />
     <ItemContainer>
@@ -166,17 +171,20 @@
       <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" sold="true" />
     </Price>
     <Deconstruct>
-      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" mincondition="0.95" />
+      <Item identifier="aluminium" />
     </Deconstruct>
-    <Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill level="30" />
-      <RequiredItem identifier="phosphorus" />
       <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="phosphorus" />
+      <RequiredItem identifier="aluminium" />
     </Fabricate>
-    <Fabricate>
+    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
       <RequiredSkill level="25" />
-      <RequiredItem identifier="phosphorus" />
       <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="phosphorus" />
+      <RequiredItem identifier="" tag="flakcannonammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" depth="0.54" sourcerect="96,160,95,78" origin="0.5,0.5" />
     <ItemContainer>

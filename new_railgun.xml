@@ -18,14 +18,13 @@
       <Item identifier="depletedfuel" />
       <Item identifier="steel" />
     </Deconstruct>
-    <Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="weapons" level="30" />
-      <RequiredSkill identifier="electrical" level="30" />
-      <RequiredItem identifier="depletedfuel" amount="2" />
+      <RequiredItem identifier="depletedfuel" />
+      <RequiredItem identifier="depletedfuel" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" requiredtime="80" amount="4">
       <RequiredSkill identifier="weapons" level="30" />
-      <RequiredSkill identifier="electrical" level="30" />
       <RequiredItem identifier="depletedfuel" amount="8" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BVTA Extension%/images/railgunshelldf.png" sourcerect="0,33,64,64" />
@@ -59,14 +58,14 @@
       <Item identifier="copper" />
       <Item identifier="c4block" outcondition="0.5" />
     </Deconstruct>
-    <Fabricate requiredtime="25">
-      <RequiredSkill level="35" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredSkill identifier="weapons" level="35" />
       <RequiredItem identifier="steel" />
       <RequiredItem identifier="fpgacircuit" />
       <RequiredItem identifier="c4block" mincondition="0.5" usecondition="true" />
     </Fabricate>
-    <Fabricate requiredtime="100">
-      <RequiredSkill level="35" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="100" amount="4">
+      <RequiredSkill identifier="weapons" level="35" />
       <RequiredItem identifier="steel" amount="4" />
       <RequiredItem identifier="fpgacircuit" amount="4" />
       <RequiredItem identifier="c4block" amount="2" />
@@ -87,7 +86,7 @@
         <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" selectionmode="Random" range="50000" />
         <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" selectionmode="Random" range="50000" />
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="50" velocitymin="100" velocitymax="2000" scalemin="1.0" scalemax="1.0" />
-        <Explosion range="133.3" structuredamage="400" />
+        <Explosion range="250" structuredamage="400" />
         <Explosion range="500" itemdamage="150" force="50.0" severlimbsprobability="5" decal="explosion" decalsize="0.97" penetration="0.5">
           <Affliction identifier="explosiondamage" strength="1250" />
           <Affliction identifier="lacerations" strength="500" />
@@ -135,13 +134,15 @@
       <Item identifier="iron" />
       <Item identifier="carbon" />
     </Deconstruct>
-    <Fabricate>
-      <RequiredSkill level="30" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="30" />
       <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="steel" amount="1" />
     </Fabricate>
-    <Fabricate>
-      <RequiredSkill level="25" />
+    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="8">
+      <RequiredSkill identifier="weapons" level="25" />
       <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="" tag="containershell" mincondition="0.0" maxcondition="0.0" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/APFSDS.png" sourcerect="0,0,214,32" />
     <BrokenSprite texture="%ModDir:BVTA Extension%/images/APFSDS.png" sourcerect="0,94,214,32" />
@@ -216,15 +217,15 @@
       <Item identifier="carbon" />
       <Item identifier="sulphuricacid" />
     </Deconstruct>
-    <Fabricate requiredtime="25">
-      <RequiredSkill identifier="weapons" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredSkill identifier="weapons" level="25" />
       <RequiredSkill identifier="medical" level="35" />
       <RequiredItem identifier="steel" />
       <RequiredItem identifier="sulphuricacid" />
       <RequiredItem identifier="alienblood" />
     </Fabricate>
-    <Fabricate requiredtime="100" amount="4">
-      <RequiredSkill identifier="weapons" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="100" amount="4">
+      <RequiredSkill identifier="weapons" level="25" />
       <RequiredSkill identifier="medical" level="35" />
       <RequiredItem identifier="steel" amount="4" />
       <RequiredItem identifier="sulphuricacid" amount="4" />
@@ -301,16 +302,16 @@
       <Item identifier="iron" />
       <Item identifier="carbon" />
     </Deconstruct>
-    <Fabricate>
-      <RequiredSkill level="30" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="30" />
       <RequiredItem identifier="c4block" mincondition="0.5" usecondition="true" />
       <RequiredItem identifier="steel" amount="2" />
     </Fabricate>
-    <Fabricate>
-      <RequiredSkill level="25" />
-      <RequiredItem identifier="steel" />
-      <RequiredItem tag="containershell" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="8">
+      <RequiredSkill identifier="weapons" level="25" />
       <RequiredItem identifier="c4block" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="" tag="containershell" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+      <RequiredItem identifier="steel" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/railguncanistershellexplosive.png" sourcerect="0,4,216,34" />
     <BrokenSprite texture="%ModDir:BVTA Extension%/images/railguncanistershellexplosive.png" sourcerect="0,40,216,34" />

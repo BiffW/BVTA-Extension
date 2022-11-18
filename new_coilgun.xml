@@ -46,16 +46,22 @@
       <Price storeidentifier="merchantarmory" multiplier="0.9" maxavailable="4" minleveldifficulty="15" />
     </Price>
     <Deconstruct>
-      <Item identifier="magnesium" />
-      <Item identifier="potassium" />
+      <Item identifier="flashpowder" mincondition="0.95" />
+      <Item identifier="iron" mincondition="0.95" />
+      <Item identifier="carbon" mincondition="0.95" />
+      <Item identifier="aluminium" />
     </Deconstruct>
-    <Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill level="35" />
       <RequiredItem identifier="flashpowder" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="aluminium" />
     </Fabricate>
-    <Fabricate>
+    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
       <RequiredSkill level="30" />
       <RequiredItem identifier="flashpowder" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="" tag="coilgunammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="0,80,95,78" />
     <ItemContainer SpawnWithId="coilgunboltstun">
