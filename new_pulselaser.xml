@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
-    <!--单束不稳定激光-->
+    <!--单束混合激光-->
     <Item identifier="pulselaserboltmixed" nameidentifier="pulselaserbolt" variantof="pulselaserbolt">
         <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
         <Projectile penetration="0.5">
@@ -9,14 +9,14 @@
                 <Affliction identifier="stun" strength="0.8" />
             </Attack>
             <StatusEffect type="OnImpact" target="UseTarget">
-                <Explosion range="225.0" ballastfloradamage="75" structuredamage="75" itemdamage="250" >
+                <Explosion range="225.0" ballastfloradamage="75" structuredamage="75" itemdamage="250">
                     <Affliction identifier="burn" strength="150" />
                     <Affliction identifier="stun" strength="5" />
                 </Explosion>
             </StatusEffect>
         </Projectile>
     </Item>
-    <!-- 三联不稳定激光 -->
+    <!-- 三联混合激光 -->
     <Item identifier="pulselaserboltmixedtrilaser" nameidentifier="pulselaserbolt" variantof="pulselaserbolttrilaser" tags="pulselaserboltmixed">
         <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
         <Projectile penetration="0.5">
@@ -32,6 +32,7 @@
             </StatusEffect>
         </Projectile>
     </Item>
+    <!--混合激光燃料箱-->
     <Item identifier="pulselaserammoboxmixed" variantof="pulselaserammoboxtrilaser">
         <PreferredContainer primary="pulselaserammosource,ammoboxcontainer" mincondition="1" />
         <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.02" />
@@ -83,6 +84,52 @@
                 <Conditional hastag="one" />
             </StatusEffect>
             <Containable items="pulselaserboltmixed" />
+        </ItemContainer>
+    </Item>
+    <!--冷照明-->
+    <Item name="Cold Light" identifier="coldlight" nonplayerteaminteractable="True">
+        <Sprite texture="%ModDir%/images/PulseLaserCold.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
+        <Body width="15" height="15" density="10" />
+        <Projectile launchimpulse="20" StickToStructures="true" />
+        <LightComponent LightColor="0,162,232,255" Flicker="0.2" range="500" IsOn="true">
+            <StatusEffect type="OnActive" targettype="This" Condition="-20" />
+            <StatusEffect type="OnBroken" targettype="This">
+                <Remove />
+            </StatusEffect>
+        </LightComponent>
+    </Item>
+    <!--穿透激光-->
+    <Item identifier="pulselaserboltpiercing" nameidentifier="pulselaserbolt" variantof="pulselaserbolt">
+        <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
+        <Projectile penetration="0.5" maxtargetstohit="3">
+            <ParticleEmitter particle="tracerpulselasercold" />
+            <Attack structuredamage="25" targetforce="100" itemdamage="25" severlimbsprobability="1.0" penetration="0.5">
+                <Affliction identifier="explosiondamage" strength="30" />
+                <Affliction identifier="stun" strength="0.3" />
+            </Attack>
+            <StatusEffect type="OnImpact" target="UseTarget">
+                <ParticleEmitter particle="muzzleflashpulselasercold" />
+                <Explosion range="150.0" ballastfloradamage="75" structuredamage="25" itemdamage="250">
+                    <Affliction identifier="burn" strength="70" />
+                    <Affliction identifier="stun" strength="2" />
+                </Explosion>
+            </StatusEffect>
+            <StatusEffect type="OnImpact" target="UseTarget">
+                <SpawnItem identifiers="coldlight" spawnposition="This" aimspread="0" rotationtype="Collider" rotation="0" />
+            </StatusEffect>
+        </Projectile>
+    </Item>
+    <!--穿透激光弹药箱-->
+    <Item identifier="pulselaserammoboxpiercing" variantof="pulselaserammoboxtrilaser">
+        <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="192,0,95,78" />
+        <ItemContainer SpawnWithId="pulselaserboltpiercing">
+            <StatusEffect>
+                <SpawnItem identifiers="pulselaserboltpiercing" />
+            </StatusEffect>
+            <StatusEffect>
+                <RequiredItem items="pulselaserboltpiercing" />
+            </StatusEffect>
+            <Containable items="pulselaserboltpiercing" />
         </ItemContainer>
     </Item>
 </Items>

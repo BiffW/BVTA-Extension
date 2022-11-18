@@ -5,6 +5,7 @@
   <Item file="%ModDir%/new_flakcannon.xml" />
   <Item file="%ModDir%/new_pulselaser.xml" />
   <Item file="%ModDir%/new_railgun.xml" />
+  <Particles file="%ModDir%/ParticlePrefabsNew.xml" />
   <Text file="%ModDir%/Text/SimplifiedChinese.xml" />
   <Text file="%ModDir%/Text/English.xml" />
 </contentpackage>
