@@ -173,7 +173,7 @@
         <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="1" scalemax="2" />
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This" condition="0" setvalue="true" stackable="false" delay="1" />
-      <StatusEffect type="OnImpact" target="This" condition="-6.25" disabledeltatime="true">
+      <StatusEffect type="OnImpact" target="This" disabledeltatime="true">
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="25" velocitymin="1000" velocitymax="4000" scalemin="0.5" scalemax="1" />
         <ParticleEmitter particle="spark" copyentityangle="true" anglemin="0" anglemax="360" particleamount="50" velocitymin="500" velocitymax="2000" scalemin="1" scalemax="2" />
       </StatusEffect>
@@ -197,7 +197,7 @@
     </ItemComponent>
     <TriggerComponent triggeredby="Creature" force="0" radius="500" allowingameediting="false">
       <StatusEffect type="OnActive" target="Character" delay="0.5" stackable="false" disabledeltatime="true">
-        <Affliction identifier="acidburn" strength="0.5" />
+        <Affliction identifier="acidburn" strength="0.8" />
       </StatusEffect>
     </TriggerComponent>
   </Item>
@@ -239,14 +239,14 @@
     <Projectile characterusable="false" launchimpulse="0.0" maxtargetstohit="1" damagedoors="true">
       <StatusEffect type="OnActive" target="This" condition="-34">
         <ParticleEmitter particle="bubbles" />
-        <ParticleEmitter particle="fixfoam" anglemin="0" anglemax="360" velocitymin="1" velocitymax="2" scalemultiplier="4.0,4.0" particlespersecond="32" colormultiplier="144,255,144,127" />
+        <ParticleEmitter particle="fixfoam" anglemin="0" anglemax="360" velocitymin="1" velocitymax="2" scalemultiplier="4.0,4.0" particlespersecond="16" colormultiplier="144,255,144,127" />
       </StatusEffect>
       <StatusEffect type="OnImpact"></StatusEffect>
       <StatusEffect type="OnUse">
         <SpawnItem identifier="railgunshellacidemitter" spawnposition="This" count="6" spread="500" />
       </StatusEffect>
       <StatusEffect type="OnBroken" />
-      <StatusEffect type="OnActive" target="This" delay="0.05" stackable="false" disabledeltatime="true">
+      <StatusEffect type="OnActive" target="This" delay="0.1" stackable="false" disabledeltatime="true">
         <SpawnItem identifier="railgunshellacidemitter" spawnposition="This" spread="100" />
       </StatusEffect>
       <StatusEffect type="Always" target="This" allowwhenbroken="true" disabledeltatime="true">
