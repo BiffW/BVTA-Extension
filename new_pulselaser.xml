@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
-    <!--单束混合激光-->
-    <Item identifier="pulselaserboltmixed" nameidentifier="pulselaserbolt" variantof="pulselaserbolt">
+    <!--穿透激光-->
+    <Item identifier="pulselaserboltpiercing" nameidentifier="pulselaserbolt" variantof="pulselaserbolt">
         <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
-        <Projectile penetration="0.5">
-            <Attack structuredamage="75" targetforce="100" itemdamage="25" severlimbsprobability="1.0" penetration="0.5">
-                <Affliction identifier="explosiondamage" strength="60" />
-                <Affliction identifier="stun" strength="0.8" />
+        <Projectile penetration="0.5" maxtargetstohit="2">
+            <ParticleEmitter particle="tracerpulselasercold" />
+            <Attack structuredamage="50" targetforce="100" itemdamage="25" severlimbsprobability="1.0" penetration="0.5">
+                <Affliction identifier="explosiondamage" strength="45" />
+                <Affliction identifier="stun" strength="0.45" />
             </Attack>
             <StatusEffect type="OnImpact" target="UseTarget">
-                <Explosion range="225.0" ballastfloradamage="75" structuredamage="75" itemdamage="250">
-                    <Affliction identifier="burn" strength="150" />
-                    <Affliction identifier="stun" strength="5" />
-                </Explosion>
-            </StatusEffect>
-        </Projectile>
-    </Item>
-    <!-- 三联混合激光 -->
-    <Item identifier="pulselaserboltmixedtrilaser" nameidentifier="pulselaserbolt" variantof="pulselaserbolttrilaser" tags="pulselaserboltmixed">
-        <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
-        <Projectile penetration="0.5">
-            <Attack structuredamage="35" targetforce="70" itemdamage="17" severlimbsprobability="1.0" penetration="0.5">
-                <Affliction identifier="explosiondamage" strength="50" />
-                <Affliction identifier="stun" strength="0.3" />
-            </Attack>
-            <StatusEffect type="OnImpact" target="UseTarget">
-                <Explosion range="150.0" ballastfloradamage="35" structuredamage="35" itemdamage="200">
-                    <Affliction identifier="burn" strength="115" />
-                    <Affliction identifier="stun" strength="2" />
+                <ParticleEmitter particle="muzzleflashpulselasercold" />
+                <Explosion range="150.0" ballastfloradamage="75" structuredamage="50" itemdamage="250">
+                    <Affliction identifier="burn" strength="105" />
+                    <Affliction identifier="stun" strength="3" />
                 </Explosion>
             </StatusEffect>
         </Projectile>
@@ -36,7 +22,7 @@
     <Item identifier="pulselaserammoboxmixed" variantof="pulselaserammoboxtrilaser">
         <PreferredContainer primary="pulselaserammosource,ammoboxcontainer" mincondition="1" />
         <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.02" />
-        <Price baseprice="450" sold="false" displaynonempty="true" minleveldifficulty="35">
+        <Price baseprice="530" sold="false" displaynonempty="true" minleveldifficulty="35">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
             <Price storeidentifier="merchantcity" multiplier="1.2" />
             <Price storeidentifier="merchantresearch" multiplier="0.9" sold="true" minavailable="3" />
@@ -46,34 +32,32 @@
         </Price>
         <Deconstruct time="10">
             <Item identifier="fulgurium" mincondition="0.95" />
-            <Item identifier="lithium" mincondition="0.95" />
+            <Item identifier="fulgurium" mincondition="0.45" />
             <Item identifier="aluminium" />
         </Deconstruct>
         <Fabricate suitablefabricators="fabricator" requiredtime="25">
             <RequiredSkill identifier="weapons" level="70" />
-            <RequiredItem identifier="fulgurium" />
+            <RequiredItem identifier="fulgurium" amount="2" />
             <RequiredItem identifier="alienblood" />
             <RequiredItem identifier="aluminium" />
-            <RequiredItem identifier="lithium" />
         </Fabricate>
         <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="20">
             <RequiredSkill identifier="weapons" level="65" />
-            <RequiredItem identifier="fulgurium" />
+            <RequiredItem identifier="fulgurium" amount="2" />
             <RequiredItem identifier="alienblood" />
             <RequiredItem tag="pulselaserammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
-            <RequiredItem identifier="lithium" />
         </Fabricate>
         <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="0,160,95,78" />
-        <ItemContainer SpawnWithId="pulselaserboltmixed">
+        <ItemContainer SpawnWithId="pulselaserboltpiercing">
             <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-                <SpawnItem identifiers="pulselaserboltmixed" spawnposition="ThisInventory" />
+                <SpawnItem identifiers="pulselaserboltpiercing" spawnposition="ThisInventory" />
                 <Conditional hastag="one" />
             </StatusEffect>
             <StatusEffect type="OnUse" target="This" condition="-1.25" disabledeltatime="true">
-                <RequiredItem items="pulselaserboltmixed" type="Contained" />
+                <RequiredItem items="pulselaserboltpiercing,pulselaserbolttrilaser" type="Contained" />
             </StatusEffect>
             <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-                <SpawnItem identifiers="pulselaserboltmixedtrilaser" spawnposition="ThisInventory" />
+                <SpawnItem identifiers="pulselaserbolttrilaser" spawnposition="ThisInventory" />
                 <Conditional hastag="three" />
             </StatusEffect>
             <StatusEffect type="OnSpawn" target="this" tags="one" setvalue="true" />
@@ -83,43 +67,10 @@
             <StatusEffect type="OnUse" target="this" tags="three" setvalue="true" delay="0.1" stackable="false" checkconditionalalways="true">
                 <Conditional hastag="one" />
             </StatusEffect>
-            <Containable items="pulselaserboltmixed" />
+            <Containable items="pulselaserboltpiercing,pulselaserbolttrilaser" />
         </ItemContainer>
     </Item>
-    <!--冷照明-->
-    <Item name="Cold Light" identifier="coldlight" nonplayerteaminteractable="True">
-        <Sprite texture="%ModDir%/images/PulseLaserCold.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
-        <Body width="15" height="15" density="10" />
-        <Projectile launchimpulse="20" StickToStructures="true" />
-        <LightComponent LightColor="0,162,232,255" Flicker="0.2" range="500" IsOn="true">
-            <StatusEffect type="OnActive" targettype="This" Condition="-20" />
-            <StatusEffect type="OnBroken" targettype="This">
-                <Remove />
-            </StatusEffect>
-        </LightComponent>
-    </Item>
-    <!--穿透激光-->
-    <Item identifier="pulselaserboltpiercing" nameidentifier="pulselaserbolt" variantof="pulselaserbolt">
-        <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
-        <Projectile penetration="0.5" maxtargetstohit="3">
-            <ParticleEmitter particle="tracerpulselasercold" />
-            <Attack structuredamage="25" targetforce="100" itemdamage="25" severlimbsprobability="1.0" penetration="0.5">
-                <Affliction identifier="explosiondamage" strength="30" />
-                <Affliction identifier="stun" strength="0.3" />
-            </Attack>
-            <StatusEffect type="OnImpact" target="UseTarget">
-                <ParticleEmitter particle="muzzleflashpulselasercold" />
-                <Explosion range="150.0" ballastfloradamage="75" structuredamage="25" itemdamage="250">
-                    <Affliction identifier="burn" strength="70" />
-                    <Affliction identifier="stun" strength="2" />
-                </Explosion>
-            </StatusEffect>
-            <StatusEffect type="OnImpact" target="UseTarget">
-                <SpawnItem identifiers="coldlight" spawnposition="This" aimspread="0" rotationtype="Collider" rotation="0" />
-            </StatusEffect>
-        </Projectile>
-    </Item>
-    <!--穿透激光弹药箱-->
+    <!--穿透激光燃料箱-->
     <Item identifier="pulselaserammoboxpiercing" variantof="pulselaserammoboxtrilaser">
         <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="192,0,95,78" />
         <ItemContainer SpawnWithId="pulselaserboltpiercing">
