@@ -1,6 +1,6 @@
 语言: 简体中文, English
 
-这个合集包含了社区modder制作的弹药。
+这个合集包含了我制作的和一部分其他mod的弹药。
 我做了点修改使其兼容BVTA
 
 [h1]
@@ -17,6 +17,10 @@
 连射炮
   - 爆破弹药箱 (EK Armory by Videogames)
   - 霰弹弹药箱 (by Zyleand)
+
+脉冲激光
+  - 穿透激光燃料箱
+  - 混合激光燃料箱
 
 电磁枪
   - 震撼弹药箱
@@ -48,6 +52,10 @@ Railgun
 Chaingun
   - Chaingun Explosive Ammunition Box (from EK Armory by Videogames)
   - Chaingun Scattering Ammunition Box (by Zyleand)
+
+Pulse Laser
+  - Piercing Pulse Laser Fuel Box
+  - Mixed Pulse Laser Fuel Box
 
 Coilgun
   - Coilgun Stunner Ammunition Box

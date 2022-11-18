@@ -14,6 +14,10 @@ Chaingun
   - Chaingun Explosive Ammunition Box from EK Armory by Videogames
   - Chaingun Scattering Ammunition Box by Zyleand
 
+Pulse Laser
+  - Piercing Pulse Laser Fuel Box
+  - Mixed Pulse Laser Fuel Box
+
 Coilgun
   - Coilgun Stunner Ammunition Box
 

@@ -1,3 +1,6 @@
+11 月 18 日
+added mixed fuel box and piercing laser box for pulser laser.
+
 11 月 9 日
 reduced particle amount to optimize shock flak bolt and acid mist shell.
 
