@@ -87,7 +87,7 @@
     <Body width="170" height="10" density="10" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
     <Projectile characterusable="false" launchimpulse="0.0" spread="10" removeonhit="true" damagedoors="true">
-      <Attack structuredamage="1" itemdamage="5" severlimbsprobability="0.5">
+      <Attack structuredamage="4" itemdamage="5" severlimbsprobability="0.5">
         <Affliction identifier="gunshotwound" strength="8" />
         <Affliction identifier="bleeding" strength="2" />
         <Affliction identifier="stun" strength="0.1" />

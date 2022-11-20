@@ -39,9 +39,9 @@
     <Body width="170" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
     <Projectile characterusable="false" launchimpulse="22.0" impulsespread="0.2" damagedoors="true">
-      <Attack structuredamage="0" itemdamage="0" severlimbsprobability="0.5" penetration="0.1">
-        <Affliction identifier="lacerations" strength="3" />
-        <Affliction identifier="bleeding" strength="2" />
+      <Attack structuredamage="0" itemdamage="10" severlimbsprobability="0.4" penetration="0.1">
+        <Affliction identifier="lacerations" strength="16" />
+        <Affliction identifier="bleeding" strength="6" />
         <Affliction identifier="stun" strength="0.2" />
         <Affliction identifier="stun" strength="0.6" probability="0.2" />
       </Attack>
@@ -52,23 +52,16 @@
         <Remove />
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This">
-        <Use />
+        <ParticleEmitter particle="ElectricShock" copyentityangle="true" anglemin="0" anglemax="360" particleamount="2" velocitymin="100" velocitymax="2000" scalemin="0.25" scalemax="0.5" />
+        <Explosion range="250.0" ballastfloradamage="0" structuredamage="0" itemdamage="0" force="10.0" flames="false" smoke="false" sparks="false" underwaterbubble="false" flashcolor="255,0,0,255" >
+          <Affliction identifier="burn" strength="22" />
+          <Affliction identifier="stun" strength="3" />
+        </Explosion>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove />
       </StatusEffect>
     </Projectile>
-    <ElectricalDischarger Range="1000" RangeMultiplierInWalls="0.1" outdoorsonly="true" powerconsumption="0">
-      <Attack targetimpulse="50">
-        <Affliction identifier="stun" strength="4" />
-        <Affliction identifier="burn" strength="10" />
-      </Attack>
-      <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-        <sound file="Content/Items/Weapons/WEAPONS_electricalDischarge1.ogg" range="2000" selectionmode="random" />
-        <sound file="Content/Items/Weapons/WEAPONS_electricalDischarge2.ogg" range="2000" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This" condition="-100" delay="0.25" disabledeltatime="true" />
-    </ElectricalDischarger>
   </Item>
   <!--高射炮电击弹药箱-->
   <Item name="" identifier="flakcannonshockammobox" variantof="flakcannonammoboxphysicorium">
