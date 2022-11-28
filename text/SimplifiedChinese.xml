@@ -21,7 +21,7 @@
   <entityname.flakcannondirectionalpiercingammobox>集束穿甲破片弹药箱</entityname.flakcannondirectionalpiercingammobox>
   <entitydescription.flakcannondirectionalpiercingammobox>一箱沉重的聚能破甲弹药，可供破片加农炮使用。可穿透船壳和装甲对敌人造成伤害。</entitydescription.flakcannondirectionalpiercingammobox>
   <entityname.pulselaserammoboxmixed>双模式脉冲激光燃料箱</entityname.pulselaserammoboxmixed>
-  <entitydescription.pulselaserammoboxmixed>两种激光燃料箱的组合体，每次射击后切换模式，可供发射80次。</entitydescription.pulselaserammoboxmixed>
+  <entitydescription.pulselaserammoboxmixed>两种雷素激光燃料箱的组合体，每次射击后切换模式，装有两倍的燃料量。</entitydescription.pulselaserammoboxmixed>
   <entityname.pulselaserammoboxpiercing>穿透脉冲激光燃料箱</entityname.pulselaserammoboxpiercing>
   <entitydescription.pulselaserammoboxpiercing>一个装好化学药剂和聚焦透镜的箱子，可以引发强力的穿透激光，打击墙壁后的目标。</entitydescription.pulselaserammoboxpiercing>
 </infotexts>

@@ -53,7 +53,7 @@
                 <SpawnItem identifiers="pulselaserboltpiercing" spawnposition="ThisInventory" />
                 <Conditional hastag="one" />
             </StatusEffect>
-            <StatusEffect type="OnUse" target="This" condition="-1.25" disabledeltatime="true">
+            <StatusEffect type="OnUse" target="This" condition="*0.5" disabledeltatime="true">
                 <RequiredItem items="pulselaserboltpiercing,pulselaserbolttrilaser" type="Contained" />
             </StatusEffect>
             <StatusEffect type="OnUse" target="This" disabledeltatime="true">

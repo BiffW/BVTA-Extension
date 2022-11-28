@@ -4,8 +4,8 @@
   <Item identifier="railgunshelldepletedfuel" variantof="railgunshell">
     <PreferredContainer primary="railgunammoloader" spawnprobability="0" />
     <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
-    <PreferredContainer secondary="wreckrailgunloader" maxamount="1" spawnprobability="0.1" />
-    <PreferredContainer secondary="wreckrailgunammocontainer" amount="1" spawnprobability="0.1" />
+    <PreferredContainer secondary="wreckrailgunloader" maxamount="1" spawnprobability="0.02" />
+    <PreferredContainer secondary="wreckrailgunammocontainer" amount="1" spawnprobability="0.05" />
     <Price baseprice="170" minleveldifficulty="25">
       <Price sold="false" />
       <Price minavailable="3" />
@@ -42,7 +42,7 @@
   <Item identifier="railgunshellaphep" variantof="railgunshell">
     <PreferredContainer primary="railgunammoloader" spawnprobability="0" />
     <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
-    <PreferredContainer secondary="wreckrailgunloader" minamount="1" maxamount="2" spawnprobability="0.05" />
+    <PreferredContainer secondary="wreckrailgunloader" minamount="1" maxamount="2" spawnprobability="0.01" />
     <PreferredContainer secondary="wreckrailgunammocontainer" amount="1" spawnprobability="0.05" />
     <Price baseprice="186" minleveldifficulty="25">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" sold="false" />

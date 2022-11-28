@@ -154,27 +154,27 @@
     <PreferredContainer primary="flakcannonammoloader" spawnprobability="0" />
     <PreferredContainer primary="ammoboxcontainer" />
     <PreferredContainer secondary="wreckflakcannonloader" />
-    <PreferredContainer secondary="wreckammoboxcontainer" spawnprobability="0.05" />
+    <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.02" />
     <Price baseprice="250" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.3" />
-      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" sold="true" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" sold="false" />
       <Price storeidentifier="merchantresearch" multiplier="1.3" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="3" sold="true" />
-      <Price storeidentifier="merchantmine" multiplier="1.2" />
-      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" sold="true" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="4" sold="true" />
+      <Price storeidentifier="merchantmine" multiplier="1.0" minavailable="3" sold="true" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="4" sold="true" />
     </Price>
     <Deconstruct>
       <Item identifier="titaniumaluminiumalloy" mincondition="0.95" />
       <Item identifier="aluminium" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
-      <RequiredSkill level="30" />
+      <RequiredSkill identifier="weapons" level="30" />
       <RequiredItem identifier="titaniumaluminiumalloy" />
       <RequiredItem identifier="phosphorus" />
       <RequiredItem identifier="aluminium" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
-      <RequiredSkill level="25" />
+      <RequiredSkill identifier="weapons" level="25" />
       <RequiredItem identifier="titaniumaluminiumalloy" />
       <RequiredItem identifier="phosphorus" />
       <RequiredItem identifier="" tag="flakcannonammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />

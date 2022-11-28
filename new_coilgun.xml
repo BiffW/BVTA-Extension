@@ -35,11 +35,11 @@
   <!--电磁枪震撼弹药箱-->
   <Item identifier="coilgunammoboxstun" variantof="coilgunammoboxpiercing">
     <PreferredContainer primary="coilgunammoloader,ammoboxcontainer" />
-    <PreferredContainer secondary="wreckcoilgunloader" spawnprobability="0.02" />
-    <PreferredContainer secondary="wreckammoboxcontainer" spawnprobability="0.04" />
-    <Price baseprice="200" minleveldifficulty="25">
+    <PreferredContainer secondary="wreckcoilgunloader" amount="1" spawnprobability="0.02" />
+    <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.04" />
+    <Price baseprice="200" displaynonempty="true" minleveldifficulty="25">
       <Price storeidentifier="merchantoutpost" multiplier="1.3" />
-      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="2" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" />
       <Price storeidentifier="merchantresearch" multiplier="1.3" />
       <Price storeidentifier="merchantmilitary" multiplier="0.9" maxavailable="4" minleveldifficulty="15" />
       <Price storeidentifier="merchantmine" multiplier="1.2" />
@@ -52,13 +52,13 @@
       <Item identifier="aluminium" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
-      <RequiredSkill level="35" />
+      <RequiredSkill identifier="weapons" level="35" />
       <RequiredItem identifier="flashpowder" />
       <RequiredItem identifier="steel" />
       <RequiredItem identifier="aluminium" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
-      <RequiredSkill level="30" />
+      <RequiredSkill identifier="weapons" level="30" />
       <RequiredItem identifier="flashpowder" />
       <RequiredItem identifier="steel" />
       <RequiredItem identifier="" tag="coilgunammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
