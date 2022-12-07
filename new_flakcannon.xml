@@ -19,8 +19,8 @@
         <Explosion range="30.0" structuredamage="20" camerashake="25.0" camerashakerange="2000" force="10.0" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.3">
           <Affliction identifier="explosiondamage" strength="20" />
         </Explosion>
-        <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" volume="5" selectionmode="Random" range="20000" dontmuffle="true" />
-        <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" volume="5" selectionmode="Random" range="20000" dontmuffle="true" />
+        <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" volume="2" selectionmode="Random" range="20000" />
+        <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" volume="2" selectionmode="Random" range="20000" />
         <ParticleEmitter particle="shrapnel" anglemin="0" anglemax="360" particleamount="50" velocitymin="100" velocitymax="2000" scalemin="1" scalemax="2" />
         <RemoveItem />
       </StatusEffect>
@@ -73,7 +73,7 @@
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
       <RequiredItem identifier="fulgurium" />
       <RequiredItem identifier="phosphorus" />
-      <RequiredItem identifier="" tag="flakcannonammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+      <RequiredItem identifier="" tag="flakcannonammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
     </Fabricate>
     <Deconstruct>
       <Item identifier="fulgurium" mincondition="0.95" />
@@ -109,9 +109,9 @@
         <Explosion range="30.0" structuredamage="20" camerashake="25.0" camerashakerange="2000" force="10.0" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.3">
           <Affliction identifier="explosiondamage" strength="20" />
         </Explosion>
-        <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" volume="5" selectionmode="Random" range="20000" dontmuffle="true" />
-        <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" volume="5" selectionmode="Random" range="20000" dontmuffle="true" />
-        <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" volume="5" selectionmode="Random" range="20000" dontmuffle="true" />
+        <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" volume="2" selectionmode="Random" range="20000" />
+        <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" volume="2" selectionmode="Random" range="20000" />
+        <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" volume="2" selectionmode="Random" range="20000" />
         <ParticleEmitter particle="shrapnel" anglemin="0" anglemax="360" particleamount="50" velocitymin="100" velocitymax="2000" scalemin="1" scalemax="2" />
         <RemoveItem />
       </StatusEffect>
@@ -177,7 +177,7 @@
       <RequiredSkill identifier="weapons" level="25" />
       <RequiredItem identifier="titaniumaluminiumalloy" />
       <RequiredItem identifier="phosphorus" />
-      <RequiredItem identifier="" tag="flakcannonammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+      <RequiredItem identifier="" tag="flakcannonammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" depth="0.54" sourcerect="96,160,95,78" origin="0.5,0.5" />
     <ItemContainer>

@@ -68,7 +68,7 @@
       <RequiredSkill identifier="weapons" level="45" />
       <RequiredItem identifier="c4block" amount="4" />
       <RequiredItem identifier="steel" />
-      <RequiredItem identifier="" tag="chaingunammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+      <RequiredItem identifier="" tag="chaingunammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="0,0,95,78" />
     <ItemContainer SpawnWithId="chaingunboltexplosive">
@@ -142,7 +142,7 @@
       <RequiredSkill identifier="weapons" level="35" />
       <RequiredItem identifier="lead" amount="3" />
       <RequiredItem identifier="steel" amount="2" />
-      <RequiredItem identifier="" tag="chaingunammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+      <RequiredItem identifier="" tag="chaingunammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="96,0,95,78" />
     <ItemContainer capacity="6" SpawnWithId="chaingunboltspread,chaingunboltspread,chaingunboltspread,chaingunboltspread,chaingunboltspread,chaingunboltspread">

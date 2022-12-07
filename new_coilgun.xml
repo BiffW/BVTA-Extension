@@ -61,7 +61,7 @@
       <RequiredSkill identifier="weapons" level="30" />
       <RequiredItem identifier="flashpowder" />
       <RequiredItem identifier="steel" />
-      <RequiredItem identifier="" tag="coilgunammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+      <RequiredItem identifier="" tag="coilgunammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="0,80,95,78" />
     <ItemContainer SpawnWithId="coilgunboltstun">

@@ -169,7 +169,7 @@
         <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="1" velocitymin="0" velocitymax="50" scalemin="0.5" scalemax="1.5" />
         <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="1" scalemax="2" />
       </StatusEffect>
-      <StatusEffect type="OnImpact" target="This" condition="0" setvalue="true" stackable="false" delay="1" />
+      <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true" stackable="false" delay="1.7" />
       <StatusEffect type="OnImpact" target="This" disabledeltatime="true">
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="25" velocitymin="1000" velocitymax="4000" scalemin="0.5" scalemax="1" />
         <ParticleEmitter particle="spark" copyentityangle="true" anglemin="0" anglemax="360" particleamount="50" velocitymin="500" velocitymax="2000" scalemin="1" scalemax="2" />
@@ -180,15 +180,14 @@
     </Projectile>
   </Item>
   <!--酸雾生成器-->
-  <Item name="Railgun Acid Emitter" identifier="railgunshellacidemitter" Scale="1" tags="" sonarsize="0" hideinmenus="true" impacttolerance="0.001" health="10">
+  <Item name="Railgun Acid Emitter" identifier="railgunshellacidemitter" Scale="1" tags="" sonarsize="0" hideinmenus="true" impacttolerance="0.001" nonplayerteaminteractable="true">
     <Body radius="200" density="10" />
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,2,2" depth="0.55" origin="0.5,0.5" />
     <ItemComponent>
       <StatusEffect type="Always" target="This" lifetime="1">
         <ParticleEmitter particle="acidmist" particlespersecond="16" scalemin="1.8" scalemax="2" velocitymin="50" velocitymax="150" anglemin="0" anglemax="360" LifeTimeMultiplier="0.32" copyentityangle="false" />
       </StatusEffect>
-      <StatusEffect type="Always" target="This" condition="-1" />
-      <StatusEffect type="OnBroken" target="This">
+      <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true" delay="10" stackable="false">
         <Remove />
       </StatusEffect>
     </ItemComponent>
