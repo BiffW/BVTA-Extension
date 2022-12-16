@@ -1,3 +1,6 @@
+11 月 28 日
+small balance changes to sell amount and spawn probability
+
 11 月 18 日
 added mixed fuel box and piercing laser box for pulser laser.
 

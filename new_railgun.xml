@@ -4,8 +4,8 @@
   <Item identifier="railgunshelldepletedfuel" variantof="railgunshell">
     <PreferredContainer primary="railgunammoloader" spawnprobability="0" />
     <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
-    <PreferredContainer secondary="wreckrailgunloader" maxamount="1" spawnprobability="0.1" />
-    <PreferredContainer secondary="wreckrailgunammocontainer" amount="1" spawnprobability="0.1" />
+    <PreferredContainer secondary="wreckrailgunloader" maxamount="1" spawnprobability="0.02" />
+    <PreferredContainer secondary="wreckrailgunammocontainer" amount="1" spawnprobability="0.05" />
     <Price baseprice="170" minleveldifficulty="25">
       <Price sold="false" />
       <Price minavailable="3" />
@@ -42,7 +42,7 @@
   <Item identifier="railgunshellaphep" variantof="railgunshell">
     <PreferredContainer primary="railgunammoloader" spawnprobability="0" />
     <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
-    <PreferredContainer secondary="wreckrailgunloader" minamount="1" maxamount="2" spawnprobability="0.05" />
+    <PreferredContainer secondary="wreckrailgunloader" minamount="1" maxamount="2" spawnprobability="0.01" />
     <PreferredContainer secondary="wreckrailgunammocontainer" amount="1" spawnprobability="0.05" />
     <Price baseprice="186" minleveldifficulty="25">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" sold="false" />
@@ -74,12 +74,12 @@
     <Sprite texture="%ModDir:BVTA Extension%/images/APHE.png" sourcerect="0,0,214,32" />
     <Projectile maxtargetstohit="2">
       <Attack structuredamage="50"></Attack>
-      <StatusEffect type="OnActive"></StatusEffect>
-      <StatusEffect type="OnImpact">
+      <StatusEffect type="OnActive" condition="-10"></StatusEffect>
+      <StatusEffect type="OnImpact" Condition="-50" setvalue="false" disabledeltatime="true">
         <clear />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
-        <clear />
+      <StatusEffect type="OnBroken" target="Contained">
+        <Use />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" disabledeltatime="true">
         <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" selectionmode="Random" range="50000" />
@@ -103,11 +103,8 @@
         <ParticleEmitter particle="spark" copyentityangle="true" anglemin="90" anglemax="-90" particleamount="50" velocitymin="750" velocitymax="2500" scalemin="2" scalemax="4" />
         <Remove />
       </StatusEffect>
-      <StatusEffect type="OnBroken" target="Contained" disabledeltatime="true">
-        <Use />
-      </StatusEffect>
-      <StatusEffect type="Always" target="This" allowwhenbroken="true" disabledeltatime="true">
-        <!--somehow the previous "<Remove />" does not apply-->
+      <!--somehow the previous "<Remove />" does not apply-->
+      <StatusEffect type="OnNotContained" target="This" allowwhenbroken="true" disabledeltatime="true">
         <Remove />
         <Conditional Condition="lt 1" />
       </StatusEffect>
@@ -172,7 +169,7 @@
         <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="1" velocitymin="0" velocitymax="50" scalemin="0.5" scalemax="1.5" />
         <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="1" scalemax="2" />
       </StatusEffect>
-      <StatusEffect type="OnImpact" target="This" condition="0" setvalue="true" stackable="false" delay="1" />
+      <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true" stackable="false" delay="1.7" />
       <StatusEffect type="OnImpact" target="This" disabledeltatime="true">
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="25" velocitymin="1000" velocitymax="4000" scalemin="0.5" scalemax="1" />
         <ParticleEmitter particle="spark" copyentityangle="true" anglemin="0" anglemax="360" particleamount="50" velocitymin="500" velocitymax="2000" scalemin="1" scalemax="2" />
@@ -183,15 +180,14 @@
     </Projectile>
   </Item>
   <!--酸雾生成器-->
-  <Item name="Railgun Acid Emitter" identifier="railgunshellacidemitter" Scale="1" tags="" sonarsize="0" hideinmenus="true" impacttolerance="0.001" health="10">
+  <Item name="Railgun Acid Emitter" identifier="railgunshellacidemitter" Scale="1" tags="" sonarsize="0" hideinmenus="true" impacttolerance="0.001" nonplayerteaminteractable="true">
     <Body radius="200" density="10" />
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,2,2" depth="0.55" origin="0.5,0.5" />
     <ItemComponent>
       <StatusEffect type="Always" target="This" lifetime="1">
         <ParticleEmitter particle="acidmist" particlespersecond="16" scalemin="1.8" scalemax="2" velocitymin="50" velocitymax="150" anglemin="0" anglemax="360" LifeTimeMultiplier="0.32" copyentityangle="false" />
       </StatusEffect>
-      <StatusEffect type="Always" target="This" condition="-1" />
-      <StatusEffect type="OnBroken" target="This">
+      <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true" delay="10" stackable="false">
         <Remove />
       </StatusEffect>
     </ItemComponent>
@@ -241,16 +237,20 @@
         <ParticleEmitter particle="bubbles" />
         <ParticleEmitter particle="fixfoam" anglemin="0" anglemax="360" velocitymin="1" velocitymax="2" scalemultiplier="4.0,4.0" particlespersecond="16" colormultiplier="144,255,144,127" />
       </StatusEffect>
-      <StatusEffect type="OnImpact"></StatusEffect>
-      <StatusEffect type="OnUse">
+      <StatusEffect type="OnImpact">
         <SpawnItem identifier="railgunshellacidemitter" spawnposition="This" count="6" spread="500" />
       </StatusEffect>
-      <StatusEffect type="OnBroken" />
+      <StatusEffect type="OnBroken" target="Contained" >
+        <Use />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
       <StatusEffect type="OnActive" target="This" delay="0.1" stackable="false" disabledeltatime="true">
         <SpawnItem identifier="railgunshellacidemitter" spawnposition="This" spread="100" />
       </StatusEffect>
-      <StatusEffect type="Always" target="This" allowwhenbroken="true" disabledeltatime="true">
-        <!--somehow the previous "<Remove />" does not apply-->
+      <!--somehow the previous "<Remove />" does not apply-->
+      <StatusEffect type="OnNotContained" target="This" allowwhenbroken="true" disabledeltatime="true">
         <Remove />
         <Conditional Condition="lt 1" />
       </StatusEffect>

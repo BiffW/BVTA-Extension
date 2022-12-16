@@ -45,7 +45,7 @@
             <RequiredSkill identifier="weapons" level="65" />
             <RequiredItem identifier="fulgurium" amount="2" />
             <RequiredItem identifier="alienblood" />
-            <RequiredItem identifier="" tag="pulselaserammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+            <RequiredItem identifier="" tag="pulselaserammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
         </Fabricate>
         <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="0,160,95,78" />
         <ItemContainer SpawnWithId="pulselaserboltpiercing">
@@ -53,7 +53,7 @@
                 <SpawnItem identifiers="pulselaserboltpiercing" spawnposition="ThisInventory" />
                 <Conditional hastag="one" />
             </StatusEffect>
-            <StatusEffect type="OnUse" target="This" condition="-1.25" disabledeltatime="true">
+            <StatusEffect type="OnUse" target="This" condition="*0.5" disabledeltatime="true">
                 <RequiredItem items="pulselaserboltpiercing,pulselaserbolttrilaser" type="Contained" />
             </StatusEffect>
             <StatusEffect type="OnUse" target="This" disabledeltatime="true">
@@ -82,7 +82,7 @@
             <RequiredSkill identifier="weapons" level="60" />
             <RequiredItem identifier="fulgurium" />
             <RequiredItem identifier="alienblood" />
-            <RequiredItem identifier="" tag="pulselaserammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+            <RequiredItem identifier="" tag="pulselaserammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
         </Fabricate>
         <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="192,0,95,78" />
         <ItemContainer SpawnWithId="pulselaserboltpiercing">

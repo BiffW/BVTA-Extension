@@ -4,7 +4,7 @@
 我做了点修改使其兼容BVTA
 
 [h1]
-需要安装BVTA或BVTA RP 才能正常使用！
+已更新，不再依赖BVTA或BVTA RP，可以单独使用！
 [/h1]
 
 轨道炮
@@ -39,7 +39,7 @@ This is a collection of interesting ammunitions made by community modders.
 I did some changes to make them compatible with Better Vanilla Turret Ammo. 
 
 [h1]
-Either BVTA or BVTA RP must be installed!
+Updated. Should no longer need BVTA or BVTA RP. Request for feedback.
 [/h1]
 
 Railgun

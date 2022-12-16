@@ -40,14 +40,14 @@
   <!--连射炮爆破弹药箱-->
   <Item identifier="chaingunammoboxexplosive" variantof="chaingunammoboxphysicorium">
     <PreferredContainer primary="chaingunammosource,ammoboxcontainer" />
-    <PreferredContainer secondary="wreckammoboxcontainer" spawnprobability="0.03" />
-    <Price baseprice="750" minleveldifficulty="25">
+    <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.03" />
+    <Price baseprice="750" sold="false" displaynonempty="true" minleveldifficulty="25">
       <Price storeidentifier="merchantoutpost" multiplier="1.3" />
       <Price storeidentifier="merchantcity" multiplier="1.2" />
-      <Price storeidentifier="merchantresearch" multiplier="1.3" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="2" />
-      <Price storeidentifier="merchantmine" multiplier="1.2" />
-      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantresearch" multiplier="1.3" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="2" sold="true" />
+      <Price storeidentifier="merchantmine" multiplier="1.0" minavailable="2" sold="true" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="2" sold="true" />
     </Price>
     <Deconstruct>
       <Item identifier="c4block" mincondition="0.95" />
@@ -68,7 +68,7 @@
       <RequiredSkill identifier="weapons" level="45" />
       <RequiredItem identifier="c4block" amount="4" />
       <RequiredItem identifier="steel" />
-      <RequiredItem identifier="" tag="chaingunammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+      <RequiredItem identifier="" tag="chaingunammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="0,0,95,78" />
     <ItemContainer SpawnWithId="chaingunboltexplosive">
@@ -87,7 +87,7 @@
     <Body width="170" height="10" density="10" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
     <Projectile characterusable="false" launchimpulse="0.0" spread="10" removeonhit="true" damagedoors="true">
-      <Attack structuredamage="1" itemdamage="5" severlimbsprobability="0.5">
+      <Attack structuredamage="4" itemdamage="5" severlimbsprobability="0.5">
         <Affliction identifier="gunshotwound" strength="8" />
         <Affliction identifier="bleeding" strength="2" />
         <Affliction identifier="stun" strength="0.1" />
@@ -113,14 +113,14 @@
   <Item identifier="chaingunammoboxspread" variantof="chaingunammobox">
     <PreferredContainer primary="chaingunammosource" spawnprobability="0" />
     <PreferredContainer primary="ammoboxcontainer" />
-    <PreferredContainer secondary="wreckammoboxcontainer" spawnprobability="0.07" />
-    <Price baseprice="200" minavailable="1">
+    <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.07" />
+    <Price baseprice="150" minavailable="1" displaynonempty="true">
       <Price storeidentifier="merchantoutpost" multiplier="1.3" />
       <Price storeidentifier="merchantcity" multiplier="1.2" />
       <Price storeidentifier="merchantresearch" multiplier="1.3" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="2" />
-      <Price storeidentifier="merchantmine" multiplier="1.2" />
-      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="3" />
+      <Price storeidentifier="merchantmine" multiplier="1.0" minavailable="2" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" />
     </Price>
     <Deconstruct>
       <Item identifier="lead" mincondition="0.95" />
@@ -142,7 +142,7 @@
       <RequiredSkill identifier="weapons" level="35" />
       <RequiredItem identifier="lead" amount="3" />
       <RequiredItem identifier="steel" amount="2" />
-      <RequiredItem identifier="" tag="chaingunammo" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+      <RequiredItem identifier="" tag="chaingunammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="96,0,95,78" />
     <ItemContainer capacity="6" SpawnWithId="chaingunboltspread,chaingunboltspread,chaingunboltspread,chaingunboltspread,chaingunboltspread,chaingunboltspread">
