@@ -87,10 +87,10 @@
     <Body width="170" height="10" density="10" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
     <Projectile characterusable="false" launchimpulse="0.0" spread="10" removeonhit="true" damagedoors="true">
-      <Attack structuredamage="4" itemdamage="5" severlimbsprobability="0.5">
-        <Affliction identifier="gunshotwound" strength="8" />
-        <Affliction identifier="bleeding" strength="2" />
-        <Affliction identifier="stun" strength="0.1" />
+      <Attack structuredamage="8" itemdamage="10" severlimbsprobability="0.5">
+        <Affliction identifier="gunshotwound" strength="16" />
+        <Affliction identifier="bleeding" strength="6" />
+        <Affliction identifier="stun" strength="0.3" />
       </Attack>
       <StatusEffect type="OnActive" target="This" lifetime="0.5">
         <ParticleEmitter particle="chainguntrail" copyentityangle="true" particlespersecond="10" initialdelay="0.05" colormultiplier="240,200,50" />
@@ -145,9 +145,9 @@
       <RequiredItem identifier="" tag="chaingunammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="96,0,95,78" />
-    <ItemContainer capacity="6" SpawnWithId="chaingunboltspread,chaingunboltspread,chaingunboltspread,chaingunboltspread,chaingunboltspread,chaingunboltspread">
+    <ItemContainer capacity="3" SpawnWithId="chaingunboltspread,chaingunboltspread,chaingunboltspread">
       <StatusEffect>
-        <SpawnItem identifiers="chaingunboltspread" count="6" />
+        <SpawnItem identifiers="chaingunboltspread" count="3" />
       </StatusEffect>
       <StatusEffect>
         <RequiredItem items="chaingunboltspread" />

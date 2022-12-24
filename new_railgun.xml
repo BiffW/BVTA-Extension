@@ -31,10 +31,11 @@
     <Sprite texture="%ModDir:BVTA Extension%/images/railgunshelldf.png" sourcerect="0,0,214,32" />
     <Projectile>
       <Attack penetration="*1.25">
-        <Affliction identifier="explosiondamage" strength="1500" />
-        <Affliction identifier="bleeding" strength="100" />
-        <Affliction identifier="radiationsickness" strength="100" />
-        <Affliction identifier="stun" strength="22.5" />
+        <Affliction identifier="explosiondamage" strength="*2" />
+        <Affliction identifier="bleeding" strength="*2" />
+        <Affliction identifier="stun" strength="*1.5" />
+        <Affliction identifier="bleeding" strength="10" multiplybymaxvitality="true" />
+        <Affliction identifier="radiationsickness" strength="50" multiplybymaxvitality="true" />
       </Attack>
     </Projectile>
   </Item>
@@ -87,29 +88,28 @@
         <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" selectionmode="Random" range="50000" />
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="50" velocitymin="100" velocitymax="2000" scalemin="1.0" scalemax="1.0" />
         <Explosion range="250" structuredamage="400" />
-        <Explosion range="500" itemdamage="150" force="50.0" severlimbsprobability="5" decal="explosion" decalsize="0.97" penetration="0.5">
-          <Affliction identifier="explosiondamage" strength="1250" />
-          <Affliction identifier="lacerations" strength="500" />
-          <Affliction identifier="bleeding" strength="500" />
-          <Affliction identifier="stun" strength="12.5" />
+        <Explosion range="500" itemdamage="150" force="50.0" severlimbsprobability="5" decal="explosion" decalsize="0.6" penetration="0.5">
+          <Affliction identifier="explosiondamage" strength="625" />
+          <Affliction identifier="lacerations" strength="250" />
+          <Affliction identifier="bleeding" strength="250" />
+          <Affliction identifier="stun" strength="7.5" />
+          <Affliction identifier="explosiondamage" strength="12" multiplybymaxvitality="true" />
         </Explosion>
         <Explosion range="707" force="25.0" severlimbsprobability="1" penetration="0.2">
           <Affliction identifier="explosiondamage" strength="125" />
           <Affliction identifier="lacerations" strength="50" />
           <Affliction identifier="stun" strength="2.5" />
+          <Affliction identifier="explosiondamage" strength="1.2" multiplybymaxvitality="true" />
         </Explosion>
         <Explosion range="1000.0" ballastfloradamage="200" force="12.5" />
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="90" anglemax="-90" particleamount="25" velocitymin="2500" velocitymax="5000" scalemin="1" scalemax="2" />
         <ParticleEmitter particle="spark" copyentityangle="true" anglemin="90" anglemax="-90" particleamount="50" velocitymin="750" velocitymax="2500" scalemin="2" scalemax="4" />
-        <Remove />
       </StatusEffect>
-      <!--somehow the previous "<Remove />" does not apply-->
-      <StatusEffect type="OnNotContained" target="This" allowwhenbroken="true" disabledeltatime="true">
+      <StatusEffect type="OnBroken" target="This">
         <Remove />
-        <Conditional Condition="lt 1" />
       </StatusEffect>
     </Projectile>
-    <MotionSensor rangex="500" rangey="500" canbeselected="false" IgnoreDead="true" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
+    <MotionSensor range="400" canbeselected="false" IgnoreDead="true" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
       <StatusEffect type="Always" target="This" condition="-100" delay="0.075" comparison="and" disabledeltatime="true">
         <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
         <Conditional Condition="lt 99" />
@@ -159,10 +159,11 @@
     <Sprite texture="%ModDir:BVTA Extension%/images/APFSDS.png" sourcerect="85,37,128,20" depth="0.55" />
     <Body width="125" height="18" density="35" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
-    <Projectile characterusable="false" launchimpulse="240.0" maxtargetstohit="16" damagedoors="true">
+    <Projectile characterusable="false" launchimpulse="240.0" maxtargetstohit="8" damagedoors="true">
       <Attack structuredamage="50" itemdamage="50" severlimbsprobability="25" penetration="0.875" targetforce="60">
-        <Affliction identifier="lacerations" strength="168" />
-        <Affliction identifier="bleeding" strength="500" />
+        <Affliction identifier="lacerations" strength="200" />
+        <Affliction identifier="bleeding" strength="50" />
+        <Affliction identifier="bleeding" strength="10" multiplybymaxvitality="true" />
         <Affliction identifier="stun" strength="5" />
       </Attack>
       <StatusEffect type="OnActive" target="This" lifetime="1">
@@ -217,15 +218,13 @@
       <Item identifier="sulphuricacid" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="25">
-      <RequiredSkill identifier="weapons" level="25" />
-      <RequiredSkill identifier="medical" level="35" />
+      <RequiredSkill identifier="weapons" level="40" />
       <RequiredItem identifier="steel" />
       <RequiredItem identifier="sulphuricacid" />
       <RequiredItem identifier="alienblood" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" requiredtime="100" amount="4">
-      <RequiredSkill identifier="weapons" level="25" />
-      <RequiredSkill identifier="medical" level="35" />
+      <RequiredSkill identifier="weapons" level="40" />
       <RequiredItem identifier="steel" amount="4" />
       <RequiredItem identifier="sulphuricacid" amount="4" />
       <RequiredItem identifier="alienblood" amount="4" />
@@ -263,7 +262,7 @@
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
     <Projectile characterusable="false" launchimpulse="-15.0" impulsespread="0.3" spread="40" damagedoors="true">
       <Attack structuredamage="5" itemdamage="15" severlimbsprobability="3.0" penetration="0.5">
-        <Affliction identifier="explosiondamage" strength="34" />
+        <Affliction identifier="explosiondamage" strength="30" />
         <Affliction identifier="bleeding" strength="20" />
         <Affliction identifier="stun" strength="2" />
       </Attack>
@@ -274,8 +273,9 @@
       <StatusEffect type="OnImpact" target="This" condition="-100" disabledeltatime="true" />
       <StatusEffect type="OnBroken" target="This">
         <Explosion range="240.0" structuredamage="5" force="10.0" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.24">
-          <Affliction identifier="explosiondamage" strength="83" />
-          <Affliction identifier="lacerations" strength="41.5" />
+          <Affliction identifier="explosiondamage" strength="60" />
+          <Affliction identifier="lacerations" strength="30" />
+          <Affliction identifier="explosiondamage" strength="0.5" multiplybymaxvitality="true" />
         </Explosion>
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="10" velocitymin="100" velocitymax="2000" scalemin="0.25" scalemax="0.5" />
         <Remove />
