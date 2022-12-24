@@ -34,7 +34,7 @@
         <Affliction identifier="explosiondamage" strength="*2" />
         <Affliction identifier="bleeding" strength="*2" />
         <Affliction identifier="stun" strength="*1.5" />
-        <Affliction identifier="bleeding" strength="10" multiplybymaxvitality="true" />
+        <Affliction identifier="bleeding" strength="10" />
         <Affliction identifier="radiationsickness" strength="50" multiplybymaxvitality="true" />
       </Attack>
     </Projectile>
@@ -57,19 +57,19 @@
       <Item identifier="iron" />
       <Item identifier="carbon" amount="2" />
       <Item identifier="copper" />
-      <Item identifier="c4block" outcondition="0.5" />
+      <Item identifier="c4block" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="25">
       <RequiredSkill identifier="weapons" level="35" />
       <RequiredItem identifier="steel" />
       <RequiredItem identifier="fpgacircuit" />
-      <RequiredItem identifier="c4block" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="c4block" usecondition="true" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" requiredtime="100" amount="4">
       <RequiredSkill identifier="weapons" level="35" />
       <RequiredItem identifier="steel" amount="4" />
       <RequiredItem identifier="fpgacircuit" amount="4" />
-      <RequiredItem identifier="c4block" amount="2" />
+      <RequiredItem identifier="c4block" amount="4" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BVTA Extension%/images/APHE.png" sourcerect="0,33,64,64" />
     <Sprite texture="%ModDir:BVTA Extension%/images/APHE.png" sourcerect="0,0,214,32" />
@@ -88,34 +88,36 @@
         <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" selectionmode="Random" range="50000" />
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="50" velocitymin="100" velocitymax="2000" scalemin="1.0" scalemax="1.0" />
         <Explosion range="250" structuredamage="400" />
-        <Explosion range="500" itemdamage="150" force="50.0" severlimbsprobability="5" decal="explosion" decalsize="0.97" penetration="0.5">
-          <Affliction identifier="explosiondamage" strength="1250" />
-          <Affliction identifier="lacerations" strength="500" />
-          <Affliction identifier="bleeding" strength="500" />
-          <Affliction identifier="stun" strength="12.5" />
-          <Affliction identifier="explosiondamage" strength="15" multiplybymaxvitality="true" />
+        <Explosion range="500" itemdamage="150" force="50.0" severlimbsprobability="5" decal="explosion" decalsize="0.6" penetration="0.5">
+          <Affliction identifier="explosiondamage" strength="625" />
+          <Affliction identifier="lacerations" strength="250" />
+          <Affliction identifier="bleeding" strength="250" />
+          <Affliction identifier="stun" strength="7.5" />
+          <Affliction identifier="explosiondamage" strength="12" multiplybymaxvitality="true" />
         </Explosion>
         <Explosion range="707" force="25.0" severlimbsprobability="1" penetration="0.2">
           <Affliction identifier="explosiondamage" strength="125" />
           <Affliction identifier="lacerations" strength="50" />
           <Affliction identifier="stun" strength="2.5" />
-          <Affliction identifier="explosiondamage" strength="1.7" multiplybymaxvitality="true" />
+          <Affliction identifier="explosiondamage" strength="1.2" multiplybymaxvitality="true" />
         </Explosion>
         <Explosion range="1000.0" ballastfloradamage="200" force="12.5" />
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="90" anglemax="-90" particleamount="25" velocitymin="2500" velocitymax="5000" scalemin="1" scalemax="2" />
         <ParticleEmitter particle="spark" copyentityangle="true" anglemin="90" anglemax="-90" particleamount="50" velocitymin="750" velocitymax="2500" scalemin="2" scalemax="4" />
-        <Remove />
       </StatusEffect>
-      <!--somehow the previous "<Remove />" does not apply-->
-      <StatusEffect type="OnNotContained" target="This" allowwhenbroken="true" disabledeltatime="true">
+      <StatusEffect type="OnBroken" target="This">
         <Remove />
-        <Conditional Condition="lt 1" />
       </StatusEffect>
     </Projectile>
-    <MotionSensor rangex="500" rangey="500" canbeselected="false" IgnoreDead="true" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
+    <MotionSensor range="400" canbeselected="false" IgnoreDead="true" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
       <StatusEffect type="Always" target="This" condition="-100" delay="0.075" comparison="and" disabledeltatime="true">
         <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
         <Conditional Condition="lt 99" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="Contained" comparison="and" disabledeltatime="true">
+        <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" targetcontainer="true" />
+        <Conditional Condition="lt 99" targetcontainer="true" />
+        <Use />
       </StatusEffect>
     </MotionSensor>
   </Item>
@@ -221,15 +223,13 @@
       <Item identifier="sulphuricacid" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="25">
-      <RequiredSkill identifier="weapons" level="25" />
-      <RequiredSkill identifier="medical" level="35" />
+      <RequiredSkill identifier="weapons" level="40" />
       <RequiredItem identifier="steel" />
       <RequiredItem identifier="sulphuricacid" />
       <RequiredItem identifier="alienblood" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" requiredtime="100" amount="4">
-      <RequiredSkill identifier="weapons" level="25" />
-      <RequiredSkill identifier="medical" level="35" />
+      <RequiredSkill identifier="weapons" level="40" />
       <RequiredItem identifier="steel" amount="4" />
       <RequiredItem identifier="sulphuricacid" amount="4" />
       <RequiredItem identifier="alienblood" amount="4" />
@@ -267,7 +267,7 @@
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
     <Projectile characterusable="false" launchimpulse="-15.0" impulsespread="0.3" spread="40" damagedoors="true">
       <Attack structuredamage="5" itemdamage="15" severlimbsprobability="3.0" penetration="0.5">
-        <Affliction identifier="explosiondamage" strength="34" />
+        <Affliction identifier="explosiondamage" strength="30" />
         <Affliction identifier="bleeding" strength="20" />
         <Affliction identifier="stun" strength="2" />
       </Attack>
@@ -278,9 +278,9 @@
       <StatusEffect type="OnImpact" target="This" condition="-100" disabledeltatime="true" />
       <StatusEffect type="OnBroken" target="This">
         <Explosion range="240.0" structuredamage="5" force="10.0" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.24">
-          <Affliction identifier="explosiondamage" strength="83" />
-          <Affliction identifier="lacerations" strength="41.5" />
-          <Affliction identifier="explosiondamage" strength="1" multiplybymaxvitality="true" />
+          <Affliction identifier="explosiondamage" strength="60" />
+          <Affliction identifier="lacerations" strength="30" />
+          <Affliction identifier="explosiondamage" strength="0.5" multiplybymaxvitality="true" />
         </Explosion>
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="10" velocitymin="100" velocitymax="2000" scalemin="0.25" scalemax="0.5" />
         <Remove />
@@ -300,7 +300,7 @@
       <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="5" />
     </Price>
     <Deconstruct>
-      <Item identifier="c4block" mincondition="0.95" outcondition="0.5" />
+      <Item identifier="c4block" mincondition="0.95" />
       <Item identifier="iron" mincondition="0.95" />
       <Item identifier="carbon" mincondition="0.95" />
       <Item identifier="iron" />
@@ -308,12 +308,12 @@
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="weapons" level="30" />
-      <RequiredItem identifier="c4block" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="c4block" usecondition="true" />
       <RequiredItem identifier="steel" amount="2" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="8">
       <RequiredSkill identifier="weapons" level="25" />
-      <RequiredItem identifier="c4block" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="c4block" usecondition="true" />
       <RequiredItem identifier="" tag="containershell" mincondition="0.0" maxcondition="0.0" usecondition="false" />
       <RequiredItem identifier="steel" />
     </Fabricate>
