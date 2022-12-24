@@ -31,10 +31,11 @@
     <Sprite texture="%ModDir:BVTA Extension%/images/railgunshelldf.png" sourcerect="0,0,214,32" />
     <Projectile>
       <Attack penetration="*1.25">
-        <Affliction identifier="explosiondamage" strength="1500" />
-        <Affliction identifier="bleeding" strength="100" />
-        <Affliction identifier="radiationsickness" strength="100" />
-        <Affliction identifier="stun" strength="22.5" />
+        <Affliction identifier="explosiondamage" strength="*2" />
+        <Affliction identifier="bleeding" strength="*2" />
+        <Affliction identifier="stun" strength="*1.5" />
+        <Affliction identifier="bleeding" strength="10" multiplybymaxvitality="true" />
+        <Affliction identifier="radiationsickness" strength="50" multiplybymaxvitality="true" />
       </Attack>
     </Projectile>
   </Item>
@@ -92,11 +93,13 @@
           <Affliction identifier="lacerations" strength="500" />
           <Affliction identifier="bleeding" strength="500" />
           <Affliction identifier="stun" strength="12.5" />
+          <Affliction identifier="explosiondamage" strength="15" multiplybymaxvitality="true" />
         </Explosion>
         <Explosion range="707" force="25.0" severlimbsprobability="1" penetration="0.2">
           <Affliction identifier="explosiondamage" strength="125" />
           <Affliction identifier="lacerations" strength="50" />
           <Affliction identifier="stun" strength="2.5" />
+          <Affliction identifier="explosiondamage" strength="1.7" multiplybymaxvitality="true" />
         </Explosion>
         <Explosion range="1000.0" ballastfloradamage="200" force="12.5" />
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="90" anglemax="-90" particleamount="25" velocitymin="2500" velocitymax="5000" scalemin="1" scalemax="2" />
@@ -162,7 +165,8 @@
     <Projectile characterusable="false" launchimpulse="240.0" maxtargetstohit="16" damagedoors="true">
       <Attack structuredamage="50" itemdamage="50" severlimbsprobability="25" penetration="0.875" targetforce="60">
         <Affliction identifier="lacerations" strength="168" />
-        <Affliction identifier="bleeding" strength="500" />
+        <Affliction identifier="bleeding" strength="50" />
+        <Affliction identifier="bleeding" strength="5" multiplybymaxvitality="true" />
         <Affliction identifier="stun" strength="5" />
       </Attack>
       <StatusEffect type="OnActive" target="This" lifetime="1">
@@ -276,6 +280,7 @@
         <Explosion range="240.0" structuredamage="5" force="10.0" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.24">
           <Affliction identifier="explosiondamage" strength="83" />
           <Affliction identifier="lacerations" strength="41.5" />
+          <Affliction identifier="explosiondamage" strength="1" multiplybymaxvitality="true" />
         </Explosion>
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="10" velocitymin="100" velocitymax="2000" scalemin="0.25" scalemax="0.5" />
         <Remove />
