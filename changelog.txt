@@ -1,3 +1,9 @@
+1/9
+reduced projectile count of chaingun scattering ammo for better performance
+reworked railgun shells, improving their damage against abyss beasts
+
+2023年
+
 11 月 28 日
 small balance changes to sell amount and spawn probability
 
@@ -9,3 +15,5 @@ reduced particle amount to optimize shock flak bolt and acid mist shell.
 
 8 月 23 日 下午 4:23
 Localization update.
+
+2022年
