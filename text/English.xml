@@ -24,4 +24,6 @@
   <entitydescription.pulselaserammoboxmixed>A mix-up of two types of fulgurium pulse laser ammo, switches lens mode after each shot. Containing twice as much fuel.</entitydescription.pulselaserammoboxmixed>
   <entityname.pulselaserammoboxpiercing>Piercing Pulse Laser Fuel Box</entityname.pulselaserammoboxpiercing>
   <entitydescription.pulselaserammoboxpiercing>A box containing a special concoction of chemicals and rare materials. The lens focuses laser to improve penetration, allowing the laser to hit targets behind walls.</entitydescription.pulselaserammoboxpiercing>
+  <entityname.acidmistbomb>Acid Mist Bomb</entityname.acidmistbomb>
+  <entitydescription.acidmistbomb>A bomb containing special acid, can be put into a railgun shell for creature hunting.</entitydescription.acidmistbomb>
 </infotexts>
