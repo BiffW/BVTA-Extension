@@ -8,6 +8,7 @@ Railgun
   - APFSDS Railgun Shell from "APFSDS Railgun Shells" by Birb
   - Acid Mist Railgun Shell
   - Explosive Canister Shell
+  - Decoy Railgun Shell
 
 Chaingun
   - Chaingun Explosive Ammunition Box from "EK Armory" by Videogames

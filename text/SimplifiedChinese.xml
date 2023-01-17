@@ -10,6 +10,9 @@
   <entitydescription.railgunshellacid>一种试验性轨道炮炮弹。装填了特制酸液，发射后能够喷洒在弹道附近。这种备受争议的武器曾多次被动物保护协会提议禁止。</entitydescription.railgunshellacid>
   <entityname.railguncanistershellexplosive>轨道炮爆破霰弹炮弹</entityname.railguncanistershellexplosive>
   <entitydescription.railguncanistershellexplosive>一种可装填式轨道炮炮弹。发射装有炸药的弹丸。</entitydescription.railguncanistershellexplosive>
+  <entityname.railgundecoydroppershell>轨道炮诱饵弹</entityname.railgundecoydroppershell>
+  <entitydescription.railgundecoydroppershell>一种防御性轨道炮炮弹，发射后会在轨迹上投放至多5个爆炸诱饵。</entitydescription.railgundecoydroppershell>
+  <entityname.railgundecoyexplosive>爆炸诱饵</entityname.railgundecoyexplosive>
   <entityname.chaingunammoboxexplosive>连射炮爆破弹药箱</entityname.chaingunammoboxexplosive>
   <entitydescription.chaingunammoboxexplosive>连射炮弹药。命中时爆炸。</entitydescription.chaingunammoboxexplosive>
   <entityname.chaingunammoboxspread>连射炮霰弹弹药箱</entityname.chaingunammoboxspread>

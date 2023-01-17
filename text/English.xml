@@ -10,6 +10,9 @@
   <entitydescription.railgunshellacid>An experimental railgun shell loaded with special acid, which can be sprayed near the projectile after launch. This controversial weapon has been repeatedly proposed for ban by animal protection societies.</entitydescription.railgunshellacid>
   <entityname.railguncanistershellexplosive>Explosive Canister Shell</entityname.railguncanistershellexplosive>
   <entitydescription.railguncanistershellexplosive>A reloadable railgun shell. Loaded with explosive pellets.</entitydescription.railguncanistershellexplosive>
+  <entityname.railgundecoydroppershell>Decoy Railgun Shell</entityname.railgundecoydroppershell>
+  <entitydescription.railgundecoydroppershell>A defensive railgun shell that drops up to 5 explosive decoys on its trace after launch.</entitydescription.railgundecoydroppershell>
+  <entityname.railgundecoyexplosive>Explosive Decoy</entityname.railgundecoyexplosive>
   <entityname.chaingunammoboxexplosive>Chaingun Explosive Ammunition Box</entityname.chaingunammoboxexplosive>
   <entitydescription.chaingunammoboxexplosive>Ammo for chaingun. Explodes on hit.</entitydescription.chaingunammoboxexplosive>
   <entityname.chaingunammoboxspread>Chaingun Scattering Ammunition Box</entityname.chaingunammoboxspread>

@@ -1,6 +1,11 @@
+1/17
+- add decoy railgun shell
+- increase fabrication cost of APHE shell and Explosive Canister shell
+
 1/9
-reduced projectile count of chaingun scattering ammo for better performance
-reworked railgun shells, improving their damage against abyss beasts
+- add acid bomb
+- reduce damage of aphe shell
+- reduce acid mist damage against large creature
 
 2023年
 

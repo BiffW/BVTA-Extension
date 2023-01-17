@@ -55,21 +55,21 @@
     </Price>
     <Deconstruct>
       <Item identifier="iron" />
-      <Item identifier="carbon" amount="2" />
-      <Item identifier="copper" />
-      <Item identifier="c4block" outcondition="0.5" />
+      <Item identifier="carbon" />
+      <Item identifier="fpgacircuit" />
+      <Item identifier="c4block" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="25">
       <RequiredSkill identifier="weapons" level="35" />
       <RequiredItem identifier="steel" />
       <RequiredItem identifier="fpgacircuit" />
-      <RequiredItem identifier="c4block" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="c4block" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" requiredtime="100" amount="4">
       <RequiredSkill identifier="weapons" level="35" />
       <RequiredItem identifier="steel" amount="4" />
       <RequiredItem identifier="fpgacircuit" amount="4" />
-      <RequiredItem identifier="c4block" amount="2" />
+      <RequiredItem identifier="c4block" amount="4" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BVTA Extension%/images/APHE.png" sourcerect="0,33,64,64" />
     <Sprite texture="%ModDir:BVTA Extension%/images/APHE.png" sourcerect="0,0,214,32" />
@@ -93,7 +93,7 @@
           <Affliction identifier="lacerations" strength="250" />
           <Affliction identifier="bleeding" strength="250" />
           <Affliction identifier="stun" strength="7.5" />
-          <Affliction identifier="explosiondamage" strength="12" multiplybymaxvitality="true" />
+          <Affliction identifier="explosiondamage" strength="20" multiplybymaxvitality="true" />
         </Explosion>
         <Use />
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="90" anglemax="-90" particleamount="25" velocitymin="2500" velocitymax="5000" scalemin="1" scalemax="2" />
@@ -259,7 +259,7 @@
     <Body width="160" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
     <Projectile characterusable="false" launchimpulse="-15.0" impulsespread="0.3" spread="40" damagedoors="true">
-      <Attack structuredamage="5" itemdamage="15" severlimbsprobability="3.0" penetration="0.5">
+      <Attack structuredamage="30" itemdamage="15" severlimbsprobability="3.0" penetration="0.5">
         <Affliction identifier="explosiondamage" strength="30" />
         <Affliction identifier="bleeding" strength="20" />
         <Affliction identifier="stun" strength="2" />
@@ -267,9 +267,10 @@
       <StatusEffect type="OnActive" target="This" lifetime="2">
         <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="1" velocitymin="0" velocitymax="50" scalemin="0.33" scalemax="1" />
       </StatusEffect>
-      <StatusEffect type="OnNotContained" target="This" condition="-100" delay="5" disabledeltatime="true" />
-      <StatusEffect type="OnImpact" target="This" condition="-100" disabledeltatime="true" />
-      <StatusEffect type="OnBroken" target="This">
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="5">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" >
         <Explosion range="240.0" structuredamage="5" force="10.0" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.24">
           <Affliction identifier="explosiondamage" strength="60" />
           <Affliction identifier="lacerations" strength="30" />
@@ -284,7 +285,7 @@
   <Item identifier="railguncanistershellexplosive" variantof="railguncanistershell">
     <PreferredContainer primary="railgunammoloader,railgunammocontainer" />
     <PreferredContainer secondary="wreckrailgunammocontainer" maxamount="1" spawnprobability="0.07" />
-    <Price baseprice="158" minleveldifficulty="25">
+    <Price baseprice="240" minleveldifficulty="25">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" sold="false" />
       <Price storeidentifier="merchantcity" multiplier="1.25" sold="false" />
       <Price storeidentifier="merchantresearch" multiplier="1.25" sold="false" />
@@ -293,7 +294,7 @@
       <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="5" />
     </Price>
     <Deconstruct>
-      <Item identifier="c4block" mincondition="0.95" outcondition="0.5" />
+      <Item identifier="c4block" mincondition="0.95" />
       <Item identifier="iron" mincondition="0.95" />
       <Item identifier="carbon" mincondition="0.95" />
       <Item identifier="iron" />
@@ -301,12 +302,12 @@
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="weapons" level="30" />
-      <RequiredItem identifier="c4block" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="c4block" />
       <RequiredItem identifier="steel" amount="2" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="8">
       <RequiredSkill identifier="weapons" level="25" />
-      <RequiredItem identifier="c4block" mincondition="0.5" usecondition="true" />
+      <RequiredItem identifier="c4block" />
       <RequiredItem identifier="" tag="containershell" mincondition="0.0" maxcondition="0.0" usecondition="false" />
       <RequiredItem identifier="steel" />
     </Fabricate>
@@ -319,5 +320,93 @@
       </StatusEffect>
       <Containable items="railguncanistershellpelletexplosive" />
     </ItemContainer>
+  </Item>
+  <!-- 诱饵 -->
+  <Item name="Explosive Decoy" identifier="railgundecoyexplosive" category="Weapon" tags="weapon,provocative,decoy" scale="0.5" sonarsize="2" impactsoundtag="impact_metal_heavy" damagedbymonsters="true" health="200" hideinmenus="true">
+    <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="140,486,21,21" depth="0.55" />
+    <Body radius="80" density="12" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <AiTarget maxsoundrange="10000" sonarlabel="entityname.railgundecoyexplosive" maxsightrange="6000" />
+    <Projectile characterusable="false" launchimpulse="5.0">
+      <StatusEffect type="OnUse" target="This" IsOn="true" />
+      <StatusEffect type="OnUse" target="This" IsOn="false" delay="45" setvalue="true" condition="-200" />
+      <StatusEffect type="OnDamaged" target="This" disabledeltatime="true" setvalue="true">
+        <Sound file="Content/Sounds/Damage/HitArmor1.ogg" range="800" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="this">
+        <Explosion range="750" ballastfloradamage="200" itemdamage="25" force="10.0" severlimbsprobability="1" decal="explosion" decalsize="0.7" penetration="0.5">
+          <Affliction identifier="explosiondamage" strength="256" />
+          <Affliction identifier="lacerations" strength="64" />
+          <Affliction identifier="bleeding" strength="500" />
+          <Affliction identifier="stun" strength="2" />
+          <Affliction identifier="explosiondamage" strength="4" multiplybymaxvitality="true" />
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+    <MotionSensor range="300" canbeselected="false" IgnoreDead="True" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
+      <StatusEffect type="Always" target="This" condition="-100" disabledeltatime="true" stackable="false" checkconditionalalways="true">
+        <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
+      </StatusEffect>
+    </MotionSensor>
+    <LightComponent LightColor="0,255,100,200" PulseFrequency="1.0" PulseAmount="0.8" Flicker="0.3" FlickerSpeed="3.0" range="700" PowerConsumption="0" IsOn="false">
+      <LightTexture texture="Content/Lights/pointlight_falloff.png" />
+      <Sound file="Content/Items/Weapons/SonarDecoy.ogg" type="OnActive" range="10000" volume="0.1" loop="true" dontmuffle="true" />
+      <StatusEffect type="OnActive" target="This" setvalue="true" soundrange="10000" sightrange="6000" />
+    </LightComponent>
+  </Item>
+  <!-- 诱饵投放弹 -->
+  <Item identifier="railgundecoydroppershell" variantof="railgunshell">
+    <PreferredContainer primary="railgunammoloader" spawnprobability="0" />
+    <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
+    <PreferredContainer secondary="wreckrailgunloader" spawnprobability="0" />
+    <PreferredContainer secondary="wreckrailgunammocontainer" spawnprobability="0.05" />
+    <Price baseprice="186" minleveldifficulty="25">
+      <Price storeidentifier="merchantoutpost" multiplier="1.5" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="5" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" sold="false" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="5" />
+    </Price>
+    <Deconstruct>
+      <Item identifier="iron" />
+      <Item identifier="carbon" />
+      <Item identifier="fpgacircuit" />
+      <Item identifier="c4block" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredSkill identifier="weapons" level="35" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="c4block" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="100" amount="4">
+      <RequiredSkill identifier="weapons" level="35" />
+      <RequiredItem identifier="steel" amount="4" />
+      <RequiredItem identifier="fpgacircuit" amount="4" />
+      <RequiredItem identifier="c4block" amount="4" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir:BVTA Extension%/images/railgundecoyshell.png" sourcerect="0,33,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:BVTA Extension%/images/railgundecoyshell.png" sourcerect="0,0,213,30" depth="0.55" origin="0.5,0.5" />
+    <Projectile characterusable="false" launchimpulse="0.0" maxtargetstohit="1" damagedoors="true">
+      <StatusEffect type="OnActive">
+      </StatusEffect>
+      <StatusEffect type="OnImpact">
+      </StatusEffect>
+      <!-- disable inherited OnBroken status effects-->
+      <StatusEffect />
+      <StatusEffect />
+      <StatusEffect type="OnActive" target="This" delay="0.5" condition="-25" stackable="false" disabledeltatime="true">
+        <SpawnItem identifier="railgundecoyexplosive" spawnposition="This" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" delay="0.5">
+        <SpawnItem identifier="railgundecoyexplosive" spawnposition="This" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" delay="0.5">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+    <ItemContainer />
   </Item>
 </Items>
