@@ -7,7 +7,7 @@
   <entityname.railgunshellapfsds>轨道炮尾翼稳定脱壳穿甲炮弹</entityname.railgunshellapfsds>
   <entitydescription.railgunshellapfsds>一种可装填式轨道炮炮弹。发射高速无装药钢针穿透舰艇外壳和装甲。</entitydescription.railgunshellapfsds>
   <entityname.railgunshellacid>轨道炮酸雾炮弹</entityname.railgunshellacid>
-  <entitydescription.railgunshellacid>一种试验性轨道炮炮弹。装填了特制酸液，发射后能够喷洒在弹道附近。这种备受争议的武器曾多次被动物保护协会提议禁止。</entitydescription.railgunshellacid>
+  <entitydescription.railgunshellacid>一种防御性轨道炮炮弹。装填了特制酸液，发射后能够在其弹道上产生酸雾，杀伤接近的小型生物。</entitydescription.railgunshellacid>
   <entityname.railguncanistershellexplosive>轨道炮爆破霰弹炮弹</entityname.railguncanistershellexplosive>
   <entitydescription.railguncanistershellexplosive>一种可装填式轨道炮炮弹。发射装有炸药的弹丸。</entitydescription.railguncanistershellexplosive>
   <entityname.railgundecoydroppershell>轨道炮诱饵弹</entityname.railgundecoydroppershell>

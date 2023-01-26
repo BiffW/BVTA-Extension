@@ -20,8 +20,8 @@
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="weapons" level="30" />
-      <RequiredItem identifier="depletedfuel" />
-      <RequiredItem identifier="depletedfuel" />
+      <RequiredItem identifier="depletedfuel" amount="1" />
+      <RequiredItem identifier="depletedfuel" amount="1" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" requiredtime="80" amount="4">
       <RequiredSkill identifier="weapons" level="30" />
@@ -34,8 +34,9 @@
         <Affliction identifier="explosiondamage" strength="*2" />
         <Affliction identifier="bleeding" strength="*2" />
         <Affliction identifier="stun" strength="*1.5" />
-        <Affliction identifier="bleeding" strength="10" multiplybymaxvitality="true" />
-        <Affliction identifier="radiationsickness" strength="50" multiplybymaxvitality="true" />
+        <Affliction identifier="bleeding" strength="12" multiplybymaxvitality="true" />
+        <Affliction identifier="radiationsickness" strength="200" />
+        <Affliction identifier="radiationsickness" strength="4" multiplybymaxvitality="true" />
       </Attack>
     </Projectile>
   </Item>
@@ -188,7 +189,7 @@
     </ItemComponent>
     <TriggerComponent triggeredby="Creature" force="0" radius="500" allowingameediting="false">
       <StatusEffect type="OnActive" target="Character" delay="0.5" stackable="false" disabledeltatime="true">
-        <Affliction identifier="acidburn" strength="0.5" />
+        <Affliction identifier="acidburn" strength="1" />
         <Conditional mass="lt 300" />
       </StatusEffect>
       <StatusEffect type="OnActive" target="Character" delay="0.5" stackable="false" disabledeltatime="true">
@@ -203,7 +204,7 @@
     <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
     <PreferredContainer secondary="wreckrailgunloader" spawnprobability="0" />
     <PreferredContainer secondary="wreckrailgunammocontainer" spawnprobability="0.05" />
-    <Price baseprice="216">
+    <Price baseprice="144">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" sold="false" />
       <Price storeidentifier="merchantcity" multiplier="1.25" sold="false" />
       <Price storeidentifier="merchantresearch" multiplier="1.25" minavailable="6" />
@@ -214,19 +215,16 @@
     <Deconstruct>
       <Item identifier="iron" />
       <Item identifier="carbon" />
-      <Item identifier="sulphuricacid" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="25">
       <RequiredSkill identifier="weapons" level="40" />
       <RequiredItem identifier="steel" />
-      <RequiredItem identifier="sulphuricacid" />
-      <RequiredItem identifier="alienblood" />
+      <RequiredItem identifier="acidmistbomb" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" requiredtime="100" amount="4">
       <RequiredSkill identifier="weapons" level="40" />
       <RequiredItem identifier="steel" amount="4" />
-      <RequiredItem identifier="sulphuricacid" amount="4" />
-      <RequiredItem identifier="alienblood" amount="4" />
+      <RequiredItem identifier="acidmistbomb" amount="4" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BVTA Extension%/images/railgunshellacid.png" sourcerect="0,33,64,64" origin="0.5,0.5" />
     <Sprite texture="%ModDir:BVTA Extension%/images/railgunshellacid.png" sourcerect="0,0,214,32" depth="0.55" origin="0.5,0.5" />
@@ -261,7 +259,7 @@
     <Projectile characterusable="false" launchimpulse="-15.0" impulsespread="0.3" spread="40" damagedoors="true">
       <Attack structuredamage="30" itemdamage="15" severlimbsprobability="3.0" penetration="0.5">
         <Affliction identifier="explosiondamage" strength="30" />
-        <Affliction identifier="bleeding" strength="20" />
+        <Affliction identifier="bleeding" strength="30" />
         <Affliction identifier="stun" strength="2" />
       </Attack>
       <StatusEffect type="OnActive" target="This" lifetime="2">
@@ -275,6 +273,7 @@
           <Affliction identifier="explosiondamage" strength="60" />
           <Affliction identifier="lacerations" strength="30" />
           <Affliction identifier="explosiondamage" strength="0.5" multiplybymaxvitality="true" />
+          <Affliction identifier="bleeding" strength="90" />
         </Explosion>
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="10" velocitymin="100" velocitymax="2000" scalemin="0.25" scalemax="0.5" />
         <Remove />
@@ -324,10 +323,10 @@
   <!-- 诱饵 -->
   <Item name="Explosive Decoy" identifier="railgundecoyexplosive" category="Weapon" tags="weapon,provocative,decoy" scale="0.5" sonarsize="2" impactsoundtag="impact_metal_heavy" damagedbymonsters="true" health="200" hideinmenus="true">
     <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="140,486,21,21" depth="0.55" />
-    <Body radius="80" density="12" />
+    <Body radius="80" density="10" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
     <AiTarget maxsoundrange="10000" sonarlabel="entityname.railgundecoyexplosive" maxsightrange="6000" />
-    <Projectile characterusable="false" launchimpulse="5.0">
+    <Projectile characterusable="false" launchimpulse="0.0">
       <StatusEffect type="OnUse" target="This" IsOn="true" />
       <StatusEffect type="OnUse" target="This" IsOn="false" delay="45" setvalue="true" condition="-200" />
       <StatusEffect type="OnDamaged" target="This" disabledeltatime="true" setvalue="true">
@@ -402,9 +401,7 @@
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" delay="0.5">
         <SpawnItem identifier="railgundecoyexplosive" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnBroken" target="This" delay="0.5">
-        <Remove />
+        <RemoveItem />
       </StatusEffect>
     </Projectile>
     <ItemContainer />

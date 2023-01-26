@@ -7,7 +7,7 @@
   <entityname.railgunshellapfsds>APFSDS Railgun Shell</entityname.railgunshellapfsds>
   <entitydescription.railgunshellapfsds>A reloadable railgun shell. Fires a high-speed steel dart that penetrate the ship's hull and armor.</entitydescription.railgunshellapfsds>
   <entityname.railgunshellacid>Acid Mist Railgun Shell</entityname.railgunshellacid>
-  <entitydescription.railgunshellacid>An experimental railgun shell loaded with special acid, which can be sprayed near the projectile after launch. This controversial weapon has been repeatedly proposed for ban by animal protection societies.</entitydescription.railgunshellacid>
+  <entitydescription.railgunshellacid>A defensive railgun shell loaded with special acid, spraying its content on its trace after launch. Usually used to hunt small creatures.</entitydescription.railgunshellacid>
   <entityname.railguncanistershellexplosive>Explosive Canister Shell</entityname.railguncanistershellexplosive>
   <entitydescription.railguncanistershellexplosive>A reloadable railgun shell. Loaded with explosive pellets.</entitydescription.railguncanistershellexplosive>
   <entityname.railgundecoydroppershell>Decoy Railgun Shell</entityname.railgundecoydroppershell>

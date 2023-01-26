@@ -14,8 +14,9 @@
       <StatusEffect type="OnActive" target="This" lifetime="2">
         <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="0.9" scalemax="1.5" />
       </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true" disabledeltatime="true" />
       <StatusEffect type="OnBroken" target="This">
-        <SpawnItem identifier="flakshockshrapnel" spawnposition="This" count="16" aimspread="120" rotationtype="Collider" rotation="0" />
+        <SpawnItem identifier="flakshockshrapnel" spawnposition="This" count="16" aimspread="90" rotationtype="Collider" rotation="0" />
         <Explosion range="30.0" structuredamage="20" camerashake="25.0" camerashakerange="2000" force="10.0" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.3">
           <Affliction identifier="explosiondamage" strength="20" />
         </Explosion>
@@ -24,10 +25,8 @@
         <ParticleEmitter particle="shrapnel" anglemin="0" anglemax="360" particleamount="50" velocitymin="100" velocitymax="2000" scalemin="1" scalemax="2" />
         <RemoveItem />
       </StatusEffect>
-      <StatusEffect type="OnActive" target="This" Condition="-100" delay="0.25" stackable="false" />
-      <StatusEffect type="OnImpact" target="This" Condition="-100" stackable="false" />
     </Projectile>
-    <MotionSensor range="200" canbeselected="false" IgnoreDead="True" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
+    <MotionSensor range="325" canbeselected="false" IgnoreDead="True" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
       <StatusEffect type="Always" target="This" condition="-100" disabledeltatime="true" stackable="false" checkconditionalalways="true">
         <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
       </StatusEffect>
@@ -40,10 +39,9 @@
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
     <Projectile characterusable="false" launchimpulse="22.0" impulsespread="0.2" damagedoors="true">
       <Attack structuredamage="0" itemdamage="10" severlimbsprobability="0.4" penetration="0.1">
-        <Affliction identifier="lacerations" strength="16" />
-        <Affliction identifier="bleeding" strength="6" />
+        <Affliction identifier="lacerations" strength="14" />
+        <Affliction identifier="bleeding" strength="7.5" />
         <Affliction identifier="stun" strength="0.2" />
-        <Affliction identifier="stun" strength="0.6" probability="0.2" />
       </Attack>
       <StatusEffect type="OnActive" target="This" lifetime="1">
         <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="1" velocitymin="-10" velocitymax="-100" scalemin="0.5" scalemax="1" />
@@ -53,7 +51,7 @@
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This">
         <ParticleEmitter particle="ElectricShock" copyentityangle="true" anglemin="0" anglemax="360" particleamount="2" velocitymin="100" velocitymax="2000" scalemin="0.25" scalemax="0.5" />
-        <Explosion range="250.0" ballastfloradamage="0" structuredamage="0" itemdamage="0" force="10.0" flames="false" smoke="false" sparks="false" underwaterbubble="false" flashcolor="255,0,0,255" >
+        <Explosion range="300.0" ballastfloradamage="0" structuredamage="0" itemdamage="0" force="10.0" flames="false" smoke="false" sparks="false" underwaterbubble="false" flashcolor="255,0,0,255" >
           <Affliction identifier="burn" strength="22" />
           <Affliction identifier="stun" strength="3" />
         </Explosion>
@@ -90,12 +88,12 @@
       <Containable items="flakshockbolt" />
     </ItemContainer>
   </Item>
-  <!--高射炮定向穿甲弹-->
+  <!--高射炮集束穿甲弹-->
   <Item name="" identifier="flakboltdirectionalpiercing" category="Weapon" scale="1" sonarsize="2" hideinmenus="true">
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
     <Body width="170" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
-    <Projectile characterusable="false" launchimpulse="0.0" maxtargetstohit="2" damagedoors="true">
+    <Projectile characterusable="false" launchimpulse="0.0" damagedoors="true">
       <Attack structuredamage="30" itemdamage="15" severlimbsprobability="1" penetration="0.1">
         <Affliction identifier="explosiondamage" strength="70" />
         <Affliction identifier="bleeding" strength="20" />
@@ -104,8 +102,9 @@
       <StatusEffect type="OnActive" target="This" lifetime="2">
         <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="0.9" scalemax="1.5" colormultiplier="255,166,166,175" />
       </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true" disabledeltatime="true" />
       <StatusEffect type="OnBroken" target="This">
-        <SpawnItem identifier="flakshrapneldirectionalpiercing" spawnposition="This" count="9" aimspread="25" rotationtype="Collider" rotation="0" />
+        <SpawnItem identifier="flakshrapneldirectionalpiercing" spawnposition="This" count="12" aimspread="25" rotationtype="Collider" rotation="0" />
         <Explosion range="30.0" structuredamage="20" camerashake="25.0" camerashakerange="2000" force="10.0" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.3">
           <Affliction identifier="explosiondamage" strength="20" />
         </Explosion>
@@ -115,26 +114,24 @@
         <ParticleEmitter particle="shrapnel" anglemin="0" anglemax="360" particleamount="50" velocitymin="100" velocitymax="2000" scalemin="1" scalemax="2" />
         <RemoveItem />
       </StatusEffect>
-      <StatusEffect type="OnActive" target="This" Condition="-100" delay="0.25" stackable="false" />
-      <StatusEffect type="OnImpact" target="This" Condition="-50" stackable="false" />
     </Projectile>
-    <MotionSensor range="300" canbeselected="false" IgnoreDead="True" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
+    <MotionSensor range="325" canbeselected="false" IgnoreDead="True" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
       <StatusEffect type="Always" target="This" condition="-100" disabledeltatime="true" stackable="false" checkconditionalalways="true">
         <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
       </StatusEffect>
     </MotionSensor>
   </Item>
-  <!--高射炮定向穿甲弹破片-->
+  <!--高射炮集束穿甲弹破片-->
   <Item name="" identifier="flakshrapneldirectionalpiercing" category="Weapon" scale="0.6" sonarsize="1" hideinmenus="true">
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
     <Body width="170" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
     <Projectile characterusable="false" launchimpulse="42.0" maxtargetstohit="2" impulsespread="0.2" damagedoors="true">
-      <Attack structuredamage="20" itemdamage="50" severlimbsprobability="0.3" penetration="0.75">
-        <Affliction identifier="lacerations" strength="21" />
-        <Affliction identifier="bleeding" strength="21" />
-        <Affliction identifier="stun" strength="1.5" />
-        <Affliction identifier="stun" strength="5" probability="0.1" />
+      <Attack structuredamage="20" itemdamage="50" severlimbsprobability="0.3" penetration="0.5">
+        <Affliction identifier="lacerations" strength="22" />
+        <Affliction identifier="bleeding" strength="20" />
+        <Affliction identifier="stun" strength="0.75" />
+        <Affliction identifier="stun" strength="2.5" probability="0.1" />
       </Attack>
       <StatusEffect type="OnActive" target="This" lifetime="1">
         <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="1" velocitymin="-10" velocitymax="-100" scalemin="0.5" scalemax="1" colormultiplier="255,166,166,175" />
@@ -149,13 +146,13 @@
       </StatusEffect>
     </Projectile>
   </Item>
-  <!--高射炮定向穿甲弹药箱-->
+  <!--高射炮集束穿甲弹药箱-->
   <Item name="" identifier="flakcannondirectionalpiercingammobox" variantof="flakcannonammobox">
     <PreferredContainer primary="flakcannonammoloader" spawnprobability="0" />
     <PreferredContainer primary="ammoboxcontainer" />
     <PreferredContainer secondary="wreckflakcannonloader" />
     <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.02" />
-    <Price baseprice="250" sold="false">
+    <Price baseprice="410" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.3" />
       <Price storeidentifier="merchantcity" multiplier="1.2" sold="false" />
       <Price storeidentifier="merchantresearch" multiplier="1.3" />
@@ -165,17 +162,18 @@
     </Price>
     <Deconstruct>
       <Item identifier="titaniumaluminiumalloy" mincondition="0.95" />
+      <Item identifier="titaniumaluminiumalloy" mincondition="0.45" />
       <Item identifier="aluminium" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="weapons" level="30" />
-      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
       <RequiredItem identifier="phosphorus" />
       <RequiredItem identifier="aluminium" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
       <RequiredSkill identifier="weapons" level="25" />
-      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
       <RequiredItem identifier="phosphorus" />
       <RequiredItem identifier="" tag="flakcannonammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
     </Fabricate>
