@@ -12,6 +12,8 @@
   <entitydescription.railguncanistershellexplosive>A reloadable railgun shell. Loaded with explosive pellets.</entitydescription.railguncanistershellexplosive>
   <entityname.railgundecoydroppershell>Decoy Railgun Shell</entityname.railgundecoydroppershell>
   <entitydescription.railgundecoydroppershell>A defensive railgun shell that drops up to 5 explosive decoys on its trace after launch.</entitydescription.railgundecoydroppershell>
+  <entityname.railgunshellfixfoam>Fixfoam Railgun Shell</entityname.railgunshellfixfoam>
+  <entitydescription.railgunshellfixfoam>A defensive railgun shell that releases multiple fixfoam pellets on the shell of your submarine. Can be used for emergency hull fix.</entitydescription.railgunshellfixfoam>
   <entityname.railgundecoyexplosive>Explosive Decoy</entityname.railgundecoyexplosive>
   <entityname.chaingunammoboxexplosive>Chaingun Explosive Ammunition Box</entityname.chaingunammoboxexplosive>
   <entitydescription.chaingunammoboxexplosive>Ammo for chaingun. Explodes on hit.</entitydescription.chaingunammoboxexplosive>

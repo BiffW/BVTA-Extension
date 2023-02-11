@@ -12,6 +12,8 @@
   <entitydescription.railguncanistershellexplosive>一种可装填式轨道炮炮弹。发射装有炸药的弹丸。</entitydescription.railguncanistershellexplosive>
   <entityname.railgundecoydroppershell>轨道炮诱饵弹</entityname.railgundecoydroppershell>
   <entitydescription.railgundecoydroppershell>一种防御性轨道炮炮弹，发射后会在轨迹上投放至多5个爆炸诱饵。</entitydescription.railgundecoydroppershell>
+  <entityname.railgunshellfixfoam>轨道炮金属泡沫弹</entityname.railgunshellfixfoam>
+  <entitydescription.railgunshellfixfoam>一种防御性轨道炮炮弹，发射后会反向释放大量金属泡沫弹丸，用于紧急修复潜艇外壳。</entitydescription.railgunshellfixfoam>
   <entityname.railgundecoyexplosive>爆炸诱饵</entityname.railgundecoyexplosive>
   <entityname.chaingunammoboxexplosive>连射炮爆破弹药箱</entityname.chaingunammoboxexplosive>
   <entitydescription.chaingunammoboxexplosive>连射炮弹药。命中时爆炸。</entitydescription.chaingunammoboxexplosive>

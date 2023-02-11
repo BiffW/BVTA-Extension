@@ -10,6 +10,7 @@
   - 酸雾炮弹
   - 爆破霰弹炮弹
   - 诱饵弹
+  - 金属泡沫弹
 
 连射炮
   - 爆破弹药箱 (EK Armory by Videogames)
@@ -42,6 +43,7 @@ Railgun
   - Acid Mist Railgun Shell
   - Explosive Canister Shell
   - Decoy Railgun Shell
+  - Fixfoam Railgun Shell
 
 Chaingun
   - Chaingun Explosive Ammunition Box (from EK Armory by Videogames)

@@ -9,6 +9,7 @@ Railgun
   - Acid Mist Railgun Shell
   - Explosive Canister Shell
   - Decoy Railgun Shell
+  - Fixfoam Railgun Shell
 
 Chaingun
   - Chaingun Explosive Ammunition Box from "EK Armory" by Videogames

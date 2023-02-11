@@ -406,4 +406,92 @@
     </Projectile>
     <ItemContainer />
   </Item>
+  <!-- 金属泡沫弹丸 -->
+  <Item name="Fixfoam Pellet" identifier="railgunshellfixfoampellet" category="Weapon" scale="0.3" sonarsize="1" hideinmenus="true">
+    <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="140,486,21,21" depth="0.55" />
+    <Body width="160" height="10" density="20" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <Projectile characterusable="false" launchimpulse="-85.0" impulsespread="0.3" sticktostructures="true" sticktodoors="true" damagedoors="false">
+      <Attack structuredamage="0" itemdamage="0">
+        <Affliction identifier="stun" strength="0.2" />
+      </Attack>
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" delay="0.33" disabledeltatime="true" />
+      <StatusEffect type="OnActive" target="This" lifetime="2">
+        <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="1" velocitymin="0" velocitymax="50" scalemin="0.33" scalemax="1" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" condition="-100" disabledeltatime="true" />
+      <StatusEffect type="OnBroken" target="This">
+        <Explosion range="500" force="0.0" camerashake="0" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" itemdamage="-75" structuredamage="-100" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" duration="1.5" soundselectionmode="All">
+        <sound file="Content/Items/Tools/Sprayer.ogg" range="500" volume="0.5" />
+        <sound file="Content/Items/Tools/FlareLoop.ogg" range="500" />
+        <ParticleEmitter particle="fixfoam" anglemax="360" velocitymin="4000" velocitymax="4000" scalemultiplier="0.5,0.5" particlespersecond="16" />
+        <ParticleEmitter particle="fixfoamgoosplash" anglemax="360" distancemax="10" scalemultiplier="0.5,0.5" particlespersecond="16" />
+        <ParticleEmitter particle="fixfoamgoosplash" anglemax="360" distancemax="10" particlespersecond="5" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" delay="1.6">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <!-- 金属泡沫弹 -->
+  <Item identifier="railgunshellfixfoam" variantof="railgunshell">
+    <PreferredContainer primary="railgunammoloader" spawnprobability="0" />
+    <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
+    <PreferredContainer secondary="wreckrailgunloader" spawnprobability="0" />
+    <PreferredContainer secondary="wreckrailgunammocontainer" amount="1" spawnprobability="0.05" />
+    <Price baseprice="100" minleveldifficulty="15">
+      <Price storeidentifier="merchantoutpost" multiplier="1.5" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="5" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" sold="false" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="5" />
+    </Price>
+    <Deconstruct>
+      <Item identifier="iron" />
+      <Item identifier="carbon" />
+      <Item identifier="sodium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredSkill identifier="mechanical" level="35" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="sodium" />
+      <RequiredItem identifier="phosphorus" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="100" amount="4">
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredSkill identifier="mechanical" level="35" />
+      <RequiredItem identifier="steel" amount="4" />
+      <RequiredItem identifier="sodium" amount="4" />
+      <RequiredItem identifier="phosphorus" amount="4" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir:BVTA Extension%/images/railgunshellfixfoam.png" sourcerect="0,33,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir:BVTA Extension%/images/railgunshellfixfoam.png" sourcerect="0,0,213,30" depth="0.55" origin="0.5,0.5" />
+    <Projectile>
+      <!-- inherited status effects -->
+      <StatusEffect type="OnActive"></StatusEffect>
+      <StatusEffect type="OnImpact" target="This" allowwhenbroken="true" Condition="-100.0" setvalue="true">
+        <clear />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" condition="-200" delay="0.3" disabledeltatime="true">
+        <clear />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <SpawnItem identifier="railgunshellfixfoampellet" spawnposition="This" count="16" aimspread="60" rotationtype="Collider" rotation="0" />
+        <Explosion range="250.0" ballastfloradamage="100" structuredamage="50" itemdamage="200" force="10.0" severlimbsprobability="0.5" decal="explosion" decalsize="0.3" penetration="0.5">
+          <Affliction identifier="explosiondamage" strength="250" />
+          <Affliction identifier="stun" strength="7" />
+        </Explosion>
+        <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" selectionmode="Random" range="50000" />
+        <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" selectionmode="Random" range="50000" />
+        <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" selectionmode="Random" range="50000" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="50" velocitymin="100" velocitymax="2000" scalemin="1.0" scalemax="1.0" />
+        <RemoveItem />
+      </StatusEffect>
+    </Projectile>
+    <ItemContainer />
+  </Item>
 </Items>
