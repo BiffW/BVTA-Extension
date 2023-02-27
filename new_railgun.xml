@@ -158,7 +158,7 @@
       <Attack structuredamage="50" itemdamage="50" severlimbsprobability="25" penetration="0.875" targetforce="60">
         <Affliction identifier="lacerations" strength="200" />
         <Affliction identifier="bleeding" strength="50" />
-        <Affliction identifier="bleeding" strength="10" multiplybymaxvitality="true" />
+        <Affliction identifier="bleeding" strength="6" multiplybymaxvitality="true" />
         <Affliction identifier="stun" strength="5" />
       </Attack>
       <StatusEffect type="OnActive" target="This" lifetime="1">
@@ -271,7 +271,7 @@
       <StatusEffect type="OnImpact" target="This" >
         <Explosion range="240.0" structuredamage="5" force="10.0" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.24">
           <Affliction identifier="explosiondamage" strength="60" />
-          <Affliction identifier="lacerations" strength="30" />
+          <Affliction identifier="burn" strength="30" />
           <Affliction identifier="explosiondamage" strength="0.5" multiplybymaxvitality="true" />
           <Affliction identifier="bleeding" strength="90" />
         </Explosion>

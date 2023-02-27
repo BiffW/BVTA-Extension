@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
   <entityname.railgunshelldepletedfuel>Depleted Fuel Railgun Shell</entityname.railgunshelldepletedfuel>
-  <entitydescription.railgunshelldepletedfuel>More powerful than steel shells, has stronger armor piercing ability, and can cause radiation to the target.</entitydescription.railgunshelldepletedfuel>
+  <entitydescription.railgunshelldepletedfuel>More powerful than steel shells, with better armor-piercing ability, and can cause radiation to the target.</entitydescription.railgunshelldepletedfuel>
   <entityname.railgunshellaphep>APHE Proximity Railgun Shell</entityname.railgunshellaphep>
   <entitydescription.railgunshellaphep>A railgun armor-piercing shell. Able to penetrate the ship's hull and detonate, equipped with a proximity fuze.</entitydescription.railgunshellaphep>
   <entityname.railgunshellapfsds>APFSDS Railgun Shell</entityname.railgunshellapfsds>
-  <entitydescription.railgunshellapfsds>A reloadable railgun shell. Fires a high-speed steel dart that penetrate the ship's hull and armor.</entitydescription.railgunshellapfsds>
+  <entitydescription.railgunshellapfsds>A reloadable railgun shell. Fires a high-speed steel dart that penetrate the hull and armor.</entitydescription.railgunshellapfsds>
   <entityname.railgunshellacid>Acid Mist Railgun Shell</entityname.railgunshellacid>
-  <entitydescription.railgunshellacid>A defensive railgun shell loaded with special acid, spraying its content on its trace after launch. Usually used to hunt small creatures.</entitydescription.railgunshellacid>
+  <entitydescription.railgunshellacid>A defensive railgun shell loaded with special acid, spraying its content on its trace after launch. Good for hunting small creatures.</entitydescription.railgunshellacid>
   <entityname.railguncanistershellexplosive>Explosive Canister Shell</entityname.railguncanistershellexplosive>
   <entitydescription.railguncanistershellexplosive>A reloadable railgun shell. Loaded with explosive pellets.</entitydescription.railguncanistershellexplosive>
   <entityname.railgundecoydroppershell>Decoy Railgun Shell</entityname.railgundecoydroppershell>
   <entitydescription.railgundecoydroppershell>A defensive railgun shell that drops up to 5 explosive decoys on its trace after launch.</entitydescription.railgundecoydroppershell>
   <entityname.railgunshellfixfoam>Fixfoam Railgun Shell</entityname.railgunshellfixfoam>
-  <entitydescription.railgunshellfixfoam>A defensive railgun shell that releases multiple fixfoam pellets on the shell of your submarine. Can be used for emergency hull fix.</entitydescription.railgunshellfixfoam>
+  <entitydescription.railgunshellfixfoam>A defensive railgun shell that releases multiple fixfoam pellets on your submarine. Can be used for emergency hull fix.</entitydescription.railgunshellfixfoam>
   <entityname.railgundecoyexplosive>Explosive Decoy</entityname.railgundecoyexplosive>
   <entityname.chaingunammoboxexplosive>Chaingun Explosive Ammunition Box</entityname.chaingunammoboxexplosive>
   <entitydescription.chaingunammoboxexplosive>Ammo for chaingun. Explodes on hit.</entitydescription.chaingunammoboxexplosive>

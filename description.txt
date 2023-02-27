@@ -1,7 +1,10 @@
 语言: 简体中文, English
 
-这个合集包含了我制作的和一部分其他mod的弹药。
-我做了点修改使其兼容Better Vanilla Turret Ammo(原版弹药加强)
+这个合集增加了多种炮台弹药。
+有一部分取自其他作者已经停止更新或者隐藏的mod，我做了点修改使其兼容Better Vanilla Turret Ammo(原版弹药加强)。
+其他的是由我制作的，有明确用途的弹药。
+
+推荐与高难mod一起使用，例如：高难狩猎、TSM Mission、EuropaWar
 
 轨道炮
   - 贫化燃料炮弹 (Ammo Mod by Laryssa)
@@ -33,8 +36,11 @@
 
 Supported languages: English, 简体中文
 
-This is a collection of interesting ammunitions made by community modders. 
-I did some changes to make them compatible with Better Vanilla Turret Ammo. 
+This is a collection adding many kinds of ammunitions for submarine turrets.
+Some are taken from mods that are no longer updated or hidden by their author. I updated them to make them compatible with BVTA.
+The rest are made by myself and they are clearly defined for multiple different purposes.
+
+It is recommended to use this mod with some difficulty mods like: 高难狩猎、T.S.M Missions、EuropaWar
 
 Railgun
   - Depleted Fuel Railgun Shell (from Ammo Mod by Laryssa)

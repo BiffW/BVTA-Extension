@@ -1,34 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Simplified Chinese" nowhitespace="true" translatedname="中文(简体)">
-  <entityname.railgunshelldepletedfuel>轨道炮贫化燃料炮弹</entityname.railgunshelldepletedfuel>
+  <entityname.railgunshelldepletedfuel>轨道炮贫化燃料弹</entityname.railgunshelldepletedfuel>
   <entitydescription.railgunshelldepletedfuel>比钢制炮弹威力更大，穿甲能力更强，能对目标造成辐射伤害。</entitydescription.railgunshelldepletedfuel>
-  <entityname.railgunshellaphep>轨道炮穿甲高爆近炸炮弹</entityname.railgunshellaphep>
+  <entityname.railgunshellaphep>轨道炮穿甲高爆近炸弹</entityname.railgunshellaphep>
   <entitydescription.railgunshellaphep>一种轨道炮穿甲弹。能够穿透舰艇的外壳后引爆，配有近炸引信。</entitydescription.railgunshellaphep>
-  <entityname.railgunshellapfsds>轨道炮尾翼稳定脱壳穿甲炮弹</entityname.railgunshellapfsds>
+  <entityname.railgunshellapfsds>轨道炮尾翼稳定脱壳穿甲弹</entityname.railgunshellapfsds>
   <entitydescription.railgunshellapfsds>一种可装填式轨道炮炮弹。发射高速无装药钢针穿透舰艇外壳和装甲。</entitydescription.railgunshellapfsds>
-  <entityname.railgunshellacid>轨道炮酸雾炮弹</entityname.railgunshellacid>
-  <entitydescription.railgunshellacid>一种防御性轨道炮炮弹。装填了特制酸液，发射后能够在其弹道上产生酸雾，杀伤接近的小型生物。</entitydescription.railgunshellacid>
+  <entityname.railgunshellacid>轨道炮酸雾弹</entityname.railgunshellacid>
+  <entitydescription.railgunshellacid>一种防御性轨道炮炮弹。装填了特制酸液，发射后能够在其弹道上释放酸雾，杀伤接近的小型生物。</entitydescription.railgunshellacid>
   <entityname.railguncanistershellexplosive>轨道炮爆破霰弹炮弹</entityname.railguncanistershellexplosive>
   <entitydescription.railguncanistershellexplosive>一种可装填式轨道炮炮弹。发射装有炸药的弹丸。</entitydescription.railguncanistershellexplosive>
   <entityname.railgundecoydroppershell>轨道炮诱饵弹</entityname.railgundecoydroppershell>
   <entitydescription.railgundecoydroppershell>一种防御性轨道炮炮弹，发射后会在轨迹上投放至多5个爆炸诱饵。</entitydescription.railgundecoydroppershell>
   <entityname.railgunshellfixfoam>轨道炮金属泡沫弹</entityname.railgunshellfixfoam>
-  <entitydescription.railgunshellfixfoam>一种防御性轨道炮炮弹，发射后会反向释放大量金属泡沫弹丸，用于紧急修复潜艇外壳。</entitydescription.railgunshellfixfoam>
+  <entitydescription.railgunshellfixfoam>一种防御性轨道炮炮弹，发射后会向己方释放大量金属泡沫弹丸，用于紧急修复潜艇外壳。</entitydescription.railgunshellfixfoam>
   <entityname.railgundecoyexplosive>爆炸诱饵</entityname.railgundecoyexplosive>
   <entityname.chaingunammoboxexplosive>连射炮爆破弹药箱</entityname.chaingunammoboxexplosive>
   <entitydescription.chaingunammoboxexplosive>连射炮弹药。命中时爆炸。</entitydescription.chaingunammoboxexplosive>
   <entityname.chaingunammoboxspread>连射炮霰弹弹药箱</entityname.chaingunammoboxspread>
   <entitydescription.chaingunammoboxspread>连射炮霰射弹药。对无护甲目标有效。</entitydescription.chaingunammoboxspread>
   <entityname.coilgunammoboxstun>电磁枪震撼弹药箱</entityname.coilgunammoboxstun>
-  <entitydescription.coilgunammoboxstun>电磁枪弹药。命中时爆炸并击晕目标。</entitydescription.coilgunammoboxstun>
+  <entitydescription.coilgunammoboxstun>电磁枪弹药。命中时爆炸并击晕目标。可有效阻止小型生物靠近，对潜艇伤害低。</entitydescription.coilgunammoboxstun>
   <entityname.flakcannonshockammobox>电击破片弹药箱</entityname.flakcannonshockammobox>
-  <entitydescription.flakcannonshockammobox>一箱沉重的电击弹药，可供破片加农炮使用。对集群目标有效。</entitydescription.flakcannonshockammobox>
+  <entitydescription.flakcannonshockammobox>一箱沉重的电击弹药，可供破片加农炮使用。对集群目标效果极佳。</entitydescription.flakcannonshockammobox>
   <entityname.flakcannondirectionalpiercingammobox>集束穿甲破片弹药箱</entityname.flakcannondirectionalpiercingammobox>
-  <entitydescription.flakcannondirectionalpiercingammobox>一箱沉重的聚能破甲弹药，可供破片加农炮使用。可穿透船壳和装甲对敌人造成伤害。</entitydescription.flakcannondirectionalpiercingammobox>
+  <entitydescription.flakcannondirectionalpiercingammobox>一箱沉重的聚能破甲弹药，可供破片加农炮使用。可穿透船壳和装甲。</entitydescription.flakcannondirectionalpiercingammobox>
   <entityname.pulselaserammoboxmixed>双模式脉冲激光燃料箱</entityname.pulselaserammoboxmixed>
-  <entitydescription.pulselaserammoboxmixed>两种雷素激光燃料箱的组合体，每次射击后切换模式，装有两倍的燃料量。</entitydescription.pulselaserammoboxmixed>
+  <entitydescription.pulselaserammoboxmixed>两种雷素激光燃料箱的组合体，每次射击后自动切换模式，装有两倍的燃料量。</entitydescription.pulselaserammoboxmixed>
   <entityname.pulselaserammoboxpiercing>穿透脉冲激光燃料箱</entityname.pulselaserammoboxpiercing>
-  <entitydescription.pulselaserammoboxpiercing>一个装好化学药剂和聚焦透镜的箱子，可以引发强力的穿透激光，打击墙壁后的目标。</entitydescription.pulselaserammoboxpiercing>
+  <entitydescription.pulselaserammoboxpiercing>一个装好化学药剂和聚焦透镜的箱子，可以诱发强力的穿透激光。</entitydescription.pulselaserammoboxpiercing>
   <entityname.acidmistbomb>酸雾炸弹</entityname.acidmistbomb>
   <entitydescription.acidmistbomb>一种装填了特制酸液的炸弹。可以装入轨道炮炮弹使用。</entitydescription.acidmistbomb>
 </infotexts>
