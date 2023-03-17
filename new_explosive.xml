@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
+  <!-- 酸雾炸弹 -->
   <Item name="" identifier="acidmistbomb" category="Weapon" description="" Scale="0.5" Tags="smallitem,explosive,demolitionsexpert" maxstacksize="8" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
     <PreferredContainer primary="secarmcab" minamount="1" maxamount="2" spawnprobability="0.2" notcampaign="true" />
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.1" />
@@ -30,6 +31,67 @@
           <Affliction identifier="stun" strength="3" />
         </Explosion>
         <SpawnItem identifier="railgunshellacidemitter" spawnposition="This" count="8" spread="500" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+    <Quality>
+      <QualityStat stattype="ExplosionRadius" value="0.1" />
+      <QualityStat stattype="ExplosionDamage" value="0.1" />
+    </Quality>
+  </Item>
+  <!-- EMP滞留效果生成器 -->
+  <Item name="EMP After Effect Emitter" identifier="empbombaftereffectemitter" Scale="0.5" tags="" sonarsize="17" hideinmenus="true">
+    <AiTarget sightrange="850.0" soundrange="850" sonardisruption="10" static="True" />
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,2,2" depth="0.55" origin="0.5,0.5" />
+    <ItemComponent>
+      <!-- reduce condition to remove the emitter after 10 seconds -->
+      <StatusEffect type="Always" target="This" condition="-10">
+        <ParticleEmitter particle="ElectricShock" anglemin="0" anglemax="360" particlespersecond="5" velocitymin="-50" velocitymax="50" scalemin="0.25" scalemax="0.5" distancemin="0" distancemax="850" />
+      </StatusEffect>
+      <!-- apply EMP to nearby characters -->
+      <StatusEffect type="Always" target="NearbyCharacters" range="850">
+        <Affliction identifier="emp" strength="10" multiplybymaxvitality="true" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <!-- EMP炸弹 -->
+  <Item name="" identifier="empbomb" category="Weapon" description="" Scale="0.5" Tags="smallitem,explosive,demolitionsexpert" maxstacksize="8" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+    <PreferredContainer primary="secarmcab" minamount="1" maxamount="2" spawnprobability="0.1" notcampaign="true" />
+    <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.05" />
+    <PreferredContainer secondary="armcab" />
+    <Price baseprice="64" minavailable="2" minleveldifficulty="5">
+      <Price storeidentifier="merchantoutpost" multiplier="1.4" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="3" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="5" />
+      <Price storeidentifier="merchantmine" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="5" />
+      <Price storeidentifier="merchantengineering" multiplier="1.2" minavailable="4" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" amount="2" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="50" />
+      <RequiredItem identifier="uex" />
+      <RequiredItem identifier="copper" amount="2" />
+    </Fabricate>
+    <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" depth="0.55" sourcerect="240,80,47,32" origin="0.5,0.5" />
+    <Body width="45" height="30" density="20" />
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" canbecombined="true" removeoncombined="true" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" type="OnBroken" range="10000" selectionmode="All" />
+      <sound file="Content/Items/Weapons/Emp.ogg" type="OnBroken" range="10000" />
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnBroken" target="This">
+        <Explosion range="850" force="2.5" empstrength="20" applyfireeffects="false" flames="false" smoke="false" sparks="false" underwaterbubble="false" >
+          <Affliction identifier="explosiondamage" strength="64" />
+          <Affliction identifier="burn" strength="15" probability="0.2" dividebylimbcount="false"/>
+          <Affliction identifier="stun" strength="5" />
+          <Affliction identifier="emp" strength="100" multiplybymaxvitality="true" />
+        </Explosion>
+        <SpawnItem identifier="empbombaftereffectemitter" spawnposition="This"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove />

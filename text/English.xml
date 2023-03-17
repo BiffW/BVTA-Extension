@@ -31,4 +31,6 @@
   <entitydescription.pulselaserammoboxpiercing>A box containing a special concoction of chemicals and rare materials. The lens focuses laser to improve penetration, allowing the laser to hit targets behind walls.</entitydescription.pulselaserammoboxpiercing>
   <entityname.acidmistbomb>Acid Mist Bomb</entityname.acidmistbomb>
   <entitydescription.acidmistbomb>A bomb containing special acid, can be put into a railgun shell for creature hunting.</entitydescription.acidmistbomb>
+  <entityname.empbomb>EMP Bomb</entityname.empbomb>
+  <entitydescription.empbomb>A bomb designed to destroy electrical devices, can be put into a railgun shell.</entitydescription.empbomb>
 </infotexts>
