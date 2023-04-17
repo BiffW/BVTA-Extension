@@ -9,11 +9,13 @@
   <entityname.railgunshellacid>轨道炮酸雾弹</entityname.railgunshellacid>
   <entitydescription.railgunshellacid>一种防御性轨道炮炮弹。装填了特制酸液，发射后能够在其弹道上释放酸雾，杀伤接近的小型生物。</entitydescription.railgunshellacid>
   <entityname.railguncanistershellexplosive>轨道炮爆破霰弹炮弹</entityname.railguncanistershellexplosive>
-  <entitydescription.railguncanistershellexplosive>一种可装填式轨道炮炮弹。发射装有炸药的弹丸。</entitydescription.railguncanistershellexplosive>
+  <entitydescription.railguncanistershellexplosive>一种可装填式轨道炮炮弹。装有高爆弹丸。</entitydescription.railguncanistershellexplosive>
   <entityname.railgundecoydroppershell>轨道炮诱饵弹</entityname.railgundecoydroppershell>
   <entitydescription.railgundecoydroppershell>一种防御性轨道炮炮弹，发射后会在轨迹上投放至多5个爆炸诱饵。</entitydescription.railgundecoydroppershell>
   <entityname.railgunshellfixfoam>轨道炮金属泡沫弹</entityname.railgunshellfixfoam>
   <entitydescription.railgunshellfixfoam>一种防御性轨道炮炮弹，发射后会向己方释放大量金属泡沫弹丸，用于紧急修复潜艇外壳。</entitydescription.railgunshellfixfoam>
+  <entityname.railguncanistershellarrowshaped>轨道炮箭型霰弹炮弹</entityname.railguncanistershellarrowshaped>
+  <entitydescription.railguncanistershellarrowshaped>一种可装填式轨道炮炮弹。装有箭型弹药。</entitydescription.railguncanistershellarrowshaped>
   <entityname.railgundecoyexplosive>爆炸诱饵</entityname.railgundecoyexplosive>
   <entityname.chaingunammoboxexplosive>连射炮爆破弹药箱</entityname.chaingunammoboxexplosive>
   <entitydescription.chaingunammoboxexplosive>连射炮弹药。命中时爆炸。</entitydescription.chaingunammoboxexplosive>

@@ -494,4 +494,68 @@
     </Projectile>
     <ItemContainer />
   </Item>
+  <!-- 箭型弹 -->
+  <Item name="Arrow" identifier="railguncanistershellarrow" category="Misc" scale="0.5" sonarsize="3" hideinmenus="true">
+    <Sprite texture="%ModDir:BVTA Extension%/images/railguncanistershellarrow.png" sourcerect="79,79,128,20" depth="0.55" />
+    <Body width="125" height="18" density="35" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <Projectile characterusable="false" launchimpulse="45" maxtargetstohit="2" spread="15" damagedoors="true">
+      <Attack structuredamage="50" itemdamage="50" severlimbsprobability="25" penetration="0.875" targetforce="60">
+        <Affliction identifier="lacerations" strength="100" />
+        <Affliction identifier="bleeding" strength="25" />
+        <Affliction identifier="bleeding" strength="3" multiplybymaxvitality="true" />
+        <Affliction identifier="stun" strength="2.5" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" lifetime="1">
+        <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="1" velocitymin="0" velocitymax="50" scalemin="0.5" scalemax="1.5" />
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="1" scalemax="2" colormultiplier="75,75,144,175" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true" stackable="false" delay="1.7" />
+      <StatusEffect type="OnImpact" target="This" disabledeltatime="true">
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="3" velocitymin="1000" velocitymax="4000" scalemin="0.5" scalemax="1" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="0" anglemax="360" particleamount="6" velocitymin="500" velocitymax="2000" scalemin="1" scalemax="2" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <!-- 箭型霰弹 -->
+  <Item identifier="railguncanistershellarrowshaped" variantof="railguncanistershell">
+    <PreferredContainer primary="railgunammoloader,railgunammocontainer" />
+    <PreferredContainer secondary="wreckrailgunammocontainer" maxamount="1" spawnprobability="0.07" />
+    <Price baseprice="240" minleveldifficulty="25">
+      <Price storeidentifier="merchantoutpost" multiplier="1.5" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="5" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" sold="false" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="5" />
+    </Price>
+    <Deconstruct>
+      <Item identifier="lead" mincondition="0.95" />
+      <Item identifier="lead" mincondition="0.95" />
+      <Item identifier="iron" />
+      <Item identifier="carbon" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredItem identifier="lead" amount="2" />
+      <RequiredItem identifier="steel" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="8">
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem identifier="lead" amount="2" />
+      <RequiredItem identifier="" tag="containershell" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+    </Fabricate>
+    <Sprite texture="%ModDir:BVTA Extension%/images/railguncanistershellarrow.png" sourcerect="0,4,216,34" />
+    <BrokenSprite texture="%ModDir:BVTA Extension%/images/railguncanistershellarrow.png" sourcerect="0,40,216,34" />
+    <InventoryIcon texture="%ModDir:BVTA Extension%/images/railguncanistershellarrow.png" sourcerect="0,80,64,64" />
+    <ItemContainer capacity="8" spawnwithid="railguncanistershellarrow,railguncanistershellarrow,railguncanistershellarrow,railguncanistershellarrow,railguncanistershellarrow,railguncanistershellarrow,railguncanistershellarrow,railguncanistershellarrow">
+      <StatusEffect>
+        <RequiredItem items="railguncanistershellarrow" />
+      </StatusEffect>
+      <Containable items="railguncanistershellarrow" />
+    </ItemContainer>
+  </Item>
 </Items>
