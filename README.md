@@ -1,6 +1,7 @@
 # BVTA-Extension
-An extension to BVTA which adds some new ammunition items made by community modders
-This mod can be used without BVTA
+An extension to BVTA which adds some new ammunition items.
+Some of them are merged from other mods that are hidden or no longer maintained by their author.
+This mod can be used without BVTA.
 
 Railgun
   - Depleted Fuel Railgun Shell from "Ammo Mod" by Laryssa
@@ -10,6 +11,10 @@ Railgun
   - Explosive Canister Shell
   - Decoy Railgun Shell
   - Fixfoam Railgun Shell
+
+Explosives
+  - Acid Mist Bomb
+  - EMP Bomb
 
 Chaingun
   - Chaingun Explosive Ammunition Box from "EK Armory" by Videogames

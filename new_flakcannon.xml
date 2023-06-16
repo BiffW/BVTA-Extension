@@ -25,12 +25,12 @@
         <ParticleEmitter particle="shrapnel" anglemin="0" anglemax="360" particleamount="50" velocitymin="100" velocitymax="2000" scalemin="1" scalemax="2" />
         <RemoveItem />
       </StatusEffect>
+      <MotionSensor range="325" canbeselected="false" IgnoreDead="True" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
+        <StatusEffect type="OnNotContained" target="This" condition="-100" disabledeltatime="true" stackable="false" checkconditionalalways="true">
+          <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
+        </StatusEffect>
+      </MotionSensor>
     </Projectile>
-    <MotionSensor range="325" canbeselected="false" IgnoreDead="True" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
-      <StatusEffect type="Always" target="This" condition="-100" disabledeltatime="true" stackable="false" checkconditionalalways="true">
-        <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
-      </StatusEffect>
-    </MotionSensor>
   </Item>
   <!--高射炮电击弹破片-->
   <Item name="Flak Shock Bolt Shrapnel" identifier="flakshockshrapnel" category="Weapon" scale="0.3" sonarsize="1" hideinmenus="true">
@@ -51,7 +51,7 @@
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This">
         <ParticleEmitter particle="ElectricShock" copyentityangle="true" anglemin="0" anglemax="360" particleamount="2" velocitymin="100" velocitymax="2000" scalemin="0.25" scalemax="0.5" />
-        <Explosion range="300.0" ballastfloradamage="0" structuredamage="0" itemdamage="0" force="10.0" flames="false" smoke="false" sparks="false" underwaterbubble="false" flashcolor="255,0,0,255" >
+        <Explosion range="300.0" ballastfloradamage="0" structuredamage="0" itemdamage="0" force="10.0" flames="false" smoke="false" sparks="false" underwaterbubble="false" flashcolor="255,0,0,255">
           <Affliction identifier="burn" strength="22" />
           <Affliction identifier="stun" strength="3" />
         </Explosion>
@@ -114,12 +114,12 @@
         <ParticleEmitter particle="shrapnel" anglemin="0" anglemax="360" particleamount="50" velocitymin="100" velocitymax="2000" scalemin="1" scalemax="2" />
         <RemoveItem />
       </StatusEffect>
+      <MotionSensor range="325" canbeselected="false" IgnoreDead="True" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
+        <StatusEffect type="OnNotContained" target="This" condition="-100" disabledeltatime="true" stackable="false" checkconditionalalways="true">
+          <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
+        </StatusEffect>
+      </MotionSensor>
     </Projectile>
-    <MotionSensor range="325" canbeselected="false" IgnoreDead="True" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
-      <StatusEffect type="Always" target="This" condition="-100" disabledeltatime="true" stackable="false" checkconditionalalways="true">
-        <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
-      </StatusEffect>
-    </MotionSensor>
   </Item>
   <!--高射炮集束穿甲弹破片-->
   <Item name="" identifier="flakshrapneldirectionalpiercing" category="Weapon" scale="0.6" sonarsize="1" hideinmenus="true">

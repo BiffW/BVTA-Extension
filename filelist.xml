@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="BVTA Extension" modversion="0.1.18" corepackage="False" steamworkshopid="2852898905" gameversion="1.0.8.0">
+<contentpackage name="BVTA Extension" modversion="0.1.19" corepackage="False" steamworkshopid="2852898905" gameversion="1.0.20.1">
   <Item file="%ModDir%/new_chaingun.xml" />
   <Item file="%ModDir%/new_coilgun.xml" />
   <Item file="%ModDir%/new_flakcannon.xml" />
@@ -9,4 +9,5 @@
   <Particles file="%ModDir%/ParticlePrefabsNew.xml" />
   <Text file="%ModDir%/Text/SimplifiedChinese.xml" />
   <Text file="%ModDir%/Text/English.xml" />
+  <Text file="%ModDir%/Text/Russian.xml" />
 </contentpackage>

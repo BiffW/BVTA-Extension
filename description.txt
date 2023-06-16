@@ -1,11 +1,14 @@
 语言: 简体中文, English
 
+[h3]简介[/h3]
 这个合集增加了多种炮台弹药。
-有一部分取自其他作者已经停止更新或者隐藏的mod，我做了点修改使其兼容Better Vanilla Turret Ammo(原版弹药加强)。
+有一部分取自其他作者已经停止更新或者隐藏的mod，我做了点修改使其兼容我的[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2683843415]原版弹药加强[/url]。
 其他的是由我制作的，有明确用途的弹药。
 
+[h3]附录[/h3]
 推荐与高难mod一起使用，例如：高难狩猎、TSM Mission、EuropaWar
 
+[h3]内容[/h3]
 轨道炮
   - 贫化燃料炮弹 (Ammo Mod by Laryssa)
   - 穿甲高爆近炸炮弹 (APHE Railgun Shells by Birb)
@@ -14,6 +17,10 @@
   - 爆破霰弹炮弹
   - 诱饵弹
   - 金属泡沫弹
+
+爆炸物
+  - 酸雾炸弹
+  - EMP炸弹
 
 连射炮
   - 爆破弹药箱 (EK Armory by Videogames)
@@ -33,15 +40,17 @@
 
   --------------------------------分割线--------------------------------
 
-
 Supported languages: English, 简体中文
 
+[h3]Summary[/h3]
 This is a collection adding many kinds of ammunitions for submarine turrets.
-Some are taken from mods that are no longer updated or hidden by their author. I updated them to make them compatible with BVTA.
+Some are merged from other mods that are no longer maintained or hidden by their author. I updated them to make them compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2683843415]BVTA[/url].
 The rest are made by myself and they are clearly defined for multiple different purposes.
 
+[h3]Note[/h3]
 It is recommended to use this mod with some difficulty mods like: 高难狩猎、T.S.M Missions、EuropaWar
 
+[h3]Content[/h3]
 Railgun
   - Depleted Fuel Railgun Shell (from Ammo Mod by Laryssa)
   - APHE Proximity Railgun Shell (from APHE Railgun Shells by Birb)
@@ -50,6 +59,10 @@ Railgun
   - Explosive Canister Shell
   - Decoy Railgun Shell
   - Fixfoam Railgun Shell
+
+Explosives
+  - Acid Mist Bomb
+  - EMP Bomb
 
 Chaingun
   - Chaingun Explosive Ammunition Box (from EK Armory by Videogames)
