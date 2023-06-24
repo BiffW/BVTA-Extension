@@ -76,7 +76,7 @@
     <Sprite texture="%ModDir:BVTA Extension%/images/APHE.png" sourcerect="0,0,214,32" />
     <Projectile maxtargetstohit="2">
       <Attack structuredamage="50"></Attack>
-      <StatusEffect type="OnActive" condition="-10"></StatusEffect>
+      <StatusEffect type="OnActive"></StatusEffect>
       <StatusEffect type="OnImpact" Condition="-50" setvalue="false" disabledeltatime="true">
         <clear />
       </StatusEffect>
@@ -103,13 +103,12 @@
       <StatusEffect type="OnBroken" target="This">
         <Remove />
       </StatusEffect>
+      <MotionSensor range="400" canbeselected="false" IgnoreDead="true" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
+        <StatusEffect type="OnNotContained" target="This" condition="-100" delay="0.075" disabledeltatime="true">
+          <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
+        </StatusEffect>
+      </MotionSensor>
     </Projectile>
-    <MotionSensor range="400" canbeselected="false" IgnoreDead="true" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
-      <StatusEffect type="Always" target="This" condition="-100" delay="0.075" comparison="and" disabledeltatime="true">
-        <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
-        <Conditional Condition="lt 99" />
-      </StatusEffect>
-    </MotionSensor>
   </Item>
   <!--尾翼稳定脱壳穿甲弹-->
   <Item identifier="railgunshellapfsds" variantof="railguncanistershell">

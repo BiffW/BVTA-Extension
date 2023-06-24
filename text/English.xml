@@ -25,6 +25,8 @@
   <entitydescription.flakcannonshockammobox>A heavy box of wide-spread electric shock ammo for the Flak Cannon. Good against swarms.</entitydescription.flakcannonshockammobox>
   <entityname.flakcannondirectionalpiercingammobox>Focused Armor-Piercing Flak Shells Box</entityname.flakcannondirectionalpiercingammobox>
   <entitydescription.flakcannondirectionalpiercingammobox>A heavy box of low spread armor-piercing ammo for the Flak Cannon. Good against targets behind walls.</entitydescription.flakcannondirectionalpiercingammobox>
+  <entityname.flakcannonammoboxexplosiveheart>Heart-Shaped Explosive Flak Shells Box</entityname.flakcannonammoboxexplosiveheart>
+  <entitydescription.flakcannonammoboxexplosiveheart>A heavy box of ammo for the flak cannon, loaded with high explosive materials that creates heart-shaped circle on detonation.</entitydescription.flakcannonammoboxexplosiveheart>
   <entityname.pulselaserammoboxmixed>Mixed Pulse Laser Fuel Box</entityname.pulselaserammoboxmixed>
   <entitydescription.pulselaserammoboxmixed>A mix-up of two types of fulgurium pulse laser ammo, switches lens mode after each shot. Containing twice as much fuel.</entitydescription.pulselaserammoboxmixed>
   <entityname.pulselaserammoboxpiercing>Piercing Pulse Laser Fuel Box</entityname.pulselaserammoboxpiercing>

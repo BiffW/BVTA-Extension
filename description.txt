@@ -1,9 +1,10 @@
-语言: 简体中文, English
+语言: 简体中文, English, Русский
 
 [h3]简介[/h3]
 这个合集增加了多种炮台弹药。
-有一部分取自其他作者已经停止更新或者隐藏的mod，我做了点修改使其兼容我的[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2683843415]原版弹药加强[/url]。
+有一部分取自其他作者已经停止更新或者隐藏的mod，我重制了它们使其继承我的[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2683843415]原版弹药加强[/url]中的修改。
 其他的是由我制作的，有明确用途的弹药。
+这个mod也可以单独使用。
 
 [h3]附录[/h3]
 推荐与高难mod一起使用，例如：高难狩猎、TSM Mission、EuropaWar
@@ -36,19 +37,21 @@
 破片加农炮
   - 电击破片弹药箱
   - 集束穿甲破片弹药箱
+  - 心形高爆破片弹药箱
 
 
   --------------------------------分割线--------------------------------
 
-Supported languages: English, 简体中文
+Supported languages: English, 简体中文, Русский
 
 [h3]Summary[/h3]
 This is a collection adding many kinds of ammunitions for submarine turrets.
-Some are merged from other mods that are no longer maintained or hidden by their author. I updated them to make them compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2683843415]BVTA[/url].
+Some are merged from other mods that are no longer maintained or hidden by their author. I remade them to make them inherit changes from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2683843415]BVTA[/url].
 The rest are made by myself and they are clearly defined for multiple different purposes.
+This mod can be used without BVTA.
 
 [h3]Note[/h3]
-It is recommended to use this mod with some difficulty mods like: 高难狩猎、T.S.M Missions、EuropaWar
+It is recommended to use this mod along with some challenging mods like: T.S.M Missions、EuropaWar
 
 [h3]Content[/h3]
 Railgun
@@ -78,3 +81,4 @@ Coilgun
 Flak Cannon
   - Shock Flak Shells Box
   - Focused Armor-Piercing Flak Shells Box
+  - Heart-Shaped Explosive Flak Shells Box

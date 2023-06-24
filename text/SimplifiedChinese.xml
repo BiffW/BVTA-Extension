@@ -9,7 +9,7 @@
   <entityname.railgunshellacid>轨道炮酸雾弹</entityname.railgunshellacid>
   <entitydescription.railgunshellacid>一种防御性轨道炮炮弹。装填了特制酸液，发射后能够在其弹道上释放酸雾，杀伤接近的小型生物。</entitydescription.railgunshellacid>
   <entityname.railguncanistershellexplosive>轨道炮爆破霰弹炮弹</entityname.railguncanistershellexplosive>
-  <entitydescription.railguncanistershellexplosive>一种可装填式轨道炮炮弹。发射装有炸药的弹丸。</entitydescription.railguncanistershellexplosive>
+  <entitydescription.railguncanistershellexplosive>一种可装填式轨道炮炮弹。装有高爆弹丸。</entitydescription.railguncanistershellexplosive>
   <entityname.railgundecoydroppershell>轨道炮诱饵弹</entityname.railgundecoydroppershell>
   <entitydescription.railgundecoydroppershell>一种防御性轨道炮炮弹，发射后会在轨迹上投放至多5个爆炸诱饵。</entitydescription.railgundecoydroppershell>
   <entityname.railgunshellfixfoam>轨道炮金属泡沫弹</entityname.railgunshellfixfoam>
@@ -25,6 +25,8 @@
   <entitydescription.flakcannonshockammobox>一箱沉重的电击弹药，可供破片加农炮使用。对集群目标效果极佳。</entitydescription.flakcannonshockammobox>
   <entityname.flakcannondirectionalpiercingammobox>集束穿甲破片弹药箱</entityname.flakcannondirectionalpiercingammobox>
   <entitydescription.flakcannondirectionalpiercingammobox>一箱沉重的聚能破甲弹药，可供破片加农炮使用。可穿透船壳和装甲。</entitydescription.flakcannondirectionalpiercingammobox>
+  <entityname.flakcannonammoboxexplosiveheart>心形高爆破片弹药箱</entityname.flakcannonammoboxexplosiveheart>
+  <entitydescription.flakcannonammoboxexplosiveheart>一箱沉重的破片加农炮弹药，装有高爆炸药，爆炸时产生心形环。</entitydescription.flakcannonammoboxexplosiveheart>
   <entityname.pulselaserammoboxmixed>双模式脉冲激光燃料箱</entityname.pulselaserammoboxmixed>
   <entitydescription.pulselaserammoboxmixed>两种雷素激光燃料箱的组合体，每次射击后自动切换模式，装有两倍的燃料量。</entitydescription.pulselaserammoboxmixed>
   <entityname.pulselaserammoboxpiercing>穿透脉冲激光燃料箱</entityname.pulselaserammoboxpiercing>

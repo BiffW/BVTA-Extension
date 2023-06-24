@@ -25,6 +25,8 @@
   <entitydescription.flakcannonshockammobox>Тяжёлый ящик с электрошоковыми патронами широкого рассеивания действия для шрапнельного орудия. Хорошо подходит против роя противников.</entitydescription.flakcannonshockammobox>
   <entityname.flakcannondirectionalpiercingammobox>Ящик Пробивных Шрапнельных Снарядов Малого Рассеивания</entityname.flakcannondirectionalpiercingammobox>
   <entitydescription.flakcannondirectionalpiercingammobox>Тяжёлый ящик с бронебойными боеприпасами малого рассеивания для шрапнельного орудия. Хорошо подходит для целей за стенами.</entitydescription.flakcannondirectionalpiercingammobox>
+  <entityname.flakcannonammoboxexplosiveheart>Ящик с взрывными патронами для зенитного орудия в форме сердца</entityname.flakcannonammoboxexplosiveheart>
+  <entitydescription.flakcannonammoboxexplosiveheart>Тяжёлый ящик с боеприпасами для зенитной пушки, заряженный взрывчатым веществом, которое при детонации образует круг в форме сердца.</entitydescription.flakcannonammoboxexplosiveheart>
   <entityname.pulselaserammoboxmixed>Смешанная Капсула для Импульсного Лазера</entityname.pulselaserammoboxmixed>
   <entitydescription.pulselaserammoboxmixed>Смех двух типов грозовиевых боеприпасов для импульсного лазера, переключает режим линзы после каждого выстрела. Содержит в два раза больше топлива.</entitydescription.pulselaserammoboxmixed>
   <entityname.pulselaserammoboxpiercing>Пробивная Капсула для Импульсного Лазера</entityname.pulselaserammoboxpiercing>
