@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <!--高射炮电击弹-->
-  <Item name="Flak Shock Bolt" identifier="flakshockbolt" category="Weapon" scale="1" sonarsize="2" hideinmenus="true">
+  <Item name="Flak Shock Bolt" identifier="bvta.flakshockbolt" aliases="flakshockbolt" category="Weapon" scale="1" sonarsize="2" hideinmenus="true">
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
     <Body width="170" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
@@ -16,7 +16,7 @@
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true" disabledeltatime="true" />
       <StatusEffect type="OnBroken" target="This">
-        <SpawnItem identifier="flakshockshrapnel" spawnposition="This" count="16" aimspread="90" rotationtype="Collider" rotation="0" />
+        <SpawnItem identifier="bvta.flakshockshrapnel" spawnposition="This" count="16" aimspread="90" rotationtype="Collider" rotation="0" />
         <Explosion range="30.0" structuredamage="20" camerashake="25.0" camerashakerange="2000" force="10.0" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.3">
           <Affliction identifier="explosiondamage" strength="20" />
         </Explosion>
@@ -33,7 +33,7 @@
     </Projectile>
   </Item>
   <!--高射炮电击弹破片-->
-  <Item name="Flak Shock Bolt Shrapnel" identifier="flakshockshrapnel" category="Weapon" scale="0.3" sonarsize="1" hideinmenus="true">
+  <Item name="Flak Shock Bolt Shrapnel" identifier="bvta.flakshockshrapnel" aliases="flakshockshrapnel" category="Weapon" scale="0.3" sonarsize="1" hideinmenus="true">
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
     <Body width="170" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
@@ -62,7 +62,7 @@
     </Projectile>
   </Item>
   <!--高射炮电击弹药箱-->
-  <Item name="" identifier="flakcannonshockammobox" variantof="flakcannonammoboxphysicorium">
+  <Item name="" identifier="bvta.flakcannonshockammobox" aliases="flakcannonshockammobox" variantof="flakcannonammoboxphysicorium">
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredItem identifier="fulgurium" />
       <RequiredItem identifier="phosphorus" />
@@ -80,16 +80,16 @@
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="96,80,95,78" />
     <ItemContainer>
       <StatusEffect>
-        <SpawnItem identifiers="flakshockbolt" />
+        <SpawnItem identifiers="bvta.flakshockbolt" />
       </StatusEffect>
       <StatusEffect>
-        <RequiredItem items="flakshockbolt" />
+        <RequiredItem items="bvta.flakshockbolt" />
       </StatusEffect>
-      <Containable items="flakshockbolt" />
+      <Containable items="bvta.flakshockbolt" />
     </ItemContainer>
   </Item>
   <!--高射炮集束穿甲弹-->
-  <Item name="Flak Directional-Piercing Bolt" identifier="flakboltdirectionalpiercing" category="Weapon" scale="1" sonarsize="2" hideinmenus="true">
+  <Item name="Flak Directional-Piercing Bolt" identifier="bvta.flakboltdirectionalpiercing" aliases="flakboltdirectionalpiercing" category="Weapon" scale="1" sonarsize="2" hideinmenus="true">
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
     <Body width="170" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
@@ -104,7 +104,7 @@
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true" disabledeltatime="true" />
       <StatusEffect type="OnBroken" target="This">
-        <SpawnItem identifier="flakshrapneldirectionalpiercing" spawnposition="This" count="12" aimspread="25" rotationtype="Collider" rotation="0" />
+        <SpawnItem identifier="bvta.flakshrapneldirectionalpiercing" spawnposition="This" count="12" aimspread="25" rotationtype="Collider" rotation="0" />
         <Explosion range="30.0" structuredamage="20" camerashake="25.0" camerashakerange="2000" force="10.0" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.3">
           <Affliction identifier="explosiondamage" strength="20" />
         </Explosion>
@@ -122,7 +122,7 @@
     </Projectile>
   </Item>
   <!--高射炮集束穿甲弹破片-->
-  <Item name="Flak Directional-Piercing Bolt Shrapnel" identifier="flakshrapneldirectionalpiercing" category="Weapon" scale="0.6" sonarsize="1" hideinmenus="true">
+  <Item name="Flak Directional-Piercing Bolt Shrapnel" identifier="bvta.flakshrapneldirectionalpiercing" aliases="flakshrapneldirectionalpiercing" category="Weapon" scale="0.6" sonarsize="1" hideinmenus="true">
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
     <Body width="170" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
@@ -147,7 +147,7 @@
     </Projectile>
   </Item>
   <!--高射炮集束穿甲弹药箱-->
-  <Item name="" identifier="flakcannondirectionalpiercingammobox" variantof="flakcannonammobox">
+  <Item name="" identifier="bvta.flakcannondirectionalpiercingammobox" aliases="flakcannondirectionalpiercingammobox" variantof="flakcannonammobox">
     <PreferredContainer primary="flakcannonammoloader" spawnprobability="0" />
     <PreferredContainer primary="ammoboxcontainer" />
     <PreferredContainer secondary="wreckflakcannonloader" />
@@ -180,16 +180,16 @@
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" depth="0.54" sourcerect="96,160,95,78" origin="0.5,0.5" />
     <ItemContainer>
       <StatusEffect>
-        <SpawnItem identifiers="flakboltdirectionalpiercing" />
+        <SpawnItem identifiers="bvta.flakboltdirectionalpiercing" />
       </StatusEffect>
       <StatusEffect>
-        <RequiredItem items="flakboltdirectionalpiercing" />
+        <RequiredItem items="bvta.flakboltdirectionalpiercing" />
       </StatusEffect>
-      <Containable items="flakboltdirectionalpiercing" />
+      <Containable items="bvta.flakboltdirectionalpiercing" />
     </ItemContainer>
   </Item>
   <!-- 高射炮心形爆破弹 -->
-  <Item nameidentifier="flakboltexplosive" identifier="flakboltexplosiveheart" category="Weapon" scale="1" sonarsize="2" hideinmenus="true">
+  <Item nameidentifier="flakboltexplosive" identifier="bvta.flakboltexplosiveheart" aliases="flakboltexplosiveheart" category="Weapon" scale="1" sonarsize="2" hideinmenus="true">
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
     <Body width="170" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
@@ -204,22 +204,22 @@
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Conditional Removed="false" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart1" spawnposition="This" rotationtype="Fixed" rotation="45" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart2" spawnposition="This" rotationtype="Fixed" rotation="55.28" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart2" spawnposition="This" rotationtype="Fixed" rotation="34.72" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart3" spawnposition="This" rotationtype="Fixed" rotation="62.075" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart3" spawnposition="This" rotationtype="Fixed" rotation="27.925" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart4" spawnposition="This" rotationtype="Fixed" rotation="67.095" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart4" spawnposition="This" rotationtype="Fixed" rotation="22.905" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart" spawnposition="This" rotationtype="Fixed" rotation="80.275" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart" spawnposition="This" rotationtype="Fixed" rotation="9.725" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart5" spawnposition="This" rotationtype="Fixed" rotation="87.424" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart5" spawnposition="This" rotationtype="Fixed" rotation="2.576" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart6" spawnposition="This" rotationtype="Fixed" rotation="-9.215" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart6" spawnposition="This" rotationtype="Fixed" rotation="-80.785" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart7" spawnposition="This" rotationtype="Fixed" rotation="-25.095" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart7" spawnposition="This" rotationtype="Fixed" rotation="-64.905" />
-        <SpawnItem identifier="flakshrapnelexplosiveheart8" spawnposition="This" rotationtype="Fixed" rotation="-45" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart1" spawnposition="This" rotationtype="Fixed" rotation="45" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart2" spawnposition="This" rotationtype="Fixed" rotation="55.28" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart2" spawnposition="This" rotationtype="Fixed" rotation="34.72" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart3" spawnposition="This" rotationtype="Fixed" rotation="62.075" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart3" spawnposition="This" rotationtype="Fixed" rotation="27.925" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart4" spawnposition="This" rotationtype="Fixed" rotation="67.095" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart4" spawnposition="This" rotationtype="Fixed" rotation="22.905" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart" spawnposition="This" rotationtype="Fixed" rotation="80.275" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart" spawnposition="This" rotationtype="Fixed" rotation="9.725" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart5" spawnposition="This" rotationtype="Fixed" rotation="87.424" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart5" spawnposition="This" rotationtype="Fixed" rotation="2.576" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart6" spawnposition="This" rotationtype="Fixed" rotation="-9.215" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart6" spawnposition="This" rotationtype="Fixed" rotation="-80.785" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart7" spawnposition="This" rotationtype="Fixed" rotation="-25.095" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart7" spawnposition="This" rotationtype="Fixed" rotation="-64.905" />
+        <SpawnItem identifier="bvta.flakshrapnelexplosiveheart8" spawnposition="This" rotationtype="Fixed" rotation="-45" />
         <Explosion range="30.0" structuredamage="20" force="10.0" camerashake="50.0" camerashakerange="2000" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.3">
           <Affliction identifier="explosiondamage" strength="20" />
         </Explosion>
@@ -238,7 +238,7 @@
     </Projectile>
   </Item>
   <!-- 高射炮心形爆破弹破片 -->
-  <Item nameidentifier="flakshrapnelexplosive" identifier="flakshrapnelexplosiveheart" category="Weapon" scale="0.3" sonarsize="1" hideinmenus="true">
+  <Item nameidentifier="flakshrapnelexplosive" identifier="bvta.flakshrapnelexplosiveheart" aliases="flakshrapnelexplosiveheart" category="Weapon" scale="0.3" sonarsize="1" hideinmenus="true">
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
     <Body width="170" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
@@ -262,7 +262,7 @@
         <!-- visual effect -->
         <Explosion range="60.0" />
         <!-- actual effect -->
-        <Explosion range="200.0" structuredamage="25" force="15.0" itemdamage="250" camerashake="10.0" camerashakerange="1000" severlimbsprobability="0.5" decal="explosion" decalsize="0.5" shockwave="true" smoke="false" flames="false" sparks="false" underwaterbubble="false" flash="false">
+        <Explosion range="60.0" structuredamage="25" force="15.0" itemdamage="250" camerashake="10.0" camerashakerange="1000" severlimbsprobability="0.5" decal="explosion" decalsize="0.5" shockwave="true" smoke="false" flames="false" sparks="false" underwaterbubble="false" flash="false">
           <Affliction identifier="explosiondamage" strength="60" />
           <Affliction identifier="bleeding" strength="30" />
           <Affliction identifier="bleeding" strength="15" probability="0.1" dividebylimbcount="false" />
@@ -271,32 +271,32 @@
       </StatusEffect>
     </Projectile>
   </Item>
-  <Item identifier="flakshrapnelexplosiveheart1" variantof="flakshrapnelexplosiveheart">
+  <Item identifier="bvta.flakshrapnelexplosiveheart1" aliases="flakshrapnelexplosiveheart1" variantof="bvta.flakshrapnelexplosiveheart">
     <Projectile launchimpulse="7.42268041237" />
   </Item>
-  <Item identifier="flakshrapnelexplosiveheart2" variantof="flakshrapnelexplosiveheart">
+  <Item identifier="bvta.flakshrapnelexplosiveheart2" aliases="flakshrapnelexplosiveheart2" variantof="bvta.flakshrapnelexplosiveheart">
     <Projectile launchimpulse="10.5154639175" />
   </Item>
-  <Item identifier="flakshrapnelexplosiveheart3" variantof="flakshrapnelexplosiveheart">
+  <Item identifier="bvta.flakshrapnelexplosiveheart3" aliases="flakshrapnelexplosiveheart3" variantof="bvta.flakshrapnelexplosiveheart">
     <Projectile launchimpulse="13.4536082474" />
   </Item>
-  <Item identifier="flakshrapnelexplosiveheart4" variantof="flakshrapnelexplosiveheart">
+  <Item identifier="bvta.flakshrapnelexplosiveheart4" aliases="flakshrapnelexplosiveheart4" variantof="bvta.flakshrapnelexplosiveheart">
     <Projectile launchimpulse="14.8453608247" />
   </Item>
-  <Item identifier="flakshrapnelexplosiveheart5" variantof="flakshrapnelexplosiveheart">
+  <Item identifier="bvta.flakshrapnelexplosiveheart5" aliases="flakshrapnelexplosiveheart5" variantof="bvta.flakshrapnelexplosiveheart">
     <Projectile launchimpulse="13.6082474227" />
   </Item>
-  <Item identifier="flakshrapnelexplosiveheart6" variantof="flakshrapnelexplosiveheart">
+  <Item identifier="bvta.flakshrapnelexplosiveheart6" aliases="flakshrapnelexplosiveheart6" variantof="bvta.flakshrapnelexplosiveheart">
     <Projectile launchimpulse="11.7355670103" />
   </Item>
-  <Item identifier="flakshrapnelexplosiveheart7" variantof="flakshrapnelexplosiveheart">
+  <Item identifier="bvta.flakshrapnelexplosiveheart7" aliases="flakshrapnelexplosiveheart7" variantof="bvta.flakshrapnelexplosiveheart">
     <Projectile launchimpulse="9.6618556701" />
   </Item>
-  <Item identifier="flakshrapnelexplosiveheart8" variantof="flakshrapnelexplosiveheart">
+  <Item identifier="bvta.flakshrapnelexplosiveheart8" aliases="flakshrapnelexplosiveheart8" variantof="bvta.flakshrapnelexplosiveheart">
     <Projectile launchimpulse="9.89690721649" />
   </Item>
   <!-- 高射炮心形爆破弹药箱 -->
-  <Item identifier="flakcannonammoboxexplosiveheart" variantof="flakcannonammoboxexplosive">
+  <Item identifier="bvta.flakcannonammoboxexplosiveheart" aliases="flakcannonammoboxexplosiveheart" variantof="flakcannonammoboxexplosive">
     <Price>
       <Price storeidentifier="merchantoutpost" />
       <Price storeidentifier="merchantcity" />
@@ -327,12 +327,12 @@
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="192,160,95,78" />
     <ItemContainer>
       <StatusEffect>
-        <SpawnItem identifiers="flakboltexplosiveheart" />
+        <SpawnItem identifiers="bvta.flakboltexplosiveheart" />
       </StatusEffect>
       <StatusEffect>
-        <RequiredItem items="flakboltexplosiveheart" />
+        <RequiredItem items="bvta.flakboltexplosiveheart" />
       </StatusEffect>
-      <Containable items="flakboltexplosiveheart" />
+      <Containable items="bvta.flakboltexplosiveheart" />
     </ItemContainer>
   </Item>
 </Items>

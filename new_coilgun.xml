@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <!--电磁枪震撼弹-->
-  <Item name="Coilgun Stun Bolt" identifier="coilgunboltstun" category="Weapon" scale="0.5" sonarsize="2" hideinmenus="true">
+  <Item name="Coilgun Stun Bolt" identifier="bvta.coilgunboltstun" aliases="coilgunboltstun" category="Weapon" scale="0.5" sonarsize="2" hideinmenus="true">
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="0,243,113,9" depth="0.55" />
     <Body width="160" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
@@ -33,7 +33,7 @@
     </Projectile>
   </Item>
   <!--电磁枪震撼弹药箱-->
-  <Item identifier="coilgunammoboxstun" variantof="coilgunammoboxpiercing">
+  <Item identifier="bvta.coilgunammoboxstun" aliases="coilgunammoboxstun" variantof="coilgunammoboxpiercing">
     <PreferredContainer primary="coilgunammoloader,ammoboxcontainer" />
     <PreferredContainer secondary="wreckcoilgunloader" amount="1" spawnprobability="0.02" />
     <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.04" />
@@ -64,14 +64,14 @@
       <RequiredItem identifier="" tag="coilgunammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="0,80,95,78" />
-    <ItemContainer SpawnWithId="coilgunboltstun">
+    <ItemContainer SpawnWithId="bvta.coilgunboltstun">
       <StatusEffect>
-        <SpawnItem identifiers="coilgunboltstun" />
+        <SpawnItem identifiers="bvta.coilgunboltstun" />
       </StatusEffect>
       <StatusEffect>
-        <RequiredItem items="coilgunboltstun" />
+        <RequiredItem items="bvta.coilgunboltstun" />
       </StatusEffect>
-      <Containable items="coilgunboltstun" />
+      <Containable items="bvta.coilgunboltstun" />
     </ItemContainer>
   </Item>
 </Items>

@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Russian" nowhitespace="false" translatedname="Русский">
-  <entityname.railgunshelldepletedfuel>Снаряд для Рельсотрона с Обеднённым Топливом</entityname.railgunshelldepletedfuel>
-  <entitydescription.railgunshelldepletedfuel>Более мощные, чем стальные снаряды, с лучшим бронепробитием, а также могут поразить цель радиацией.</entitydescription.railgunshelldepletedfuel>
-  <entityname.railgunshellaphep>Кумулятивный Бесконтактный Снаряд для Рельсотрона</entityname.railgunshellaphep>
-  <entitydescription.railgunshellaphep>Бронебойный снаряд для рельсотрона. Способен пробить корпус корабля и взорваться, оснащён бесконтактным взрывателем.</entitydescription.railgunshellaphep>
-  <entityname.railgunshellapfsds>APFSDS Снаряд для рельсотрона</entityname.railgunshellapfsds>
-  <entitydescription.railgunshellapfsds>Бронебойный оперённый подкалиберный снаряд для рельсотрона. Стреляет высокоскоростным стальным дротиком, который пробивает корпус и броню (можно перезаряжать).</entitydescription.railgunshellapfsds>
-  <entityname.railgunshellacid>Кислотный Снаряд для Рельсотрона</entityname.railgunshellacid>
-  <entitydescription.railgunshellacid>Снаряд для рельсотрона, заряженный специальной кислотой, которая распыляется вслед за снарядом. Хорошо подходит для охоты на мелких существ.</entitydescription.railgunshellacid>
-  <entityname.railguncanistershellexplosive>Взрывной Снаряд для Рельсотрона</entityname.railguncanistershellexplosive>
-  <entitydescription.railguncanistershellexplosive>Заряжен взрывной картечью (можно перезаряжать).</entitydescription.railguncanistershellexplosive>
-  <entityname.railgundecoydroppershell>Снаряд-приманка для Рельсотрона</entityname.railgundecoydroppershell>
-  <entitydescription.railgundecoydroppershell>Снаряд для рельсотрона, который после запуска разделяется на 5 ложных целей.</entitydescription.railgundecoydroppershell>
-  <entityname.railgunshellfixfoam>Снаряд с Монтажной Пеной для Рельсотрона</entityname.railgunshellfixfoam>
-  <entitydescription.railgunshellfixfoam>Снаряд для рельсотрона, который выпускает несколько гранул монтажной пены для починки вашей подводной лодки. Может быть использован для экстренной починки корпуса.</entitydescription.railgunshellfixfoam>
-  <entityname.railgundecoyexplosive>Разрывная Приманка</entityname.railgundecoyexplosive>
-  <entityname.chaingunammoboxexplosive>Разрывные Боеприпасы для Цепной Пушки</entityname.chaingunammoboxexplosive>
-  <entitydescription.chaingunammoboxexplosive>Боеприпасы для цепной пушки. Взрываются при попадании.</entitydescription.chaingunammoboxexplosive>
-  <entityname.chaingunammoboxspread>Картечные Боеприпасы для Цепной Пушки</entityname.chaingunammoboxspread>
-  <entitydescription.chaingunammoboxspread>Картечные боеприпасы для цепной пушки. Эффективны против небронированных целей.</entitydescription.chaingunammoboxspread>
-  <entityname.coilgunammoboxstun>Оглушающие Боеприпасы для Магнитной Пушки</entityname.coilgunammoboxstun>
-  <entitydescription.coilgunammoboxstun>Боеприпасы для магнитной пушки. Взрываются и оглушают цель при попадании.</entitydescription.coilgunammoboxstun>
-  <entityname.flakcannonshockammobox>Ящик Шоковых Шрапнельных Снарядов</entityname.flakcannonshockammobox>
-  <entitydescription.flakcannonshockammobox>Тяжёлый ящик с электрошоковыми патронами широкого рассеивания действия для шрапнельного орудия. Хорошо подходит против роя противников.</entitydescription.flakcannonshockammobox>
-  <entityname.flakcannondirectionalpiercingammobox>Ящик Пробивных Шрапнельных Снарядов Малого Рассеивания</entityname.flakcannondirectionalpiercingammobox>
-  <entitydescription.flakcannondirectionalpiercingammobox>Тяжёлый ящик с бронебойными боеприпасами малого рассеивания для шрапнельного орудия. Хорошо подходит для целей за стенами.</entitydescription.flakcannondirectionalpiercingammobox>
-  <entityname.flakcannonammoboxexplosiveheart>Ящик с взрывными патронами для зенитного орудия в форме сердца</entityname.flakcannonammoboxexplosiveheart>
-  <entitydescription.flakcannonammoboxexplosiveheart>Тяжёлый ящик с боеприпасами для зенитной пушки, заряженный взрывчатым веществом, которое при детонации образует круг в форме сердца.</entitydescription.flakcannonammoboxexplosiveheart>
-  <entityname.pulselaserammoboxmixed>Смешанная Капсула для Импульсного Лазера</entityname.pulselaserammoboxmixed>
-  <entitydescription.pulselaserammoboxmixed>Смех двух типов грозовиевых боеприпасов для импульсного лазера, переключает режим линзы после каждого выстрела. Содержит в два раза больше топлива.</entitydescription.pulselaserammoboxmixed>
-  <entityname.pulselaserammoboxpiercing>Пробивная Капсула для Импульсного Лазера</entityname.pulselaserammoboxpiercing>
-  <entitydescription.pulselaserammoboxpiercing>Ящик, содержащий особые химические вещества и редкие материалы. Линза фокусирует лазер для улучшения пробивной способности, позволяя поражать цели за стенами.</entitydescription.pulselaserammoboxpiercing>
-  <entityname.acidmistbomb>Кислотная Бомба</entityname.acidmistbomb>
-  <entitydescription.acidmistbomb>Бомба, содержащая особую кислоту, может быть помещена в снаряд для рельсотрона.</entitydescription.acidmistbomb>
-  <entityname.empbomb>ЭМ Бомба</entityname.empbomb>
-  <entitydescription.empbomb>Бомба, предназначенная для уничтожения электрических устройств, может быть помещена в снаряд для рельсотрона.</entitydescription.empbomb>
+  <entityname.bvta.railgunshelldepletedfuel>Снаряд для Рельсотрона с Обеднённым Топливом</entityname.bvta.railgunshelldepletedfuel>
+  <entitydescription.bvta.railgunshelldepletedfuel>Более мощные, чем стальные снаряды, с лучшим бронепробитием, а также могут поразить цель радиацией.</entitydescription.bvta.railgunshelldepletedfuel>
+  <entityname.bvta.railgunshellaphep>Кумулятивный Бесконтактный Снаряд для Рельсотрона</entityname.bvta.railgunshellaphep>
+  <entitydescription.bvta.railgunshellaphep>Бронебойный снаряд для рельсотрона. Способен пробить корпус корабля и взорваться, оснащён бесконтактным взрывателем.</entitydescription.bvta.railgunshellaphep>
+  <entityname.bvta.railgunshellapfsds>APFSDS Снаряд для рельсотрона</entityname.bvta.railgunshellapfsds>
+  <entitydescription.bvta.railgunshellapfsds>Бронебойный оперённый подкалиберный снаряд для рельсотрона. Стреляет высокоскоростным стальным дротиком, который пробивает корпус и броню (можно перезаряжать).</entitydescription.bvta.railgunshellapfsds>
+  <entityname.bvta.railgunshellacid>Кислотный Снаряд для Рельсотрона</entityname.bvta.railgunshellacid>
+  <entitydescription.bvta.railgunshellacid>Снаряд для рельсотрона, заряженный специальной кислотой, которая распыляется вслед за снарядом. Хорошо подходит для охоты на мелких существ.</entitydescription.bvta.railgunshellacid>
+  <entityname.bvta.railguncanistershellexplosive>Взрывной Снаряд для Рельсотрона</entityname.bvta.railguncanistershellexplosive>
+  <entitydescription.bvta.railguncanistershellexplosive>Заряжен взрывной картечью (можно перезаряжать).</entitydescription.bvta.railguncanistershellexplosive>
+  <entityname.bvta.railgundecoydroppershell>Снаряд-приманка для Рельсотрона</entityname.bvta.railgundecoydroppershell>
+  <entitydescription.bvta.railgundecoydroppershell>Снаряд для рельсотрона, который после запуска разделяется на 5 ложных целей.</entitydescription.bvta.railgundecoydroppershell>
+  <entityname.bvta.railgunshellfixfoam>Снаряд с Монтажной Пеной для Рельсотрона</entityname.bvta.railgunshellfixfoam>
+  <entitydescription.bvta.railgunshellfixfoam>Снаряд для рельсотрона, который выпускает несколько гранул монтажной пены для починки вашей подводной лодки. Может быть использован для экстренной починки корпуса.</entitydescription.bvta.railgunshellfixfoam>
+  <entityname.bvta.railgundecoyexplosive>Разрывная Приманка</entityname.bvta.railgundecoyexplosive>
+  <entityname.bvta.chaingunammoboxexplosive>Разрывные Боеприпасы для Цепной Пушки</entityname.bvta.chaingunammoboxexplosive>
+  <entitydescription.bvta.chaingunammoboxexplosive>Боеприпасы для цепной пушки. Взрываются при попадании.</entitydescription.bvta.chaingunammoboxexplosive>
+  <entityname.bvta.chaingunammoboxscattering>Картечные Боеприпасы для Цепной Пушки</entityname.bvta.chaingunammoboxscattering>
+  <entitydescription.bvta.chaingunammoboxscattering>Картечные боеприпасы для цепной пушки. Эффективны против небронированных целей.</entitydescription.bvta.chaingunammoboxscattering>
+  <entityname.bvta.coilgunammoboxstun>Оглушающие Боеприпасы для Магнитной Пушки</entityname.bvta.coilgunammoboxstun>
+  <entitydescription.bvta.coilgunammoboxstun>Боеприпасы для магнитной пушки. Взрываются и оглушают цель при попадании.</entitydescription.bvta.coilgunammoboxstun>
+  <entityname.bvta.flakcannonshockammobox>Ящик Шоковых Шрапнельных Снарядов</entityname.bvta.flakcannonshockammobox>
+  <entitydescription.bvta.flakcannonshockammobox>Тяжёлый ящик с электрошоковыми патронами широкого рассеивания действия для шрапнельного орудия. Хорошо подходит против роя противников.</entitydescription.bvta.flakcannonshockammobox>
+  <entityname.bvta.flakcannondirectionalpiercingammobox>Ящик Пробивных Шрапнельных Снарядов Малого Рассеивания</entityname.bvta.flakcannondirectionalpiercingammobox>
+  <entitydescription.bvta.flakcannondirectionalpiercingammobox>Тяжёлый ящик с бронебойными боеприпасами малого рассеивания для шрапнельного орудия. Хорошо подходит для целей за стенами.</entitydescription.bvta.flakcannondirectionalpiercingammobox>
+  <entityname.bvta.flakcannonammoboxexplosiveheart>Ящик с взрывными патронами для зенитного орудия в форме сердца</entityname.bvta.flakcannonammoboxexplosiveheart>
+  <entitydescription.bvta.flakcannonammoboxexplosiveheart>Тяжёлый ящик с боеприпасами для зенитной пушки, заряженный взрывчатым веществом, которое при детонации образует круг в форме сердца.</entitydescription.bvta.flakcannonammoboxexplosiveheart>
+  <entityname.bvta.pulselaserammoboxmixed>Смешанная Капсула для Импульсного Лазера</entityname.bvta.pulselaserammoboxmixed>
+  <entitydescription.bvta.pulselaserammoboxmixed>Смех двух типов грозовиевых боеприпасов для импульсного лазера, переключает режим линзы после каждого выстрела. Содержит в два раза больше топлива.</entitydescription.bvta.pulselaserammoboxmixed>
+  <entityname.bvta.pulselaserammoboxpiercing>Пробивная Капсула для Импульсного Лазера</entityname.bvta.pulselaserammoboxpiercing>
+  <entitydescription.bvta.pulselaserammoboxpiercing>Ящик, содержащий особые химические вещества и редкие материалы. Линза фокусирует лазер для улучшения пробивной способности, позволяя поражать цели за стенами.</entitydescription.bvta.pulselaserammoboxpiercing>
+  <entityname.bvta.acidmistbomb>Кислотная Бомба</entityname.bvta.acidmistbomb>
+  <entitydescription.bvta.acidmistbomb>Бомба, содержащая особую кислоту, может быть помещена в снаряд для рельсотрона.</entitydescription.bvta.acidmistbomb>
+  <entityname.bvta.empbomb>ЭМ Бомба</entityname.bvta.empbomb>
+  <entitydescription.bvta.empbomb>Бомба, предназначенная для уничтожения электрических устройств, может быть помещена в снаряд для рельсотрона.</entitydescription.bvta.empbomb>
   <!-- Перевёл Enigma#0599 -->
 </infotexts>

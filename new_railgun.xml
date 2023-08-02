@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <!--贫化燃料弹-->
-  <Item identifier="railgunshelldepletedfuel" variantof="railgunshell">
+  <Item identifier="bvta.railgunshelldepletedfuel" aliases="railgunshelldepletedfuel" variantof="railgunshell">
     <PreferredContainer primary="railgunammoloader" spawnprobability="0" />
     <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
     <PreferredContainer secondary="wreckrailgunloader" maxamount="1" spawnprobability="0.02" />
@@ -41,7 +41,7 @@
     </Projectile>
   </Item>
   <!--穿甲高爆近炸弹-->
-  <Item identifier="railgunshellaphep" variantof="railgunshell">
+  <Item identifier="bvta.railgunshellaphep" aliases="railgunshellaphep" variantof="railgunshell">
     <PreferredContainer primary="railgunammoloader" spawnprobability="0" />
     <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
     <PreferredContainer secondary="wreckrailgunloader" minamount="1" maxamount="2" spawnprobability="0.01" />
@@ -111,7 +111,7 @@
     </Projectile>
   </Item>
   <!--尾翼稳定脱壳穿甲弹-->
-  <Item identifier="railgunshellapfsds" variantof="railguncanistershell">
+  <Item identifier="bvta.railgunshellapfsds" aliases="railgunshellapfsds" variantof="railguncanistershell">
     <PreferredContainer primary="railgunammoloader,railgunammocontainer" />
     <PreferredContainer secondary="wreckrailgunammocontainer" spawnprobability="0.05" />
     <Price baseprice="200" minleveldifficulty="25">
@@ -139,17 +139,17 @@
       <RequiredItem identifier="" tag="containershell" mincondition="0.0" maxcondition="0.0" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/APFSDS.png" sourcerect="0,0,214,32" />
-    <BrokenSprite texture="%ModDir:BVTA Extension%/images/APFSDS.png" sourcerect="0,94,214,32" />
+    <BrokenSprite texture="%ModDir:BVTA Extension%/images/APFSDS.png" sourcerect="80,64,136,32" origin="0.7867,0.5" />
     <InventoryIcon texture="%ModDir:BVTA Extension%/images/APFSDS.png" sourcerect="0,32,64,64" />
-    <ItemContainer capacity="1" spawnwithid="railgunapfsdsdart">
+    <ItemContainer capacity="1" spawnwithid="bvta.railgunapfsdsdart">
       <StatusEffect type="OnUse" target="This" condition="-100" disabledeltatime="true">
-        <RequiredItem items="railgunapfsdsdart" />
+        <RequiredItem items="bvta.railgunapfsdsdart" />
       </StatusEffect>
-      <Containable items="railgunapfsdsdart" />
+      <Containable items="bvta.railgunapfsdsdart" />
     </ItemContainer>
   </Item>
   <!--钢针-->
-  <Item name="APFSDSdart" identifier="railgunapfsdsdart" category="Misc" scale="0.5" sonarsize="3" hideinmenus="true">
+  <Item name="APFSDSdart" identifier="bvta.railgunapfsdsdart" aliases="railgunapfsdsdart" category="Misc" scale="0.5" sonarsize="3" hideinmenus="true">
     <Sprite texture="%ModDir:BVTA Extension%/images/APFSDS.png" sourcerect="85,37,128,20" depth="0.55" />
     <Body width="125" height="18" density="35" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
@@ -175,7 +175,7 @@
     </Projectile>
   </Item>
   <!--酸雾生成器-->
-  <Item name="Railgun Acid Emitter" identifier="railgunshellacidemitter" Scale="1" tags="" sonarsize="0" hideinmenus="true" impacttolerance="0.001" nonplayerteaminteractable="true">
+  <Item name="Railgun Acid Emitter" identifier="bvta.railgunshellacidemitter" aliases="railgunshellacidemitter" Scale="1" tags="" sonarsize="0" hideinmenus="true" impacttolerance="0.001" nonplayerteaminteractable="true">
     <Body radius="200" density="10" />
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,2,2" depth="0.55" origin="0.5,0.5" />
     <ItemComponent>
@@ -198,7 +198,7 @@
     </TriggerComponent>
   </Item>
   <!--酸雾弹-->
-  <Item identifier="railgunshellacid" variantof="railgunshell">
+  <Item identifier="bvta.railgunshellacid" aliases="railgunshellacid" variantof="railgunshell">
     <PreferredContainer primary="railgunammoloader" spawnprobability="0" />
     <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
     <PreferredContainer secondary="wreckrailgunloader" spawnprobability="0" />
@@ -233,7 +233,7 @@
         <ParticleEmitter particle="fixfoam" anglemin="0" anglemax="360" velocitymin="1" velocitymax="2" scalemultiplier="4.0,4.0" particlespersecond="16" colormultiplier="144,255,144,127" />
       </StatusEffect>
       <StatusEffect type="OnImpact">
-        <SpawnItem identifier="railgunshellacidemitter" spawnposition="This" count="6" spread="500" />
+        <SpawnItem identifier="bvta.railgunshellacidemitter" spawnposition="This" count="6" spread="500" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="Contained">
         <Use />
@@ -242,7 +242,7 @@
         <Remove />
       </StatusEffect>
       <StatusEffect type="OnActive" target="This" delay="0.1" stackable="false" disabledeltatime="true">
-        <SpawnItem identifier="railgunshellacidemitter" spawnposition="This" spread="100" />
+        <SpawnItem identifier="bvta.railgunshellacidemitter" spawnposition="This" spread="100" />
       </StatusEffect>
       <!--somehow the previous "<Remove />" does not apply-->
       <StatusEffect type="OnBroken" target="This">
@@ -251,7 +251,7 @@
     </Projectile>
   </Item>
   <!--爆破霰弹弹丸-->
-  <Item name="Explosive Pellet" identifier="railguncanistershellpelletexplosive" category="Weapon" scale="0.5" sonarsize="2" hideinmenus="true">
+  <Item name="Explosive Pellet" identifier="bvta.railguncanistershellpelletexplosive" aliases="railguncanistershellpelletexplosive" category="Weapon" scale="0.5" sonarsize="2" hideinmenus="true">
     <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="140,486,21,21" depth="0.55" />
     <Body width="160" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
@@ -280,7 +280,7 @@
     </Projectile>
   </Item>
   <!-- 爆破霰弹 -->
-  <Item identifier="railguncanistershellexplosive" variantof="railguncanistershell">
+  <Item identifier="bvta.railguncanistershellexplosive" aliases="railguncanistershellexplosive" variantof="railguncanistershell">
     <PreferredContainer primary="railgunammoloader,railgunammocontainer" />
     <PreferredContainer secondary="wreckrailgunammocontainer" maxamount="1" spawnprobability="0.07" />
     <Price baseprice="240" minleveldifficulty="25">
@@ -312,15 +312,15 @@
     <Sprite texture="%ModDir:BVTA Extension%/images/railguncanistershellexplosive.png" sourcerect="0,4,216,34" />
     <BrokenSprite texture="%ModDir:BVTA Extension%/images/railguncanistershellexplosive.png" sourcerect="0,40,216,34" />
     <InventoryIcon texture="%ModDir:BVTA Extension%/images/railguncanistershellexplosive.png" sourcerect="0,80,64,64" />
-    <ItemContainer capacity="24" spawnwithid="railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive,railguncanistershellpelletexplosive">
+    <ItemContainer capacity="24" spawnwithid="bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive">
       <StatusEffect>
-        <RequiredItem items="railguncanistershellpelletexplosive" />
+        <RequiredItem items="bvta.railguncanistershellpelletexplosive" />
       </StatusEffect>
-      <Containable items="railguncanistershellpelletexplosive" />
+      <Containable items="bvta.railguncanistershellpelletexplosive" />
     </ItemContainer>
   </Item>
   <!-- 诱饵 -->
-  <Item name="Explosive Decoy" identifier="railgundecoyexplosive" category="Weapon" tags="weapon,provocative,decoy" scale="0.5" sonarsize="2" impactsoundtag="impact_metal_heavy" damagedbymonsters="true" health="200" hideinmenus="true">
+  <Item name="Explosive Decoy" identifier="bvta.railgundecoyexplosive" aliases="railgundecoyexplosive" category="Weapon" tags="weapon,provocative,decoy" scale="0.5" sonarsize="2" impactsoundtag="impact_metal_heavy" damagedbymonsters="true" health="200" hideinmenus="true">
     <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="140,486,21,21" depth="0.55" />
     <Body radius="80" density="10" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
@@ -354,7 +354,7 @@
     </LightComponent>
   </Item>
   <!-- 诱饵投放弹 -->
-  <Item identifier="railgundecoydroppershell" variantof="railgunshell">
+  <Item identifier="bvta.railgundecoydroppershell" aliases="railgundecoydroppershell" variantof="railgunshell">
     <PreferredContainer primary="railgunammoloader" spawnprobability="0" />
     <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
     <PreferredContainer secondary="wreckrailgunloader" spawnprobability="0" />
@@ -396,17 +396,17 @@
       <StatusEffect />
       <StatusEffect />
       <StatusEffect type="OnActive" target="This" delay="0.5" condition="-25" stackable="false" disabledeltatime="true">
-        <SpawnItem identifier="railgundecoyexplosive" spawnposition="This" />
+        <SpawnItem identifier="bvta.railgundecoyexplosive" spawnposition="This" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" delay="0.5">
-        <SpawnItem identifier="railgundecoyexplosive" spawnposition="This" />
+        <SpawnItem identifier="bvta.railgundecoyexplosive" spawnposition="This" />
         <RemoveItem />
       </StatusEffect>
     </Projectile>
     <ItemContainer />
   </Item>
   <!-- 金属泡沫弹丸 -->
-  <Item name="Fixfoam Pellet" identifier="railgunshellfixfoampellet" category="Weapon" scale="0.3" sonarsize="1" hideinmenus="true">
+  <Item name="Fixfoam Pellet" identifier="bvta.railgunshellfixfoampellet" aliases="railgunshellfixfoampellet" category="Weapon" scale="0.3" sonarsize="1" hideinmenus="true">
     <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="140,486,21,21" depth="0.55" />
     <Body width="160" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
@@ -435,7 +435,7 @@
     </Projectile>
   </Item>
   <!-- 金属泡沫弹 -->
-  <Item identifier="railgunshellfixfoam" variantof="railgunshell">
+  <Item identifier="bvta.railgunshellfixfoam" aliases="railgunshellfixfoam" variantof="railgunshell">
     <PreferredContainer primary="railgunammoloader" spawnprobability="0" />
     <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
     <PreferredContainer secondary="wreckrailgunloader" spawnprobability="0" />
@@ -479,7 +479,7 @@
         <clear />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
-        <SpawnItem identifier="railgunshellfixfoampellet" spawnposition="This" count="16" aimspread="60" rotationtype="Collider" rotation="0" />
+        <SpawnItem identifier="bvta.railgunshellfixfoampellet" spawnposition="This" count="16" aimspread="60" rotationtype="Collider" rotation="0" />
         <Explosion range="250.0" ballastfloradamage="100" structuredamage="50" itemdamage="200" force="10.0" severlimbsprobability="0.5" decal="explosion" decalsize="0.3" penetration="0.5">
           <Affliction identifier="explosiondamage" strength="250" />
           <Affliction identifier="stun" strength="7" />

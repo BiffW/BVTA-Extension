@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
     <!--穿透激光-->
-    <Item identifier="pulselaserboltpiercing" nameidentifier="pulselaserbolt" variantof="pulselaserbolt">
+    <Item identifier="bvta.pulselaserboltpiercing" aliases="pulselaserboltpiercing" nameidentifier="pulselaserbolt" variantof="pulselaserbolt">
         <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
         <Projectile penetration="0.5" maxtargetstohit="2">
             <ParticleEmitter particle="tracerpulselasercold" />
@@ -19,7 +19,7 @@
         </Projectile>
     </Item>
     <!--混合激光燃料箱-->
-    <Item identifier="pulselaserammoboxmixed" variantof="pulselaserammoboxtrilaser">
+    <Item identifier="bvta.pulselaserammoboxmixed" aliases="pulselaserammoboxmixed" variantof="pulselaserammoboxtrilaser">
         <PreferredContainer primary="pulselaserammosource,ammoboxcontainer" mincondition="1" />
         <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.02" />
         <Price baseprice="530" sold="false" displaynonempty="true" minleveldifficulty="35">
@@ -48,13 +48,13 @@
             <RequiredItem identifier="" tag="pulselaserammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
         </Fabricate>
         <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="0,160,95,78" />
-        <ItemContainer SpawnWithId="pulselaserboltpiercing">
+        <ItemContainer SpawnWithId="bvta.pulselaserboltpiercing">
             <StatusEffect type="OnUse" target="This" disabledeltatime="true">
-                <SpawnItem identifiers="pulselaserboltpiercing" spawnposition="ThisInventory" />
+                <SpawnItem identifiers="bvta.pulselaserboltpiercing" spawnposition="ThisInventory" />
                 <Conditional hastag="one" />
             </StatusEffect>
             <StatusEffect type="OnUse" target="This" condition="*0.5" disabledeltatime="true">
-                <RequiredItem items="pulselaserboltpiercing,pulselaserbolttrilaser" type="Contained" />
+                <RequiredItem items="bvta.pulselaserboltpiercing,pulselaserbolttrilaser" type="Contained" />
             </StatusEffect>
             <StatusEffect type="OnUse" target="This" disabledeltatime="true">
                 <SpawnItem identifiers="pulselaserbolttrilaser" spawnposition="ThisInventory" />
@@ -67,11 +67,11 @@
             <StatusEffect type="OnUse" target="this" tags="three" setvalue="true" delay="0.1" stackable="false" checkconditionalalways="true">
                 <Conditional hastag="one" />
             </StatusEffect>
-            <Containable items="pulselaserboltpiercing,pulselaserbolttrilaser" />
+            <Containable items="bvta.pulselaserboltpiercing,pulselaserbolttrilaser" />
         </ItemContainer>
     </Item>
     <!--穿透激光燃料箱-->
-    <Item identifier="pulselaserammoboxpiercing" variantof="pulselaserammoboxtrilaser">
+    <Item identifier="bvta.pulselaserammoboxpiercing" aliases="pulselaserammoboxpiercing" variantof="pulselaserammoboxtrilaser">
         <Fabricate suitablefabricators="fabricator" requiredtime="20">
             <RequiredSkill identifier="weapons" level="65" />
             <RequiredItem identifier="fulgurium" />
@@ -85,14 +85,14 @@
             <RequiredItem identifier="" tag="pulselaserammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
         </Fabricate>
         <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="192,0,95,78" />
-        <ItemContainer SpawnWithId="pulselaserboltpiercing">
+        <ItemContainer SpawnWithId="bvta.pulselaserboltpiercing">
             <StatusEffect>
-                <SpawnItem identifiers="pulselaserboltpiercing" />
+                <SpawnItem identifiers="bvta.pulselaserboltpiercing" />
             </StatusEffect>
             <StatusEffect>
-                <RequiredItem items="pulselaserboltpiercing" />
+                <RequiredItem items="bvta.pulselaserboltpiercing" />
             </StatusEffect>
-            <Containable items="pulselaserboltpiercing" />
+            <Containable items="bvta.pulselaserboltpiercing" />
         </ItemContainer>
     </Item>
 </Items>

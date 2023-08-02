@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
   <!-- 酸雾炸弹 -->
-  <Item name="" identifier="acidmistbomb" category="Weapon" description="" Scale="0.5" Tags="smallitem,explosive,demolitionsexpert" maxstacksize="8" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+  <Item name="" identifier="bvta.acidmistbomb" aliases="acidmistbomb" category="Weapon" description="" Scale="0.5" Tags="smallitem,explosive,demolitionsexpert" maxstacksize="8" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
     <PreferredContainer primary="secarmcab" minamount="1" maxamount="2" spawnprobability="0.2" notcampaign="true" />
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.1" />
     <PreferredContainer secondary="armcab" />
@@ -30,7 +30,7 @@
           <Affliction identifier="acidburn" strength="150" dividebylimbcount="true" />
           <Affliction identifier="stun" strength="3" />
         </Explosion>
-        <SpawnItem identifier="railgunshellacidemitter" spawnposition="This" count="8" spread="500" />
+        <SpawnItem identifier="bvta.railgunshellacidemitter" spawnposition="This" count="8" spread="500" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove />
@@ -42,7 +42,7 @@
     </Quality>
   </Item>
   <!-- EMP滞留效果生成器 -->
-  <Item name="EMP After Effect Emitter" identifier="empbombaftereffectemitter" Scale="0.5" tags="" sonarsize="17" hideinmenus="true">
+  <Item name="EMP After Effect Emitter" identifier="bvta.empbombaftereffectemitter" aliases="empbombaftereffectemitter" Scale="0.5" tags="" sonarsize="17" hideinmenus="true">
     <AiTarget sightrange="850.0" soundrange="850" sonardisruption="10" static="True" />
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,2,2" depth="0.55" origin="0.5,0.5" />
     <ItemComponent>
@@ -60,7 +60,7 @@
     </ItemComponent>
   </Item>
   <!-- EMP炸弹 -->
-  <Item name="" identifier="empbomb" category="Weapon" description="" Scale="0.5" Tags="smallitem,explosive,demolitionsexpert" maxstacksize="8" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+  <Item name="" identifier="bvta.empbomb" aliases="empbomb" category="Weapon" description="" Scale="0.5" Tags="smallitem,explosive,demolitionsexpert" maxstacksize="8" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
     <PreferredContainer primary="secarmcab" minamount="1" maxamount="2" spawnprobability="0.1" notcampaign="true" />
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.05" />
     <PreferredContainer secondary="armcab" />
@@ -91,7 +91,7 @@
           <Affliction identifier="stun" strength="5" />
           <Affliction identifier="emp" strength="100" multiplybymaxvitality="true" />
         </Explosion>
-        <SpawnItem identifier="empbombaftereffectemitter" spawnposition="This"/>
+        <SpawnItem identifier="bvta.empbombaftereffectemitter" spawnposition="This"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove />
