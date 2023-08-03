@@ -2,7 +2,7 @@
 <Items>
   <!--电磁枪震撼弹-->
   <Item name="Coilgun Stun Bolt" identifier="bvta.coilgunboltstun" aliases="coilgunboltstun" category="Weapon" scale="0.5" sonarsize="2" hideinmenus="true">
-    <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="0,243,113,9" depth="0.55" />
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
     <Body width="160" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
     <Projectile characterusable="false" launchimpulse="0" damagedoors="true">
