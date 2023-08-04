@@ -285,7 +285,7 @@
   <Item identifier="bvta.railguncanistershellexplosive" aliases="railguncanistershellexplosive" variantof="railguncanistershell">
     <PreferredContainer primary="railgunammoloader,railgunammocontainer" />
     <PreferredContainer secondary="wreckrailgunammocontainer" maxamount="1" spawnprobability="0.07" />
-    <Price baseprice="200" minleveldifficulty="25">
+    <Price baseprice="225" minleveldifficulty="25">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" sold="false" />
       <Price storeidentifier="merchantcity" multiplier="1.25" sold="false" />
       <Price storeidentifier="merchantresearch" multiplier="1.25" sold="false" />
@@ -307,7 +307,7 @@
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="8">
       <RequiredSkill identifier="weapons" level="25" />
       <RequiredItem identifier="c4block" amount="1" description="" />
-      <RequiredItem identifier="" tag="munition_core" amount="1" description="fabricationdescription.munition_core" mincondition="1" usecondition="true" />
+      <RequiredItem identifier="" tag="munition_core" amount="1" description="fabricationdescription.munition_core" mincondition="1" maxcondition="1" />
       <RequiredItem identifier="" tag="containershell" mincondition="0.0" maxcondition="0.0" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/railguncanistershellexplosive.png" sourcerect="0,4,216,34" />
