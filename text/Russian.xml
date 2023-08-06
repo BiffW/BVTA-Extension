@@ -21,6 +21,8 @@
   <entitydescription.bvta.chaingunammoboxscattering>Картечные боеприпасы для цепной пушки. Эффективны против небронированных целей.</entitydescription.bvta.chaingunammoboxscattering>
   <entityname.bvta.coilgunammoboxstun>Оглушающие Боеприпасы для Магнитной Пушки</entityname.bvta.coilgunammoboxstun>
   <entitydescription.bvta.coilgunammoboxstun>Боеприпасы для магнитной пушки. Взрываются и оглушают цель при попадании.</entitydescription.bvta.coilgunammoboxstun>
+  <entityname.bvta.coilgunammoboxdelayedrecoil>Coilgun Delayed-Recoil Ammunition Box</entityname.bvta.coilgunammoboxdelayedrecoil>
+  <entitydescription.bvta.coilgunammoboxdelayedrecoil>Ammunition for the coilgun. Launches a sub-bolt shortly after first impact. Effective against one-side-armored targets</entitydescription.bvta.coilgunammoboxdelayedrecoil>
   <entityname.bvta.flakcannonshockammobox>Ящик Шоковых Шрапнельных Снарядов</entityname.bvta.flakcannonshockammobox>
   <entitydescription.bvta.flakcannonshockammobox>Тяжёлый ящик с электрошоковыми патронами широкого рассеивания действия для шрапнельного орудия. Хорошо подходит против роя противников.</entitydescription.bvta.flakcannonshockammobox>
   <entityname.bvta.flakcannondirectionalpiercingammobox>Ящик Пробивных Шрапнельных Снарядов Малого Рассеивания</entityname.bvta.flakcannondirectionalpiercingammobox>

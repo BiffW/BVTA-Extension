@@ -72,4 +72,88 @@
       <Containable items="bvta.coilgunboltstun" />
     </ItemContainer>
   </Item>
+  <!-- 电磁枪DR弹 -->
+  <Item name="Coilgun DR Bolt" identifier="bvta.coilgunboltdelayedrecoil" category="Weapon" scale="0.5" sonarsize="2" hideinmenus="true">
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="144,447,112,12" depth="0.55" />
+    <Body width="160" height="10" density="20" />
+    <Holdable slots="RightHand,LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <Projectile characterusable="false" launchimpulse="0" maxtargetstohit="2" damagedoors="true">
+      <Attack structuredamage="10" itemdamage="10" severlimbsprobability="0.1" penetration="0.5">
+        <Affliction identifier="lacerations" strength="8" />
+        <Affliction identifier="bleeding" strength="1" />
+        <Affliction identifier="stun" strength="0.0125" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" lifetime="2">
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="0.3" scalemax="0.6" colormultiplier="255,80,80,255" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="3">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" delay="0.075" stackable="false">
+        <SpawnItem identifier="bvta.coilgunboltdelayedrecoilsmall" spawnposition="This" count="1" aimspread="0" rotationtype="Collider" rotation="180" />
+        <Explosion range="5.0" force="10.0" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="10" velocitymin="100" velocitymax="2000" scalemin="0.3" scalemax="0.45" />
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+    <Upgrade gameversion="0.10.0.0" scale="*0.5" />
+  </Item>
+  <!-- 电磁枪DR子弹 -->
+  <Item name="Coilgun DR Sub-Bolt" identifier="bvta.coilgunboltdelayedrecoilsmall" category="Weapon" scale="0.3" sonarsize="1.2" hideinmenus="true">
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="144,447,112,12" depth="0.55" />
+    <Body width="160" height="10" density="20" />
+    <Holdable slots="RightHand,LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <Projectile characterusable="false" launchimpulse="100" damagedoors="true">
+      <Attack structuredamage="0" itemdamage="5" severlimbsprobability="0.15" penetration="0.5">
+        <Affliction identifier="lacerations" strength="12" />
+        <Affliction identifier="bleeding" strength="2" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" lifetime="1.5">
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="0.5" scalemax="1" colormultiplier="80,80,255,255" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="1.5">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+    <Upgrade gameversion="0.10.0.0" scale="*0.5" />
+  </Item>
+  <!-- 电磁枪延迟反冲弹药箱 -->
+  <Item identifier="bvta.coilgunammoboxdelayedrecoil" variantof="coilgunammoboxpiercing">
+    <PreferredContainer primary="coilgunammoloader,ammoboxcontainer" mincondition="1" />
+    <PreferredContainer secondary="wreckcoilgunloader" amount="1" spawnprobability="0.02" />
+    <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.06" />
+    <Price baseprice="115" displaynonempty="true" minleveldifficulty="15">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" multiplier="1.3" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="3" minleveldifficulty="5" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="1.2" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" minleveldifficulty="5" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredItem tag="advmunition_tip" description="fabricationdescription.advmunition_tip" />
+      <RequiredItem tag="munition_core" amount="2" description="fabricationdescription.munition_core" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem tag="advmunition_tip" description="fabricationdescription.advmunition_tip" />
+      <RequiredItem tag="munition_core" amount="2" description="fabricationdescription.munition_core" />
+      <RequiredItem tag="coilgunammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
+    </Fabricate>
+    <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes_2.png" sourcerect="0,0,95,78" />
+    <ItemContainer SpawnWithId="bvta.coilgunboltdelayedrecoil">
+      <StatusEffect>
+        <SpawnItem identifiers="bvta.coilgunboltdelayedrecoil" />
+      </StatusEffect>
+      <StatusEffect>
+        <RequiredItem items="bvta.coilgunboltdelayedrecoil" />
+      </StatusEffect>
+      <Containable items="bvta.coilgunboltdelayedrecoil" />
+    </ItemContainer>
+  </Item>
 </Items>

@@ -21,6 +21,8 @@
   <entitydescription.bvta.chaingunammoboxscattering>连射炮霰射弹药。对无护甲目标有效。</entitydescription.bvta.chaingunammoboxscattering>
   <entityname.bvta.coilgunammoboxstun>电磁枪震撼弹药箱</entityname.bvta.coilgunammoboxstun>
   <entitydescription.bvta.coilgunammoboxstun>电磁枪弹药。命中时爆炸并击晕目标。可有效阻止小型生物靠近，对潜艇伤害低。</entitydescription.bvta.coilgunammoboxstun>
+  <entityname.bvta.coilgunammoboxdelayedrecoil>电磁枪延迟反冲弹药箱</entityname.bvta.coilgunammoboxdelayedrecoil>
+  <entitydescription.bvta.coilgunammoboxdelayedrecoil>电磁枪弹药。命中目标后延迟引爆反向发射一发小口径弹。可有效对付单侧带甲目标。</entitydescription.bvta.coilgunammoboxdelayedrecoil>
   <entityname.bvta.flakcannonshockammobox>电击破片弹药箱</entityname.bvta.flakcannonshockammobox>
   <entitydescription.bvta.flakcannonshockammobox>一箱沉重的电击弹药，可供破片加农炮使用。对集群目标效果极佳。</entitydescription.bvta.flakcannonshockammobox>
   <entityname.bvta.flakcannondirectionalpiercingammobox>集束穿甲破片弹药箱</entityname.bvta.flakcannondirectionalpiercingammobox>

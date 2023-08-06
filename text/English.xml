@@ -21,6 +21,8 @@
   <entitydescription.bvta.chaingunammoboxscattering>Scattering ammo for chaingun. Effective against unarmored targets.</entitydescription.bvta.chaingunammoboxscattering>
   <entityname.bvta.coilgunammoboxstun>Coilgun Stunner Ammunition Box</entityname.bvta.coilgunammoboxstun>
   <entitydescription.bvta.coilgunammoboxstun>Ammunition for the coilgun. Explodes and stuns targets on impact.</entitydescription.bvta.coilgunammoboxstun>
+  <entityname.bvta.coilgunammoboxdelayedrecoil>Coilgun Delayed-Recoil Ammunition Box</entityname.bvta.coilgunammoboxdelayedrecoil>
+  <entitydescription.bvta.coilgunammoboxdelayedrecoil>Ammunition for the coilgun. Launches a sub-bolt shortly after first impact. Effective against one-side-armored targets</entitydescription.bvta.coilgunammoboxdelayedrecoil>
   <entityname.bvta.flakcannonshockammobox>Shock Flak Shells Box</entityname.bvta.flakcannonshockammobox>
   <entitydescription.bvta.flakcannonshockammobox>A heavy box of wide-spread electric shock ammo for the Flak Cannon. Good against swarms.</entitydescription.bvta.flakcannonshockammobox>
   <entityname.bvta.flakcannondirectionalpiercingammobox>Focused Armor-Piercing Flak Shells Box</entityname.bvta.flakcannondirectionalpiercingammobox>
