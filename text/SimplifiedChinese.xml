@@ -33,6 +33,8 @@
   <entitydescription.bvta.pulselaserammoboxmixed>两种雷素激光燃料箱的组合体，每次射击后自动切换模式，装有两倍的燃料量。</entitydescription.bvta.pulselaserammoboxmixed>
   <entityname.bvta.pulselaserammoboxpiercing>穿透脉冲激光燃料箱</entityname.bvta.pulselaserammoboxpiercing>
   <entitydescription.bvta.pulselaserammoboxpiercing>一个装好化学药剂和聚焦透镜的箱子，可以诱发强力的穿透激光。</entitydescription.bvta.pulselaserammoboxpiercing>
+  <entityname.bvta.pulsebilaserammobox>双重脉冲激光燃料箱</entityname.bvta.pulsebilaserammobox>
+  <entitydescription.bvta.pulsebilaserammobox>一个装好化学药剂和聚焦透镜的箱子，可以诱发两束威力稍弱的激光，命中率更高。</entitydescription.bvta.pulsebilaserammobox>
   <entityname.bvta.acidmistbomb>酸雾炸弹</entityname.bvta.acidmistbomb>
   <entitydescription.bvta.acidmistbomb>一种装填了特制酸液的炸弹。可以装入轨道炮炮弹使用。</entitydescription.bvta.acidmistbomb>
   <entityname.bvta.empbomb>EMP炸弹</entityname.bvta.empbomb>

@@ -22,7 +22,7 @@
   <entityname.bvta.coilgunammoboxstun>Coilgun Stunner Ammunition Box</entityname.bvta.coilgunammoboxstun>
   <entitydescription.bvta.coilgunammoboxstun>Ammunition for the coilgun. Explodes and stuns targets on impact.</entitydescription.bvta.coilgunammoboxstun>
   <entityname.bvta.coilgunammoboxdelayedrecoil>Coilgun Delayed-Recoil Ammunition Box</entityname.bvta.coilgunammoboxdelayedrecoil>
-  <entitydescription.bvta.coilgunammoboxdelayedrecoil>Ammunition for the coilgun. Launches a sub-bolt shortly after first impact. Effective against one-side-armored targets</entitydescription.bvta.coilgunammoboxdelayedrecoil>
+  <entitydescription.bvta.coilgunammoboxdelayedrecoil>Ammunition for the coilgun. Launches a sub-bolt shortly after first impact. Effective against one-side-armored targets.</entitydescription.bvta.coilgunammoboxdelayedrecoil>
   <entityname.bvta.flakcannonshockammobox>Shock Flak Shells Box</entityname.bvta.flakcannonshockammobox>
   <entitydescription.bvta.flakcannonshockammobox>A heavy box of wide-spread electric shock ammo for the Flak Cannon. Good against swarms.</entitydescription.bvta.flakcannonshockammobox>
   <entityname.bvta.flakcannondirectionalpiercingammobox>Focused Armor-Piercing Flak Shells Box</entityname.bvta.flakcannondirectionalpiercingammobox>
@@ -33,6 +33,8 @@
   <entitydescription.bvta.pulselaserammoboxmixed>A mix-up of two types of fulgurium pulse laser ammo, switches lens mode after each shot. Containing twice as much fuel.</entitydescription.bvta.pulselaserammoboxmixed>
   <entityname.bvta.pulselaserammoboxpiercing>Piercing Pulse Laser Fuel Box</entityname.bvta.pulselaserammoboxpiercing>
   <entitydescription.bvta.pulselaserammoboxpiercing>A box containing a special concoction of chemicals and rare materials. The lens focuses laser to improve penetration, allowing the laser to hit targets behind walls.</entitydescription.bvta.pulselaserammoboxpiercing>
+  <entityname.bvta.pulsebilaserammobox>Pulse Bi-Laser Fuel Box</entityname.bvta.pulsebilaserammobox>
+  <entitydescription.bvta.pulsebilaserammobox>A box containing a special concoction of chemicals and rare materials. The lens used splits the laser in two. Each deals less damage but can increase the hit rate.</entitydescription.bvta.pulsebilaserammobox>
   <entityname.bvta.acidmistbomb>Acid Mist Bomb</entityname.bvta.acidmistbomb>
   <entitydescription.bvta.acidmistbomb>A bomb containing special acid, can be put into a railgun shell.</entitydescription.bvta.acidmistbomb>
   <entityname.bvta.empbomb>EMP Bomb</entityname.bvta.empbomb>

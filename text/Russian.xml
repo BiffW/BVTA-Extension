@@ -21,14 +21,16 @@
   <entitydescription.bvta.chaingunammoboxscattering>Картечные боеприпасы для цепной пушки. Эффективны против небронированных целей.</entitydescription.bvta.chaingunammoboxscattering>
   <entityname.bvta.coilgunammoboxstun>Оглушающие Боеприпасы для Магнитной Пушки</entityname.bvta.coilgunammoboxstun>
   <entitydescription.bvta.coilgunammoboxstun>Боеприпасы для магнитной пушки. Взрываются и оглушают цель при попадании.</entitydescription.bvta.coilgunammoboxstun>
-  <entityname.bvta.coilgunammoboxdelayedrecoil>Coilgun Delayed-Recoil Ammunition Box</entityname.bvta.coilgunammoboxdelayedrecoil>
-  <entitydescription.bvta.coilgunammoboxdelayedrecoil>Ammunition for the coilgun. Launches a sub-bolt shortly after first impact. Effective against one-side-armored targets</entitydescription.bvta.coilgunammoboxdelayedrecoil>
+  <!-- <entityname.bvta.coilgunammoboxdelayedrecoil>Coilgun Delayed-Recoil Ammunition Box</entityname.bvta.coilgunammoboxdelayedrecoil>
+  <entitydescription.bvta.coilgunammoboxdelayedrecoil>Ammunition for the coilgun. Launches a sub-bolt shortly after first impact. Effective against one-side-armored targets.</entitydescription.bvta.coilgunammoboxdelayedrecoil> -->
   <entityname.bvta.flakcannonshockammobox>Ящик Шоковых Шрапнельных Снарядов</entityname.bvta.flakcannonshockammobox>
   <entitydescription.bvta.flakcannonshockammobox>Тяжёлый ящик с электрошоковыми патронами широкого рассеивания действия для шрапнельного орудия. Хорошо подходит против роя противников.</entitydescription.bvta.flakcannonshockammobox>
   <entityname.bvta.flakcannondirectionalpiercingammobox>Ящик Пробивных Шрапнельных Снарядов Малого Рассеивания</entityname.bvta.flakcannondirectionalpiercingammobox>
   <entitydescription.bvta.flakcannondirectionalpiercingammobox>Тяжёлый ящик с бронебойными боеприпасами малого рассеивания для шрапнельного орудия. Хорошо подходит для целей за стенами.</entitydescription.bvta.flakcannondirectionalpiercingammobox>
   <entityname.bvta.flakcannonammoboxexplosiveheart>Ящик с взрывными патронами для зенитного орудия в форме сердца</entityname.bvta.flakcannonammoboxexplosiveheart>
   <entitydescription.bvta.flakcannonammoboxexplosiveheart>Тяжёлый ящик с боеприпасами для зенитной пушки, заряженный взрывчатым веществом, которое при детонации образует круг в форме сердца.</entitydescription.bvta.flakcannonammoboxexplosiveheart>
+  <!-- <entityname.bvta.pulsebilaserammobox>Pulse Bi-Laser Fuel Box</entityname.bvta.pulsebilaserammobox>
+  <entitydescription.bvta.pulsebilaserammobox>A box containing a special concoction of chemicals and rare materials. The lens used splits the laser in two. Each deals less damage but can increase the hit rate.</entitydescription.bvta.pulsebilaserammobox> -->
   <entityname.bvta.pulselaserammoboxmixed>Смешанная Капсула для Импульсного Лазера</entityname.bvta.pulselaserammoboxmixed>
   <entitydescription.bvta.pulselaserammoboxmixed>Смех двух типов грозовиевых боеприпасов для импульсного лазера, переключает режим линзы после каждого выстрела. Содержит в два раза больше топлива.</entitydescription.bvta.pulselaserammoboxmixed>
   <entityname.bvta.pulselaserammoboxpiercing>Пробивная Капсула для Импульсного Лазера</entityname.bvta.pulselaserammoboxpiercing>

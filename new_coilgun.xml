@@ -84,7 +84,7 @@
         <Affliction identifier="stun" strength="0.0125" />
       </Attack>
       <StatusEffect type="OnActive" target="This" lifetime="2">
-        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="0.3" scalemax="0.6" colormultiplier="255,80,80,255" />
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="0.3" scalemax="0.6" />
       </StatusEffect>
       <StatusEffect type="OnNotContained" target="This" stackable="false" delay="3">
         <Remove />
@@ -103,13 +103,13 @@
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="144,447,112,12" depth="0.55" />
     <Body width="160" height="10" density="20" />
     <Holdable slots="RightHand,LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
-    <Projectile characterusable="false" launchimpulse="100" damagedoors="true">
+    <Projectile characterusable="false" launchimpulse="100" damagedoors="false">
       <Attack structuredamage="0" itemdamage="5" severlimbsprobability="0.15" penetration="0.5">
         <Affliction identifier="lacerations" strength="12" />
         <Affliction identifier="bleeding" strength="2" />
       </Attack>
       <StatusEffect type="OnActive" target="This" lifetime="1.5">
-        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="0.5" scalemax="1" colormultiplier="80,80,255,255" />
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="0.5" scalemax="1" colormultiplier="255,80,80,255" />
       </StatusEffect>
       <StatusEffect type="OnNotContained" target="This" stackable="false" delay="1.5">
         <Remove />
@@ -137,12 +137,14 @@
       <RequiredSkill identifier="weapons" level="30" />
       <RequiredItem tag="advmunition_tip" description="fabricationdescription.advmunition_tip" />
       <RequiredItem tag="munition_core" amount="2" description="fabricationdescription.munition_core" />
+      <RequiredItem identifier="" tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
       <RequiredItem identifier="aluminium" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
       <RequiredSkill identifier="weapons" level="25" />
       <RequiredItem tag="advmunition_tip" description="fabricationdescription.advmunition_tip" />
       <RequiredItem tag="munition_core" amount="2" description="fabricationdescription.munition_core" />
+      <RequiredItem identifier="" tag="munition_propulsion" description="fabricationdescription.munition_propulsion" mincondition="1" maxcondition="1" />
       <RequiredItem tag="coilgunammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes_2.png" sourcerect="0,0,95,78" />
