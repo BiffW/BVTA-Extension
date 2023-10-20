@@ -6,7 +6,7 @@
     <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
     <PreferredContainer secondary="wreckrailgunloader" maxamount="1" spawnprobability="0.02" />
     <PreferredContainer secondary="wreckrailgunammocontainer" amount="1" spawnprobability="0.05" />
-    <Price baseprice="170" minleveldifficulty="25">
+    <Price baseprice="100" minleveldifficulty="25">
       <Price sold="false" />
       <Price minavailable="3" />
       <Price sold="false" />
@@ -15,17 +15,19 @@
       <Price minavailable="5" />
     </Price>
     <Deconstruct>
+      <Item identifier="iron" />
+      <Item identifier="carbon" />
       <Item identifier="depletedfuel" />
-      <Item identifier="steel" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="weapons" level="30" />
-      <RequiredItem identifier="depletedfuel" amount="1" />
+      <RequiredItem identifier="steel" amount="1" />
       <RequiredItem identifier="depletedfuel" amount="1" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" requiredtime="80" amount="4">
       <RequiredSkill identifier="weapons" level="30" />
-      <RequiredItem identifier="depletedfuel" amount="8" />
+      <RequiredItem identifier="steel" amount="4" />
+      <RequiredItem identifier="depletedfuel" amount="4" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BVTA Extension%/images/railgunshelldf.png" sourcerect="0,33,64,64" />
     <Sprite texture="%ModDir:BVTA Extension%/images/railgunshelldf.png" sourcerect="0,0,214,32" />
@@ -283,7 +285,7 @@
   <Item identifier="bvta.railguncanistershellexplosive" aliases="railguncanistershellexplosive" variantof="railguncanistershell">
     <PreferredContainer primary="railgunammoloader,railgunammocontainer" />
     <PreferredContainer secondary="wreckrailgunammocontainer" maxamount="1" spawnprobability="0.07" />
-    <Price baseprice="240" minleveldifficulty="25">
+    <Price baseprice="225" minleveldifficulty="25">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" sold="false" />
       <Price storeidentifier="merchantcity" multiplier="1.25" sold="false" />
       <Price storeidentifier="merchantresearch" multiplier="1.25" sold="false" />
@@ -293,21 +295,20 @@
     </Price>
     <Deconstruct>
       <Item identifier="c4block" mincondition="0.95" />
-      <Item identifier="iron" mincondition="0.95" />
-      <Item identifier="carbon" mincondition="0.95" />
       <Item identifier="iron" />
       <Item identifier="carbon" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="weapons" level="30" />
-      <RequiredItem identifier="c4block" />
-      <RequiredItem identifier="steel" amount="2" />
+      <RequiredItem identifier="c4block" amount="1" description="" />
+      <RequiredItem identifier="" tag="munition_core" amount="1" description="fabricationdescription.munition_core" />
+      <RequiredItem identifier="steel" amount="1" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="8">
       <RequiredSkill identifier="weapons" level="25" />
-      <RequiredItem identifier="c4block" />
+      <RequiredItem identifier="c4block" amount="1" description="" />
+      <RequiredItem identifier="" tag="munition_core" amount="1" description="fabricationdescription.munition_core" mincondition="1" maxcondition="1" />
       <RequiredItem identifier="" tag="containershell" mincondition="0.0" maxcondition="0.0" usecondition="false" />
-      <RequiredItem identifier="steel" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/railguncanistershellexplosive.png" sourcerect="0,4,216,34" />
     <BrokenSprite texture="%ModDir:BVTA Extension%/images/railguncanistershellexplosive.png" sourcerect="0,40,216,34" />

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+  <!-- RAILGUN -->
   <entityname.bvta.railgunshelldepletedfuel>Снаряд для Рельсотрона с Обеднённым Топливом</entityname.bvta.railgunshelldepletedfuel>
   <entitydescription.bvta.railgunshelldepletedfuel>Более мощные, чем стальные снаряды, с лучшим бронепробитием, а также могут поразить цель радиацией.</entitydescription.bvta.railgunshelldepletedfuel>
   <entityname.bvta.railgunshellaphep>Кумулятивный Бесконтактный Снаряд для Рельсотрона</entityname.bvta.railgunshellaphep>
@@ -15,22 +16,37 @@
   <entityname.bvta.railgunshellfixfoam>Снаряд с Монтажной Пеной для Рельсотрона</entityname.bvta.railgunshellfixfoam>
   <entitydescription.bvta.railgunshellfixfoam>Снаряд для рельсотрона, который выпускает несколько гранул монтажной пены для починки вашей подводной лодки. Может быть использован для экстренной починки корпуса.</entitydescription.bvta.railgunshellfixfoam>
   <entityname.bvta.railgundecoyexplosive>Разрывная Приманка</entityname.bvta.railgundecoyexplosive>
+  <!-- CHAINGUN -->
   <entityname.bvta.chaingunammoboxexplosive>Разрывные Боеприпасы для Цепной Пушки</entityname.bvta.chaingunammoboxexplosive>
   <entitydescription.bvta.chaingunammoboxexplosive>Боеприпасы для цепной пушки. Взрываются при попадании.</entitydescription.bvta.chaingunammoboxexplosive>
-  <entityname.bvta.chaingunammoboxscattering>Картечные Боеприпасы для Цепной Пушки</entityname.bvta.chaingunammoboxscattering>
-  <entitydescription.bvta.chaingunammoboxscattering>Картечные боеприпасы для цепной пушки. Эффективны против небронированных целей.</entitydescription.bvta.chaingunammoboxscattering>
+  <!-- TODO: Splitter Ammo box - Translation needs update -->
+  <entityname.bvta.chaingunammoboxsplitter>Картечные Боеприпасы для Цепной Пушки</entityname.bvta.chaingunammoboxsplitter>
+  <entitydescription.bvta.chaingunammoboxsplitter>Картечные боеприпасы для цепной пушки. Эффективны против небронированных целей.</entitydescription.bvta.chaingunammoboxsplitter>
+  <!-- COILGUN -->
   <entityname.bvta.coilgunammoboxstun>Оглушающие Боеприпасы для Магнитной Пушки</entityname.bvta.coilgunammoboxstun>
   <entitydescription.bvta.coilgunammoboxstun>Боеприпасы для магнитной пушки. Взрываются и оглушают цель при попадании.</entitydescription.bvta.coilgunammoboxstun>
+  <!-- TODO: DR Ammo box - Translation to be done -->
+  <entityname.bvta.coilgunammoboxdelayedrecoil>Coilgun Delayed-Recoil Ammunition Box</entityname.bvta.coilgunammoboxdelayedrecoil>
+  <entitydescription.bvta.coilgunammoboxdelayedrecoil>Ammunition for the coilgun. Explode and launches sub-bolts shortly after first impact.</entitydescription.bvta.coilgunammoboxdelayedrecoil>
+  <!-- FLAK CANNON -->
   <entityname.bvta.flakcannonshockammobox>Ящик Шоковых Шрапнельных Снарядов</entityname.bvta.flakcannonshockammobox>
   <entitydescription.bvta.flakcannonshockammobox>Тяжёлый ящик с электрошоковыми патронами широкого рассеивания действия для шрапнельного орудия. Хорошо подходит против роя противников.</entitydescription.bvta.flakcannonshockammobox>
   <entityname.bvta.flakcannondirectionalpiercingammobox>Ящик Пробивных Шрапнельных Снарядов Малого Рассеивания</entityname.bvta.flakcannondirectionalpiercingammobox>
   <entitydescription.bvta.flakcannondirectionalpiercingammobox>Тяжёлый ящик с бронебойными боеприпасами малого рассеивания для шрапнельного орудия. Хорошо подходит для целей за стенами.</entitydescription.bvta.flakcannondirectionalpiercingammobox>
   <entityname.bvta.flakcannonammoboxexplosiveheart>Ящик с взрывными патронами для зенитного орудия в форме сердца</entityname.bvta.flakcannonammoboxexplosiveheart>
   <entitydescription.bvta.flakcannonammoboxexplosiveheart>Тяжёлый ящик с боеприпасами для зенитной пушки, заряженный взрывчатым веществом, которое при детонации образует круг в форме сердца.</entitydescription.bvta.flakcannonammoboxexplosiveheart>
+  <!-- TODO: Tree-Shaped Ammo box - Translation to be done -->
+  <entityname.bvta.flakcannonammoboxtreeshaped>Tree-Shaped Spreader Flak Shells Box</entityname.bvta.flakcannonammoboxtreeshaped>
+  <entitydescription.bvta.flakcannonammoboxtreeshaped>A heavy box of wide-spread shrapnel ammo for the flak cannon, loaded with pillar-shaped explosives that let shrapnels spread like tree branches.</entitydescription.bvta.flakcannonammoboxtreeshaped>
+  <!-- PULSE LASER -->
   <entityname.bvta.pulselaserammoboxmixed>Смешанная Капсула для Импульсного Лазера</entityname.bvta.pulselaserammoboxmixed>
   <entitydescription.bvta.pulselaserammoboxmixed>Смех двух типов грозовиевых боеприпасов для импульсного лазера, переключает режим линзы после каждого выстрела. Содержит в два раза больше топлива.</entitydescription.bvta.pulselaserammoboxmixed>
   <entityname.bvta.pulselaserammoboxpiercing>Пробивная Капсула для Импульсного Лазера</entityname.bvta.pulselaserammoboxpiercing>
   <entitydescription.bvta.pulselaserammoboxpiercing>Ящик, содержащий особые химические вещества и редкие материалы. Линза фокусирует лазер для улучшения пробивной способности, позволяя поражать цели за стенами.</entitydescription.bvta.pulselaserammoboxpiercing>
+  <!-- TODO: Bi-Laser Fuel box - Translation to be done -->
+  <entityname.bvta.pulsebilaserammobox>Pulse Bi-Laser Fuel Box</entityname.bvta.pulsebilaserammobox>
+  <entitydescription.bvta.pulsebilaserammobox>A box containing a special concoction of chemicals and rare materials. The lens used splits the laser in two. Each deals less damage but can increase the hit rate.</entitydescription.bvta.pulsebilaserammobox>
+  <!-- EXPLOSIVE -->
   <entityname.bvta.acidmistbomb>Кислотная Бомба</entityname.bvta.acidmistbomb>
   <entitydescription.bvta.acidmistbomb>Бомба, содержащая особую кислоту, может быть помещена в снаряд для рельсотрона.</entitydescription.bvta.acidmistbomb>
   <entityname.bvta.empbomb>ЭМ Бомба</entityname.bvta.empbomb>

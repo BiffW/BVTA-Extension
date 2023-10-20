@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
   <!-- 酸雾炸弹 -->
-  <Item name="" identifier="bvta.acidmistbomb" aliases="acidmistbomb" category="Weapon" description="" Scale="0.5" Tags="smallitem,explosive,demolitionsexpert" maxstacksize="8" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+  <Item name="" identifier="bvta.acidmistbomb" aliases="acidmistbomb" category="Weapon" description="" Scale="0.5" Tags="smallitem,explosive,demolitionsexpert" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
     <PreferredContainer primary="secarmcab" minamount="1" maxamount="2" spawnprobability="0.2" notcampaign="true" />
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.1" />
     <PreferredContainer secondary="armcab" />
@@ -60,7 +60,7 @@
     </ItemComponent>
   </Item>
   <!-- EMP炸弹 -->
-  <Item name="" identifier="bvta.empbomb" aliases="empbomb" category="Weapon" description="" Scale="0.5" Tags="smallitem,explosive,demolitionsexpert" maxstacksize="8" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
+  <Item name="" identifier="bvta.empbomb" aliases="empbomb" category="Weapon" description="" Scale="0.5" Tags="smallitem,explosive,demolitionsexpert" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" impactsoundtag="impact_soft">
     <PreferredContainer primary="secarmcab" minamount="1" maxamount="2" spawnprobability="0.1" notcampaign="true" />
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.05" />
     <PreferredContainer secondary="armcab" />

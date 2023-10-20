@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
+  <!-- RAILGUN -->
   <entityname.bvta.railgunshelldepletedfuel>Depleted Fuel Railgun Shell</entityname.bvta.railgunshelldepletedfuel>
   <entitydescription.bvta.railgunshelldepletedfuel>More powerful than steel shells, with better armor-piercing ability, and can cause radiation to the target.</entitydescription.bvta.railgunshelldepletedfuel>
   <entityname.bvta.railgunshellaphep>APHE Proximity Railgun Shell</entityname.bvta.railgunshellaphep>
@@ -15,22 +16,33 @@
   <entityname.bvta.railgunshellfixfoam>Fixfoam Railgun Shell</entityname.bvta.railgunshellfixfoam>
   <entitydescription.bvta.railgunshellfixfoam>A defensive railgun shell that releases multiple fixfoam pellets on your submarine. Can be used for emergency hull fix.</entitydescription.bvta.railgunshellfixfoam>
   <entityname.bvta.railgundecoyexplosive>Explosive Decoy</entityname.bvta.railgundecoyexplosive>
+  <!-- CHAINGUN -->
   <entityname.bvta.chaingunammoboxexplosive>Chaingun Explosive Ammunition Box</entityname.bvta.chaingunammoboxexplosive>
   <entitydescription.bvta.chaingunammoboxexplosive>Ammo for chaingun. Explodes on hit.</entitydescription.bvta.chaingunammoboxexplosive>
-  <entityname.bvta.chaingunammoboxscattering>Chaingun Scattering Ammunition Box</entityname.bvta.chaingunammoboxscattering>
-  <entitydescription.bvta.chaingunammoboxscattering>Scattering ammo for chaingun. Effective against unarmored targets.</entitydescription.bvta.chaingunammoboxscattering>
+  <entityname.bvta.chaingunammoboxsplitter>Chaingun Splitter Ammunition Box</entityname.bvta.chaingunammoboxsplitter>
+  <entitydescription.bvta.chaingunammoboxsplitter>Splitter ammo for chaingun. Splits into smaller rounds on hit. Effective against unarmored targets.</entitydescription.bvta.chaingunammoboxsplitter>
+  <!-- COILGUN -->
   <entityname.bvta.coilgunammoboxstun>Coilgun Stunner Ammunition Box</entityname.bvta.coilgunammoboxstun>
   <entitydescription.bvta.coilgunammoboxstun>Ammunition for the coilgun. Explodes and stuns targets on impact.</entitydescription.bvta.coilgunammoboxstun>
+  <entityname.bvta.coilgunammoboxdelayedrecoil>Coilgun Delayed-Recoil Ammunition Box</entityname.bvta.coilgunammoboxdelayedrecoil>
+  <entitydescription.bvta.coilgunammoboxdelayedrecoil>Ammunition for the coilgun. Explode and launches sub-bolts shortly after first impact.</entitydescription.bvta.coilgunammoboxdelayedrecoil>
+  <!-- FLAK CANNON -->
   <entityname.bvta.flakcannonshockammobox>Shock Flak Shells Box</entityname.bvta.flakcannonshockammobox>
   <entitydescription.bvta.flakcannonshockammobox>A heavy box of wide-spread electric shock ammo for the Flak Cannon. Good against swarms.</entitydescription.bvta.flakcannonshockammobox>
   <entityname.bvta.flakcannondirectionalpiercingammobox>Focused Armor-Piercing Flak Shells Box</entityname.bvta.flakcannondirectionalpiercingammobox>
   <entitydescription.bvta.flakcannondirectionalpiercingammobox>A heavy box of low spread armor-piercing ammo for the Flak Cannon. Good against targets behind walls.</entitydescription.bvta.flakcannondirectionalpiercingammobox>
   <entityname.bvta.flakcannonammoboxexplosiveheart>Heart-Shaped Explosive Flak Shells Box</entityname.bvta.flakcannonammoboxexplosiveheart>
   <entitydescription.bvta.flakcannonammoboxexplosiveheart>A heavy box of ammo for the flak cannon, loaded with high explosive materials that creates heart-shaped circle on detonation.</entitydescription.bvta.flakcannonammoboxexplosiveheart>
+  <entityname.bvta.flakcannonammoboxtreeshaped>Tree-Shaped Spreader Flak Shells Box</entityname.bvta.flakcannonammoboxtreeshaped>
+  <entitydescription.bvta.flakcannonammoboxtreeshaped>A heavy box of wide-spread shrapnel ammo for the flak cannon, loaded with pillar-shaped explosives that let shrapnels spread like branches of trees.</entitydescription.bvta.flakcannonammoboxtreeshaped>
+  <!-- PULSE LASER -->
   <entityname.bvta.pulselaserammoboxmixed>Mixed Pulse Laser Fuel Box</entityname.bvta.pulselaserammoboxmixed>
   <entitydescription.bvta.pulselaserammoboxmixed>A mix-up of two types of fulgurium pulse laser ammo, switches lens mode after each shot. Containing twice as much fuel.</entitydescription.bvta.pulselaserammoboxmixed>
   <entityname.bvta.pulselaserammoboxpiercing>Piercing Pulse Laser Fuel Box</entityname.bvta.pulselaserammoboxpiercing>
   <entitydescription.bvta.pulselaserammoboxpiercing>A box containing a special concoction of chemicals and rare materials. The lens focuses laser to improve penetration, allowing the laser to hit targets behind walls.</entitydescription.bvta.pulselaserammoboxpiercing>
+  <entityname.bvta.pulsebilaserammobox>Pulse Bi-Laser Fuel Box</entityname.bvta.pulsebilaserammobox>
+  <entitydescription.bvta.pulsebilaserammobox>A box containing a special concoction of chemicals and rare materials. The lens used splits the laser in two. Each deals less damage but can increase the hit rate.</entitydescription.bvta.pulsebilaserammobox>
+  <!-- EXPLOSIVE -->
   <entityname.bvta.acidmistbomb>Acid Mist Bomb</entityname.bvta.acidmistbomb>
   <entitydescription.bvta.acidmistbomb>A bomb containing special acid, can be put into a railgun shell.</entitydescription.bvta.acidmistbomb>
   <entityname.bvta.empbomb>EMP Bomb</entityname.bvta.empbomb>

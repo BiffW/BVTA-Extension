@@ -2,7 +2,7 @@
 <Items>
   <!--电磁枪震撼弹-->
   <Item name="Coilgun Stun Bolt" identifier="bvta.coilgunboltstun" aliases="coilgunboltstun" category="Weapon" scale="0.5" sonarsize="2" hideinmenus="true">
-    <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="0,243,113,9" depth="0.55" />
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
     <Body width="160" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
     <Projectile characterusable="false" launchimpulse="0" damagedoors="true">
@@ -33,35 +33,33 @@
     </Projectile>
   </Item>
   <!--电磁枪震撼弹药箱-->
-  <Item identifier="bvta.coilgunammoboxstun" aliases="coilgunammoboxstun" variantof="coilgunammoboxpiercing">
+  <Item identifier="bvta.coilgunammoboxstun" aliases="coilgunammoboxstun" variantof="coilgunammoboxexplosive">
     <PreferredContainer primary="coilgunammoloader,ammoboxcontainer" />
     <PreferredContainer secondary="wreckcoilgunloader" amount="1" spawnprobability="0.02" />
     <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.04" />
-    <Price baseprice="200" displaynonempty="true" minleveldifficulty="25">
+    <Price baseprice="170" sold="false" displaynonempty="true" minleveldifficulty="10">
       <Price storeidentifier="merchantoutpost" multiplier="1.3" />
       <Price storeidentifier="merchantcity" multiplier="1.2" />
       <Price storeidentifier="merchantresearch" multiplier="1.3" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.9" maxavailable="4" minleveldifficulty="15" />
+      <Price storeidentifier="merchantmilitary" sold="true" multiplier="0.9" maxavailable="4" minleveldifficulty="5" />
       <Price storeidentifier="merchantmine" multiplier="1.2" />
-      <Price storeidentifier="merchantarmory" multiplier="0.9" maxavailable="4" minleveldifficulty="15" />
+      <Price storeidentifier="merchantarmory" sold="true" multiplier="0.9" maxavailable="4" minleveldifficulty="5" />
     </Price>
     <Deconstruct>
       <Item identifier="flashpowder" mincondition="0.95" />
-      <Item identifier="iron" mincondition="0.95" />
-      <Item identifier="carbon" mincondition="0.95" />
       <Item identifier="aluminium" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="weapons" level="35" />
-      <RequiredItem identifier="flashpowder" />
-      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="flashpowder" amount="1" />
+      <RequiredItem identifier="" tag="advmunition_jacket" amount="1" description="fabricationdescription.advmunition_jacket" />
       <RequiredItem identifier="aluminium" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
       <RequiredSkill identifier="weapons" level="30" />
-      <RequiredItem identifier="flashpowder" />
-      <RequiredItem identifier="steel" />
-      <RequiredItem identifier="" tag="coilgunammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
+      <RequiredItem identifier="flashpowder" amount="1" />
+      <RequiredItem identifier="" tag="advmunition_jacket" amount="1" description="fabricationdescription.advmunition_jacket" />
+      <RequiredItem defaultitem="bvta.coilgunammoboxstun" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes.png" sourcerect="0,80,95,78" />
     <ItemContainer SpawnWithId="bvta.coilgunboltstun">
@@ -72,6 +70,100 @@
         <RequiredItem items="bvta.coilgunboltstun" />
       </StatusEffect>
       <Containable items="bvta.coilgunboltstun" />
+    </ItemContainer>
+  </Item>
+  <!-- 电磁枪DR弹 -->
+  <Item name="Coilgun DR Bolt" identifier="bvta.coilgunboltdelayedrecoil" category="Weapon" scale="0.5" sonarsize="2" hideinmenus="true">
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="144,447,112,12" depth="0.55" />
+    <Body width="160" height="10" density="20" />
+    <Holdable slots="RightHand,LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <Projectile characterusable="false" launchimpulse="0" maxtargetstohit="2" damagedoors="true">
+      <Attack structuredamage="10" itemdamage="10" severlimbsprobability="0.1" penetration="0.5">
+        <Affliction identifier="lacerations" strength="4" />
+        <Affliction identifier="bleeding" strength="1" />
+        <Affliction identifier="stun" strength="0.0125" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" lifetime="2">
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="0.3" scalemax="0.6" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="3">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" delay="0.075" stackable="false">
+        <SpawnItem identifier="bvta.coilgunboltdelayedrecoilsmall" spawnposition="This" count="1" aimspread="0" rotationtype="Collider" />
+        <SpawnItem identifier="bvta.coilgunboltdelayedrecoilsmall" spawnposition="This" count="1" aimspread="0" rotationtype="Collider" rotation="180" />
+        <Explosion range="5.0" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="10" velocitymin="100" velocitymax="2000" scalemin="0.3" scalemax="0.45" />
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+    <Upgrade gameversion="0.10.0.0" scale="*0.5" />
+  </Item>
+  <!-- 电磁枪DR子弹 -->
+  <Item name="Coilgun DR Sub-Bolt" identifier="bvta.coilgunboltdelayedrecoilsmall" category="Weapon" scale="0.3" sonarsize="1.2" hideinmenus="true">
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="144,447,112,12" depth="0.55" />
+    <Body width="160" height="10" density="20" />
+    <Holdable slots="RightHand,LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <Projectile characterusable="false" launchimpulse="100" damagedoors="false">
+      <Attack structuredamage="0" itemdamage="5" severlimbsprobability="0.1" penetration="0.5">
+        <Affliction identifier="lacerations" strength="12" />
+        <Affliction identifier="bleeding" strength="2" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" lifetime="1.5">
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="0.375" scalemax="0.75" colormultiplier="255,80,80,255" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="1.5">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This">
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="10" velocitymin="100" velocitymax="2000" scalemin="0.125" scalemax="0.25" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+    <Upgrade gameversion="0.10.0.0" scale="*0.5" />
+  </Item>
+  <!-- 电磁枪延迟反冲弹药箱 -->
+  <Item identifier="bvta.coilgunammoboxdelayedrecoil" variantof="coilgunammoboxpiercing">
+    <PreferredContainer primary="coilgunammoloader,ammoboxcontainer" mincondition="1" />
+    <PreferredContainer secondary="wreckcoilgunloader" amount="1" spawnprobability="0.02" />
+    <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.06" />
+    <Price baseprice="140" displaynonempty="true" minleveldifficulty="15">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" multiplier="1.3" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="3" minleveldifficulty="5" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="1.2" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" minleveldifficulty="5" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredItem tag="advmunition_tip" description="fabricationdescription.advmunition_tip" />
+      <RequiredItem tag="munition_core" amount="2" description="fabricationdescription.munition_core" />
+      <RequiredItem identifier="" tag="munition_propulsion" amount="1" description="fabricationdescription.munition_propulsion" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem tag="advmunition_tip" description="fabricationdescription.advmunition_tip" />
+      <RequiredItem tag="munition_core" amount="2" description="fabricationdescription.munition_core" />
+      <RequiredItem tag="munition_propulsion" amount="1" mincondition="1" maxcondition="1" usecondition="true" description="fabricationdescription.munition_propulsion" header="" defaultitem="" />
+      <RequiredItem tag="ammobox" mincondition="0.0" maxcondition="0.1" usecondition="false" description="fabricationdescription.ammoboxrecycle" header="fabricationheader.ammoboxrecycle" defaultitem="bvta.coilgunammoboxdelayedrecoil" />
+    </Fabricate>
+    <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes_2.png" sourcerect="0,0,95,78" />
+    <ItemContainer SpawnWithId="bvta.coilgunboltdelayedrecoil">
+      <StatusEffect>
+        <SpawnItem identifiers="bvta.coilgunboltdelayedrecoil" />
+      </StatusEffect>
+      <StatusEffect>
+        <RequiredItem items="bvta.coilgunboltdelayedrecoil" />
+      </StatusEffect>
+      <Containable items="bvta.coilgunboltdelayedrecoil" />
     </ItemContainer>
   </Item>
 </Items>
