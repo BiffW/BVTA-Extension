@@ -325,7 +325,7 @@
     <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="140,486,21,21" depth="0.55" />
     <Body radius="80" density="10" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
-    <AiTarget maxsoundrange="10000" sonarlabel="entityname.railgundecoyexplosive" maxsightrange="6000" />
+    <AiTarget maxsoundrange="10000" sonarlabel="entityname.bvta.railgundecoyexplosive" maxsightrange="6000" />
     <Projectile characterusable="false" launchimpulse="0.0">
       <StatusEffect type="OnUse" target="This" IsOn="true" />
       <StatusEffect type="OnUse" target="This" IsOn="false" delay="45" setvalue="true" condition="-200" />
