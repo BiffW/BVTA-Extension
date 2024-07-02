@@ -223,12 +223,12 @@
     <Fabricate suitablefabricators="fabricator" requiredtime="25">
       <RequiredSkill identifier="weapons" level="40" />
       <RequiredItem identifier="steel" />
-      <RequiredItem identifier="acidmistbomb" />
+      <RequiredItem identifier="bvta.acidmistbomb" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" requiredtime="100" amount="4">
       <RequiredSkill identifier="weapons" level="40" />
       <RequiredItem identifier="steel" amount="4" />
-      <RequiredItem identifier="acidmistbomb" amount="4" />
+      <RequiredItem identifier="bvta.acidmistbomb" amount="4" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BVTA Extension%/images/railgunshellacid.png" sourcerect="0,33,64,64" origin="0.5,0.5" />
     <Sprite texture="%ModDir:BVTA Extension%/images/railgunshellacid.png" sourcerect="0,0,214,32" depth="0.55" origin="0.5,0.5" />
