@@ -45,6 +45,7 @@
       <Price storeidentifier="merchantmine" multiplier="1.2" />
       <Price storeidentifier="merchantarmory" sold="true" multiplier="0.9" maxavailable="4" minleveldifficulty="5" />
     </Price>
+    <Deconstruct />
     <Deconstruct>
       <Item identifier="flashpowder" mincondition="0.95" />
       <Item identifier="aluminium" />
@@ -56,7 +57,7 @@
       <RequiredItem identifier="aluminium" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
-      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredSkill identifier="weapons" level="25" />
       <RequiredItem identifier="flashpowder" amount="1" />
       <RequiredItem identifier="" tag="advmunition_jacket" amount="1" description="fabricationdescription.advmunition_jacket" />
       <RequiredItem defaultitem="bvta.coilgunammoboxstun" />
@@ -66,7 +67,7 @@
       <StatusEffect>
         <SpawnItem identifiers="bvta.coilgunboltstun" />
       </StatusEffect>
-      <StatusEffect>
+      <StatusEffect condition="-0.5">
         <RequiredItem items="bvta.coilgunboltstun" />
       </StatusEffect>
       <Containable items="bvta.coilgunboltstun" />
@@ -125,23 +126,26 @@
     </Projectile>
     <Upgrade gameversion="0.10.0.0" scale="*0.5" />
   </Item>
-  <!-- 电磁枪延迟反冲弹药箱 -->
-  <Item identifier="bvta.coilgunammoboxdelayedrecoil" variantof="coilgunammoboxpiercing">
+  <!-- 电磁枪延迟反冲弹药箱:隐藏,因为没什么特色 -->
+  <Item identifier="bvta.coilgunammoboxdelayedrecoil" variantof="coilgunammoboxpiercing" hideinmenus="true">
     <PreferredContainer primary="coilgunammoloader,ammoboxcontainer" mincondition="1" />
-    <PreferredContainer secondary="wreckcoilgunloader" amount="1" spawnprobability="0.02" />
-    <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.06" />
-    <Price baseprice="140" displaynonempty="true" minleveldifficulty="15">
+    <PreferredContainer secondary="wreckcoilgunloader" amount="1" spawnprobability="0" />
+    <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0" />
+    <Price />
+    <!-- <Price baseprice="140" displaynonempty="true" minleveldifficulty="15">
       <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
       <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" sold="false" />
       <Price storeidentifier="merchantresearch" sold="false" multiplier="1.3" />
       <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="3" minleveldifficulty="5" />
       <Price storeidentifier="merchantmine" sold="false" multiplier="1.2" />
       <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" minleveldifficulty="5" />
-    </Price>
+    </Price> -->
     <Deconstruct time="10">
       <Item identifier="aluminium" />
     </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+    <Fabricate />
+    <Fabricate />
+    <!-- <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="weapons" level="30" />
       <RequiredItem tag="advmunition_tip" description="fabricationdescription.advmunition_tip" />
       <RequiredItem tag="munition_core" amount="2" description="fabricationdescription.munition_core" />
@@ -154,7 +158,7 @@
       <RequiredItem tag="munition_core" amount="2" description="fabricationdescription.munition_core" />
       <RequiredItem tag="munition_propulsion" amount="1" mincondition="1" maxcondition="1" usecondition="true" description="fabricationdescription.munition_propulsion" header="" defaultitem="" />
       <RequiredItem tag="ammobox" mincondition="0.0" maxcondition="0.1" usecondition="false" description="fabricationdescription.ammoboxrecycle" header="fabricationheader.ammoboxrecycle" defaultitem="bvta.coilgunammoboxdelayedrecoil" />
-    </Fabricate>
+    </Fabricate> -->
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes_2.png" sourcerect="0,0,95,78" />
     <ItemContainer SpawnWithId="bvta.coilgunboltdelayedrecoil">
       <StatusEffect>

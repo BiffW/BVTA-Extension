@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <!--贫化燃料弹-->
+  <!-- 贫化燃料弹 -->
   <Item identifier="bvta.railgunshelldepletedfuel" aliases="railgunshelldepletedfuel" variantof="railgunshell">
     <PreferredContainer primary="railgunammoloader" spawnprobability="0" />
     <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
@@ -37,8 +37,7 @@
         <Affliction identifier="bleeding" strength="*2" />
         <Affliction identifier="stun" strength="*1.5" />
         <Affliction identifier="bleeding" strength="12" multiplybymaxvitality="true" />
-        <Affliction identifier="radiationsickness" strength="200" />
-        <Affliction identifier="radiationsickness" strength="4" multiplybymaxvitality="true" />
+        <Affliction identifier="radiationsickness" strength="200" multiplybymaxvitality="true" />
       </Attack>
     </Projectile>
   </Item>
@@ -255,15 +254,15 @@
       </StatusEffect>
     </Projectile>
   </Item>
-  <!--爆破霰弹弹丸-->
+  <!-- 爆破霰弹弹丸 -->
   <Item name="Explosive Pellet" identifier="bvta.railguncanistershellpelletexplosive" aliases="railguncanistershellpelletexplosive" category="Weapon" scale="0.5" sonarsize="2" hideinmenus="true">
     <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="140,486,21,21" depth="0.55" />
     <Body width="160" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
-    <Projectile characterusable="false" launchimpulse="-15.0" impulsespread="0.3" spread="40" damagedoors="true">
-      <Attack structuredamage="30" itemdamage="15" severlimbsprobability="3.0" penetration="0.5">
-        <Affliction identifier="explosiondamage" strength="30" />
-        <Affliction identifier="bleeding" strength="30" />
+    <Projectile characterusable="false" launchimpulse="-15.0" impulsespread="0.3" spread="30" damagedoors="true">
+      <Attack structuredamage="40" itemdamage="15" severlimbsprobability="0.5" penetration="0.5">
+        <Affliction identifier="explosiondamage" strength="20" />
+        <Affliction identifier="bleeding" strength="20" />
         <Affliction identifier="stun" strength="2" />
       </Attack>
       <StatusEffect type="OnActive" target="This" lifetime="2">
@@ -273,11 +272,10 @@
         <Remove />
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This" >
-        <Explosion range="240.0" structuredamage="5" force="10.0" itemdamage="15" severlimbsprobability="0.1" decal="explosion" decalsize="0.24">
-          <Affliction identifier="explosiondamage" strength="60" />
-          <Affliction identifier="burn" strength="30" />
+        <Explosion range="360.0" structuredamage="20" force="10.0" itemdamage="15" severlimbsprobability="0.5" decal="explosion" decalsize="0.36">
+          <Affliction identifier="explosiondamage" strength="80" />
           <Affliction identifier="explosiondamage" strength="0.5" multiplybymaxvitality="true" />
-          <Affliction identifier="bleeding" strength="90" />
+          <Affliction identifier="bleeding" strength="80" />
         </Explosion>
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="10" velocitymin="100" velocitymax="2000" scalemin="0.25" scalemax="0.5" />
         <Remove />
@@ -287,8 +285,8 @@
   <!-- 爆破霰弹 -->
   <Item identifier="bvta.railguncanistershellexplosive" aliases="railguncanistershellexplosive" variantof="railguncanistershell">
     <PreferredContainer primary="railgunammoloader,railgunammocontainer" />
-    <PreferredContainer secondary="wreckrailgunammocontainer" maxamount="1" spawnprobability="0.07" />
-    <Price baseprice="225" minleveldifficulty="25">
+    <PreferredContainer secondary="wreckrailgunammocontainer" minamount="1" maxamount="2" spawnprobability="0.02" />
+    <Price baseprice="225" minleveldifficulty="15">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" sold="false" />
       <Price storeidentifier="merchantcity" multiplier="1.25" sold="false" />
       <Price storeidentifier="merchantresearch" multiplier="1.25" sold="false" />
@@ -297,28 +295,31 @@
       <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="5" />
     </Price>
     <Deconstruct>
+      <Item identifier="steel" />
       <Item identifier="c4block" mincondition="0.95" />
-      <Item identifier="iron" />
-      <Item identifier="carbon" />
     </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiredtime="20">
-      <RequiredSkill identifier="weapons" level="30" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredSkill identifier="weapons" level="50" />
       <RequiredItem identifier="c4block" amount="1" description="" />
-      <RequiredItem identifier="" tag="munition_core" amount="1" description="fabricationdescription.munition_core" />
+      <RequiredItem identifier="" tag="advmunition_jacket" amount="1" description="fabricationdescription.advmunition_jacket" />
       <RequiredItem identifier="steel" amount="1" />
     </Fabricate>
-    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="8">
-      <RequiredSkill identifier="weapons" level="25" />
+    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="40" />
       <RequiredItem identifier="c4block" amount="1" description="" />
-      <RequiredItem identifier="" tag="munition_core" amount="1" description="fabricationdescription.munition_core" mincondition="1" maxcondition="1" />
+      <RequiredItem identifier="" tag="advmunition_jacket" amount="1" description="fabricationdescription.advmunition_jacket" mincondition="1" maxcondition="1" />
       <RequiredItem identifier="" tag="containershell" mincondition="0.0" maxcondition="0.0" usecondition="false" />
     </Fabricate>
     <Sprite texture="%ModDir:BVTA Extension%/images/railguncanistershellexplosive.png" sourcerect="0,4,216,34" />
     <BrokenSprite texture="%ModDir:BVTA Extension%/images/railguncanistershellexplosive.png" sourcerect="0,40,216,34" />
     <InventoryIcon texture="%ModDir:BVTA Extension%/images/railguncanistershellexplosive.png" sourcerect="0,80,64,64" />
-    <ItemContainer capacity="24" spawnwithid="bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive">
-      <StatusEffect>
+    <ItemContainer capacity="30" spawnwithid="bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive,bvta.railguncanistershellpelletexplosive">
+      <StatusEffect condition="-25">
         <RequiredItem items="bvta.railguncanistershellpelletexplosive" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+        <Conditional condition="gte 25" />
+        <SpawnItem identifiers="bvta.railguncanistershellpelletexplosive" count="15" spawnposition="ThisInventory" />
       </StatusEffect>
       <Containable items="bvta.railguncanistershellpelletexplosive" />
     </ItemContainer>
@@ -332,14 +333,10 @@
     <Projectile characterusable="false" launchimpulse="0.0">
       <StatusEffect type="OnUse" target="This" IsOn="true" />
       <StatusEffect type="OnUse" target="This" IsOn="false" delay="45" setvalue="true" condition="-200" />
-      <StatusEffect type="OnDamaged" target="This" disabledeltatime="true" setvalue="true">
-        <Sound file="Content/Sounds/Damage/HitArmor1.ogg" range="800" />
-      </StatusEffect>
       <StatusEffect type="OnBroken" target="this">
         <Explosion range="750" ballastfloradamage="200" itemdamage="25" force="10.0" severlimbsprobability="1" decal="explosion" decalsize="0.7" penetration="0.5">
-          <Affliction identifier="explosiondamage" strength="256" />
-          <Affliction identifier="lacerations" strength="64" />
-          <Affliction identifier="bleeding" strength="500" />
+          <Affliction identifier="explosiondamage" strength="320" />
+          <Affliction identifier="bleeding" strength="160" />
           <Affliction identifier="stun" strength="2" />
           <Affliction identifier="explosiondamage" strength="4" multiplybymaxvitality="true" />
         </Explosion>
@@ -347,7 +344,7 @@
       </StatusEffect>
     </Projectile>
     <MotionSensor range="300" canbeselected="false" IgnoreDead="True" minimumvelocity="0" updateinterval="0.025" target="Monster" DetectOwnMotion="false">
-      <StatusEffect type="Always" target="This" condition="-100" disabledeltatime="true" stackable="false" checkconditionalalways="true">
+      <StatusEffect type="OnNotContained" target="This" condition="-100" disabledeltatime="true" stackable="false" checkconditionalalways="true">
         <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
       </StatusEffect>
     </MotionSensor>
@@ -362,14 +359,14 @@
     <PreferredContainer primary="railgunammoloader" spawnprobability="0" />
     <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
     <PreferredContainer secondary="wreckrailgunloader" spawnprobability="0" />
-    <PreferredContainer secondary="wreckrailgunammocontainer" spawnprobability="0.05" />
-    <Price baseprice="186" minleveldifficulty="25">
+    <PreferredContainer secondary="wreckrailgunammocontainer" spawnprobability="0.02" />
+    <Price baseprice="310" minleveldifficulty="25">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" sold="false" />
       <Price storeidentifier="merchantcity" multiplier="1.25" sold="false" />
       <Price storeidentifier="merchantresearch" multiplier="1.25" sold="false" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="5" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="3" />
       <Price storeidentifier="merchantmine" multiplier="1.25" sold="false" />
-      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="5" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" />
     </Price>
     <Deconstruct>
       <Item identifier="iron" />
@@ -378,13 +375,13 @@
       <Item identifier="c4block" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="25">
-      <RequiredSkill identifier="weapons" level="35" />
+      <RequiredSkill identifier="weapons" level="55" />
       <RequiredItem identifier="steel" />
       <RequiredItem identifier="fpgacircuit" />
       <RequiredItem identifier="c4block" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" requiredtime="100" amount="4">
-      <RequiredSkill identifier="weapons" level="35" />
+      <RequiredSkill identifier="weapons" level="55" />
       <RequiredItem identifier="steel" amount="4" />
       <RequiredItem identifier="fpgacircuit" amount="4" />
       <RequiredItem identifier="c4block" amount="4" />
@@ -443,8 +440,8 @@
     <PreferredContainer primary="railgunammoloader" spawnprobability="0" />
     <PreferredContainer primary="railgunammocontainer" spawnprobability="0" />
     <PreferredContainer secondary="wreckrailgunloader" spawnprobability="0" />
-    <PreferredContainer secondary="wreckrailgunammocontainer" amount="1" spawnprobability="0.05" />
-    <Price baseprice="100" minleveldifficulty="15">
+    <PreferredContainer secondary="wreckrailgunammocontainer" amount="1" spawnprobability="0.01" />
+    <Price baseprice="165" minleveldifficulty="15">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" sold="false" />
       <Price storeidentifier="merchantcity" multiplier="1.25" sold="false" />
       <Price storeidentifier="merchantresearch" multiplier="1.25" sold="false" />
@@ -455,21 +452,21 @@
     <Deconstruct>
       <Item identifier="iron" />
       <Item identifier="carbon" />
-      <Item identifier="sodium" />
+      <Item identifier="sodium" amount="2" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="25">
       <RequiredSkill identifier="weapons" level="25" />
       <RequiredSkill identifier="mechanical" level="35" />
       <RequiredItem identifier="steel" />
-      <RequiredItem identifier="sodium" />
-      <RequiredItem identifier="phosphorus" />
+      <RequiredItem identifier="sodium" amount="2" />
+      <RequiredItem identifier="phosphorus" amount="2" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" requiredtime="100" amount="4">
       <RequiredSkill identifier="weapons" level="25" />
       <RequiredSkill identifier="mechanical" level="35" />
       <RequiredItem identifier="steel" amount="4" />
-      <RequiredItem identifier="sodium" amount="4" />
-      <RequiredItem identifier="phosphorus" amount="4" />
+      <RequiredItem identifier="sodium" amount="8" />
+      <RequiredItem identifier="phosphorus" amount="8" />
     </Fabricate>
     <InventoryIcon texture="%ModDir:BVTA Extension%/images/railgunshellfixfoam.png" sourcerect="0,33,64,64" origin="0.5,0.5" />
     <Sprite texture="%ModDir:BVTA Extension%/images/railgunshellfixfoam.png" sourcerect="0,0,213,30" depth="0.55" origin="0.5,0.5" />

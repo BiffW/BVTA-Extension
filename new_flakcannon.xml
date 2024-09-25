@@ -37,7 +37,7 @@
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
     <Body width="170" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
-    <Projectile characterusable="false" launchimpulse="22.0" impulsespread="0.2" damagedoors="true">
+    <Projectile characterusable="false" launchimpulse="22.0" impulsespread="0.2" damagedoors="true" DamageUser="true">
       <Attack structuredamage="0" itemdamage="10" severlimbsprobability="0.4" penetration="0.1">
         <Affliction identifier="lacerations" strength="14" />
         <Affliction identifier="bleeding" strength="7.5" />
@@ -63,17 +63,16 @@
   </Item>
   <!--高射炮电击弹药箱-->
   <Item name="" identifier="bvta.flakcannonshockammobox" aliases="flakcannonshockammobox" variantof="flakcannonammoboxphysicorium">
-    <Price baseprice="360"></Price>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredItem identifier="fulgurium" />
-      <RequiredItem identifier="" tag="munition_core" description="fabricationdescription.munition_core" />
+      <RequiredItem identifier="" tag="advmunition_core" description="fabricationdescription.advmunition_core" />
       <RequiredItem identifier="" tag="advmunition_jacket" amount="2" description="fabricationdescription.advmunition_jacket" />
       <RequiredItem identifier="" tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
       <RequiredItem identifier="aluminium" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
       <RequiredItem identifier="fulgurium" />
-      <RequiredItem identifier="" tag="munition_core" description="fabricationdescription.munition_core" />
+      <RequiredItem identifier="" tag="advmunition_core" description="fabricationdescription.advmunition_core" />
       <RequiredItem identifier="" tag="advmunition_jacket" amount="2" description="fabricationdescription.advmunition_jacket" />
       <RequiredItem identifier="" tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
       <RequiredItem defaultitem="bvta.flakcannonshockammobox" />
@@ -131,7 +130,7 @@
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
     <Body width="170" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
-    <Projectile characterusable="false" launchimpulse="42.0" maxtargetstohit="2" impulsespread="0.2" damagedoors="true">
+    <Projectile characterusable="false" launchimpulse="42.0" maxtargetstohit="2" impulsespread="0.2" damagedoors="true" DamageUser="true">
       <Attack structuredamage="20" itemdamage="50" severlimbsprobability="0.3" penetration="0.5">
         <Affliction identifier="lacerations" strength="22" />
         <Affliction identifier="bleeding" strength="20" />
@@ -157,7 +156,7 @@
     <PreferredContainer primary="ammoboxcontainer" />
     <PreferredContainer secondary="wreckflakcannonloader" />
     <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.02" />
-    <Price baseprice="410" sold="false">
+    <Price baseprice="*1.3" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.3" />
       <Price storeidentifier="merchantcity" multiplier="1.2" />
       <Price storeidentifier="merchantresearch" multiplier="1.3" />
@@ -167,15 +166,15 @@
     </Price>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="weapons" level="30" />
-      <RequiredItem identifier="" tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
+      <RequiredItem identifier="" tag="munition_propulsion" amount="2" description="fabricationdescription.munition_propulsion" />
       <RequiredItem identifier="" tag="advmunition_tip" amount="2" description="fabricationdescription.advmunition_tip" />
-      <RequiredItem identifier="" tag="munition_core" description="fabricationdescription.munition_core" />
+      <RequiredItem identifier="" tag="advmunition_core" amount="2" description="fabricationdescription.advmunition_core" />
       <RequiredItem identifier="" tag="advmunition_jacket" amount="2" description="fabricationdescription.advmunition_jacket" />
       <RequiredItem identifier="aluminium" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
       <RequiredSkill identifier="weapons" level="25" />
-      <RequiredItem identifier="" tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
+      <RequiredItem identifier="" tag="munition_propulsion" amount="2" description="fabricationdescription.munition_propulsion" />
       <RequiredItem identifier="" tag="advmunition_tip" amount="2" description="fabricationdescription.advmunition_tip" />
       <RequiredItem identifier="" tag="advmunition_core" amount="2" description="fabricationdescription.advmunition_core" />
       <RequiredItem identifier="" tag="advmunition_jacket" amount="2" description="fabricationdescription.advmunition_jacket" />
@@ -246,7 +245,7 @@
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
     <Body width="170" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
-    <Projectile characterusable="false" launchimpulse="15" impulsespread="0" damagedoors="true" MaxTargetsToHit="8">
+    <Projectile characterusable="false" launchimpulse="15" impulsespread="0" damagedoors="true" DamageUser="true">
       <Attack structuredamage="20" itemdamage="10" severlimbsprobability="1" penetration="0.1">
         <Affliction identifier="explosiondamage" strength="3" />
         <Affliction identifier="bleeding" strength="2" />
@@ -255,16 +254,11 @@
       <StatusEffect type="OnActive" target="This" lifetime="1">
         <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="1" velocitymin="-10" velocitymax="-100" scalemin="0.5" scalemax="1" />
       </StatusEffect>
-      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="1.8">
-        <Remove />
-      </StatusEffect>
-      <StatusEffect type="OnBroken" target="This">
-        <Remove />
-      </StatusEffect>
-      <StatusEffect type="OnActive" target="This" delay="0.25" stackable="false" checkconditionalalways="true">
+      <StatusEffect type="OnNotContained" target="This" condition="0" setvalue="true" />
+      <StatusEffect type="OnBroken" target="This" delay="0.25" stackable="false" checkconditionalalways="true">
         <Conditional Removed="false" />
         <!-- visual effect -->
-        <Explosion range="60.0" />
+        <Explosion range="150.0" />
         <!-- actual effect -->
         <Explosion range="200.0" structuredamage="25" force="15.0" itemdamage="250" camerashake="10.0" camerashakerange="1000" severlimbsprobability="0.5" decal="explosion" decalsize="0.5" shockwave="true" smoke="false" flames="false" sparks="false" underwaterbubble="false" flash="false">
           <Affliction identifier="explosiondamage" strength="60" />
@@ -400,24 +394,27 @@
       </StatusEffect>
     </Projectile>
   </Item>
-  <!-- 树形弹药箱 -->
-  <Item name="Flak Treeshaped Shells Box" identifier="bvta.flakcannonammoboxtreeshaped" variantof="flakcannonammobox">
+  <!-- 树形弹药箱:隐藏,因为不够有特色 -->
+  <Item name="Flak Treeshaped Shells Box" identifier="bvta.flakcannonammoboxtreeshaped" variantof="flakcannonammobox" hideinmenus="true">
     <PreferredContainer primary="flakcannonammoloader" amount="1" mincondition="1" />
     <PreferredContainer primary="ammoboxcontainer" mincondition="1" />
-    <PreferredContainer secondary="wreckflakcannonloader" amount="1" />
-    <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.05" />
-    <Price baseprice="180" displaynonempty="true" minleveldifficulty="15">
+    <PreferredContainer secondary="wreckflakcannonloader" spawnprobability="0" />
+    <PreferredContainer secondary="wreckammoboxcontainer" spawnprobability="0" />
+    <Price />
+    <!-- <Price baseprice="180" displaynonempty="true" minleveldifficulty="15">
       <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="2" />
       <Price storeidentifier="merchantcity" multiplier="1.2" sold="false" />
       <Price storeidentifier="merchantresearch" multiplier="1.3" minavailable="2" />
       <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="4" minleveldifficulty="10" />
       <Price storeidentifier="merchantmine" multiplier="1.2" minavailable="2" />
       <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="4" minleveldifficulty="10" />
-    </Price>
+    </Price> -->
     <Deconstruct time="10">
       <Item identifier="aluminium" />
     </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+    <Fabricate />
+    <Fabricate />
+    <!-- <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="weapons" level="25" />
       <RequiredItem identifier="" tag="munition_propulsion" amount="3" description="fabricationdescription.munition_propulsion" />
       <RequiredItem identifier="" tag="munition_core" amount="1" description="fabricationdescription.munition_core" />
@@ -430,7 +427,7 @@
       <RequiredItem identifier="" tag="munition_core" amount="1" description="fabricationdescription.munition_core" />
       <RequiredItem identifier="" tag="advmunition_jacket" amount="2" description="fabricationdescription.advmunition_jacket" />
       <RequiredItem defaultitem="bvta.flakcannonammoboxtreeshaped" />
-    </Fabricate>
+    </Fabricate> -->
     <Sprite texture="%ModDir:BVTA Extension%/images/ammoboxes_2.png" sourcerect="96,0,95,78" />
     <ItemContainer>
       <StatusEffect>

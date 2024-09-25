@@ -18,7 +18,7 @@
             </StatusEffect>
         </Projectile>
     </Item>
-    <!--混合激光燃料箱(HIDDEN BECAUSE NOT EXACTLY USEFUL)-->
+    <!-- 混合激光燃料箱:隐藏,因为没什么特色 -->
     <Item identifier="bvta.pulselaserammoboxmixed" aliases="pulselaserammoboxmixed" variantof="pulselaserammoboxtrilaser" hideinmenus="true">
         <PreferredContainer primary="pulselaserammosource,ammoboxcontainer" mincondition="1" />
         <PreferredContainer secondary="wreckammoboxcontainer" spawnprobability="0" />
